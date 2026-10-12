@@ -26,19 +26,20 @@
 @media (max-width:734px){.story > li{grid-template-columns:minmax(0,1fr);gap:4px}.story-w{padding-top:0}}
 
 /* software screen illustration */
-.screen{background:#111113;border-radius:20px;overflow:hidden;color:#f5f5f7}
-.screen-bar{display:flex;align-items:center;gap:6px;padding:12px 16px;background:#1d1d1f;border-bottom:1px solid #2c2c2e}
-.screen-bar span{width:9px;height:9px;border-radius:50%;background:#3a3a3c}
-.screen-bar p{margin-left:10px;font-size:12px;color:#a1a1a6}
-.screen-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:18px 18px 20px}
-.screen-body svg{width:100%;height:auto;aspect-ratio:560/130}
-.screen-k{font-size:12px;color:#a1a1a6;margin-bottom:6px}
+.screen{background:#0b1220;border:1px solid #1c2638;border-radius:20px;overflow:hidden;color:#e6edf7}
+.screen-bar{display:flex;align-items:center;gap:6px;padding:12px 16px;background:#0f1828;border-bottom:1px solid #1c2638}
+.screen-bar span{width:9px;height:9px;border-radius:50%;background:#26324a}
+.screen-bar p{margin-left:10px;font-size:12px;color:#9aa8bf;font-weight:600;letter-spacing:.01em}
+.screen-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:14px}
+.screen-body > div{background:#111a2b;border:1px solid #1c2638;border-radius:14px;padding:14px 12px 10px}
+.screen-body svg{width:100%;height:auto;aspect-ratio:560/232;display:block}
+.screen-k{font-size:13px;font-weight:600;color:#e6edf7;margin-bottom:8px}
 .screen-v{font-size:17px;font-weight:600;margin-top:6px}
-.screen-v.hi{color:var(--green-d)}
+.screen-v.hi{color:#1E9BF0}
 .screen--xl{max-width:980px;margin-left:auto;margin-right:auto}
 .screen--xl .screen-body{padding:clamp(18px,3vw,36px);gap:clamp(18px,3vw,36px)}
-.screen--xl .screen-v{font-size:clamp(19px,2.4vw,28px)}
-.screen .ph-cap{padding:0 18px 16px;margin-top:0;color:#a1a1a6}
+.screen--xl .screen-v{font-size:clamp(17px,1.8vw,22px)}
+.screen .ph-cap{padding:0 18px 16px;margin-top:0;color:#8391a7}
 @media (max-width:600px){.screen-body{grid-template-columns:minmax(0,1fr)}}
 
 /* ==========================================================================

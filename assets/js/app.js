@@ -162,27 +162,57 @@
     return { rebuild: () => { track.scrollLeft = 0; build(); } };
   };
 
-  /* ---------------- force and activation traces (synthetic, drawn to the 7% and 37% example) ---------------- */
-  const W = 560, H = 130, BASE = 118, TOP = 14;
+  /* ---------------- force and activation traces, styled after the NeuroStrip app (synthetic, drawn to the 7% and 37% example) ---------------- */
+  const SIDE = { ok: '#F26B1D', hurt: '#1E9BF0' };
   function rng(seed) { let a = seed >>> 0; return () => { a |= 0; a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
   const smooth = (a, b, t) => { const x = Math.min(1, Math.max(0, (t - a) / (b - a))); return x * x * (3 - 2 * x); };
-  const gate = (t) => smooth(0.1, 0.26, t) * (1 - smooth(0.74, 0.9, t));
-  const line = (pts) => pts.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join('');
-  const area = (pts) => line(pts) + `L${W} ${BASE}L0 ${BASE}Z`;
-  function forcePts(amp, seed) { const r = rng(seed), pts = []; for (let i = 0; i <= 140; i++) { const t = i / 140; const g = gate(t) * (1 - 0.06 * smooth(0.3, 0.74, t)) + 0.012 * Math.sin(t * 46 + seed) * gate(t) + (r() - 0.5) * 0.006; pts.push([t * W, BASE - g * amp * (BASE - TOP)]); } return pts; }
-  function emgPts(amp, seed) { const r = rng(seed), raw = [], env = []; for (let i = 0; i <= 280; i++) { const t = i / 280; const g = gate(t) * (0.82 + 0.18 * Math.sin(t * 19 + seed * 0.7)); raw.push([t * W, BASE - (g * amp * (0.35 + r() * 0.75) + r() * 0.02) * (BASE - TOP)]); if (i % 4 === 0) env.push([t * W, BASE - (g * amp * 0.86 + (r() - 0.5) * 0.03 * g) * (BASE - TOP)]); } return { raw, env }; }
-  U.drawTraces = (root) => $$('svg[data-trace]', root).forEach((svg) => {
-    const dark = svg.dataset.theme !== 'light';
-    const ok = dark ? '#a1a1a6' : '#86868b', hurt = dark ? '#2EE6A6' : '#0A8A64';
-    const grid = `<g stroke="${dark ? 'rgba(255,255,255,.08)' : 'rgba(0,0,0,.08)'}" stroke-width="1">${[0.25, 0.5, 0.75].map((f) => `<path d="M0 ${(TOP + (BASE - TOP) * f).toFixed(1)}H${W}"/>`).join('')}<path d="M0 ${BASE}H${W}" stroke="${dark ? 'rgba(255,255,255,.2)' : 'rgba(0,0,0,.2)'}"/></g>`;
-    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-    if (svg.dataset.trace === 'force') {
-      const a = forcePts(1, 3), b = forcePts(0.93, 11);
-      svg.innerHTML = grid + `<path d="${line(a)}" fill="none" stroke="${ok}" stroke-width="2.4" stroke-linecap="round"/><path d="${line(b)}" fill="none" stroke="${hurt}" stroke-width="2.4" stroke-linecap="round"/>`;
-    } else {
-      const a = emgPts(1, 5), b = emgPts(0.63, 17);
-      svg.innerHTML = grid + `<path d="${area(a.raw)}" fill="${ok}" fill-opacity=".22"/><path d="${area(b.raw)}" fill="${hurt}" fill-opacity=".28"/><path d="${line(a.env)}" fill="none" stroke="${ok}" stroke-width="2.4" stroke-linecap="round"/><path d="${line(b.env)}" fill="none" stroke="${hurt}" stroke-width="2.4" stroke-linecap="round"/>`;
+  const REPS = 4;
+  /* one contraction per rep: fast rise, a held effort, fast release */
+  const rep = (t, sharp) => { const k = (t * REPS) % 1; const e = sharp ? 0.03 : 0.07; return smooth(0.14, 0.14 + e, k) * (1 - smooth(0.7 - e, 0.7, k)); };
+  function forceSeries(amp, seed, n) { const r = rng(seed), v = []; for (let i = 0; i <= n; i++) { const t = i / n, k = (t * REPS) % 1; const g = rep(t, false); v.push(g * amp * (0.86 + 0.04 * Math.sin(k * Math.PI)) + g * (r() - 0.5) * 0.012 + (r() - 0.5) * 0.004); } return v; }
+  function emgSeries(amp, seed, n) {
+    const r = rng(seed), v = [];
+    for (let i = 0; i <= n; i++) {
+      const t = i / n, k = (t * REPS) % 1, g = rep(t, true);
+      const shape = 0.72 + 0.28 * Math.sin(Math.min(1, Math.max(0, (k - 0.14) / 0.56)) * Math.PI);
+      const burst = g * amp * shape * (0.5 + 0.5 * Math.pow(r(), 1.6));
+      const spike = g && r() > 0.9 ? g * amp * 0.28 * r() : 0;
+      v.push(Math.min(1, 0.04 + r() * 0.025 + burst + spike));
     }
+    return v;
+  }
+  U.drawTraces = (root) => $$('svg[data-trace]', root).forEach((svg) => {
+    const mini = !!svg.closest('.mini-trace');
+    const emg = svg.dataset.trace !== 'force';
+    const W = 560, H = mini ? 130 : 232;
+    const L = mini ? 6 : 40, R = 8, T = mini ? 8 : 24, B = mini ? 8 : 40;
+    const pw = W - L - R, ph = H - T - B;
+    const n = emg ? (mini ? 200 : 300) : 160;
+    const okV = emg ? emgSeries(0.8, 5, n) : forceSeries(1, 3, n);
+    const hurtV = emg ? emgSeries(0.8 * 0.58, 17, n) : forceSeries(0.93, 11, n);
+    const X = (i) => (L + (i / n) * pw).toFixed(1), Y = (v) => (T + (1 - v) * ph).toFixed(1);
+    const path = (vals) => vals.map((v, i) => (i ? 'L' : 'M') + X(i) + ' ' + Y(v)).join('');
+    const gridC = 'rgba(148,163,184,.14)', textC = '#8391a7';
+    const yTicks = [0, 0.25, 0.5, 0.75, 1], yLab = emg ? ['0', '200', '400', '600', '800'] : ['0', '250', '500', '750', '1000'];
+    let g = `<rect x="0" y="0" width="${W}" height="${H}" fill="none"/>`;
+    g += `<g stroke="${gridC}" stroke-width="1">${yTicks.map((f) => `<path d="M${L} ${Y(f)}H${W - R}"/>`).join('')}${mini ? '' : [0, 2, 4, 6, 8, 10].map((s) => `<path d="M${(L + (s / 10) * pw).toFixed(1)} ${T}V${T + ph}"/>`).join('')}</g>`;
+    if (!mini) {
+      g += `<g fill="${textC}" font-size="10" font-family="var(--font)">${yTicks.map((f, i) => `<text x="${L - 6}" y="${(+Y(f) + 3.5).toFixed(1)}" text-anchor="end">${yLab[i]}</text>`).join('')}${[0, 2, 4, 6, 8, 10].map((s) => `<text x="${(L + (s / 10) * pw).toFixed(1)}" y="${T + ph + 14}" text-anchor="middle">${s}</text>`).join('')}<text x="${L - 6}" y="12" text-anchor="end" font-size="9">${emg ? 'μV' : 'N'}</text></g>`;
+    }
+    if (emg) {
+      /* dashed lines at each side's average peak make the gap readable at a glance */
+      const peak = (vals) => { const top = vals.filter((v) => v > 0.2).sort((a, b) => b - a); const k = top.slice(0, Math.max(1, Math.round(top.length * 0.4))); return k.reduce((a, b) => a + b, 0) / k.length; };
+      [[okV, SIDE.ok], [hurtV, SIDE.hurt]].forEach(([vals, c]) => { g += `<path d="M${L} ${Y(peak(vals))}H${W - R}" stroke="${c}" stroke-width="${mini ? 1.4 : 1.6}" stroke-dasharray="7 5" opacity=".9"/>`; });
+    }
+    const sw = emg ? (mini ? 1.2 : 1.4) : (mini ? 2 : 2.4);
+    g += `<path d="${path(okV)}" fill="none" stroke="${SIDE.ok}" stroke-width="${sw}" stroke-linejoin="round"/><path d="${path(hurtV)}" fill="none" stroke="${SIDE.hurt}" stroke-width="${sw}" stroke-linejoin="round"/>`;
+    if (!mini) {
+      const ly = H - 8, cx = L + pw / 2;
+      g += `<g font-size="11" font-family="var(--font)" fill="#c9d3e3"><circle cx="${cx - 118}" cy="${ly - 4}" r="4" fill="${SIDE.ok}"/><text x="${cx - 108}" y="${ly}">Uninjured side</text><circle cx="${cx + 10}" cy="${ly - 4}" r="4" fill="${SIDE.hurt}"/><text x="${cx + 20}" y="${ly}">Injured side</text></g>`;
+    }
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    svg.setAttribute('preserveAspectRatio', mini ? 'none' : 'xMidYMid meet');
+    svg.innerHTML = g;
   });
 
   /* ---------------- boot: after every module has rendered ---------------- */
