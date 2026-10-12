@@ -1,0 +1,139 @@
+<section class="sec sec--paper2" id="channels" data-title="Channels and budget">
+  <div class="wrap">
+    <header class="sec-head rv">
+      <p class="kicker"><b>07</b>Channels and budget <span class="q-tag">{{i:circle-help}}Answers question 2</span></p>
+      <h2>Three channels. <span class="em hl-signal">Three different jobs.</span></h2>
+      <p class="lede">Each channel was picked for the job it has to do against a universe of about 1,000 accounts, not for its popularity. <b>LinkedIn</b> is the only place those accounts can be targeted by name. <b>Search</b> catches the few who are already looking. <b>Email</b> turns attention into a booked call.</p>
+    </header>
+
+    <div class="jobs rv">
+      <div class="job job--1"><span>{{i:megaphone}}</span><b>Create</b><p>LinkedIn puts one idea in front of the named accounts.</p></div>
+      <i class="job-arrow" aria-hidden="true">{{i:arrow-right}}</i>
+      <div class="job job--2"><span>{{i:search}}</span><b>Capture</b><p>Search answers the people already looking.</p></div>
+      <i class="job-arrow" aria-hidden="true">{{i:arrow-right}}</i>
+      <div class="job job--3"><span>{{i:mail}}</span><b>Convert</b><p>Email turns attention into a booked call.</p></div>
+      <i class="job-arrow" aria-hidden="true">{{i:arrow-right}}</i>
+      <div class="job job--4"><span>{{i:calendar-days}}</span><b>The calendar</b><p>20 qualified discovery calls a week.</p></div>
+    </div>
+
+    <div class="chan rv" id="chan">
+      <div class="seg" id="chanTabs" role="tablist" aria-label="Channel"></div>
+      <div class="chan-panel card" id="chanPanel" role="tabpanel"></div>
+    </div>
+
+    <div class="grid g2 chan-support">
+      <article class="card rv">
+        <div class="card-ic">{{i:repeat}}</div>
+        <h4>Supporting layer: retargeting <span class="tag">10% of channel budget</span></h4>
+        <p class="mute small">Meta and YouTube against site visitors, video viewers and uploaded contact lists. Cheap frequency that keeps the idea in memory between touches. It is not a prospecting test until the creative has proven itself on LinkedIn.</p>
+      </article>
+      <article class="card rv" style="--d:80ms">
+        <div class="card-ic">{{i:sparkles}}</div>
+        <h4>Asymmetric bets <span class="tag">15% of channel budget</span></h4>
+        <p class="mute small">Placements with educators and newsletters that sports clinicians already trust{{ev:h:h8}}, co-marketing with complementary testing vendors, and the booth activation.{{ev:h:h6}} Each is small, capped and separately tracked. Most will fail quietly. One could change the slope.</p>
+      </article>
+    </div>
+
+    <details class="notyet rv">
+      <summary>{{i:ban}}<span>What is deliberately not in the first test set, and why</span>{{i:chevron-down}}</summary>
+      <table class="tbl tbl--stack">
+        <thead><tr><th>Channel</th><th>Decision</th><th>Reason</th></tr></thead>
+        <tbody>
+          <tr><td>Meta and Instagram prospecting</td><td data-l="Decision"><span class="tag tag--hold">Test in phase 3</span></td><td data-l="Reason">Clinicians are there and the product is visual, but the platform cannot isolate executives at 1,000 named groups. Broad targeting would fill the calendar with students and patients. Runs first as retargeting, then as experiment 12.</td></tr>
+          <tr><td>YouTube</td><td data-l="Decision"><span class="tag tag--hold">Retargeting only</span></td><td data-l="Reason">The demo belongs there as a destination. Paid reach comes after the trace video proves itself.</td></tr>
+          <tr><td>SEO and comparison content</td><td data-l="Decision"><span class="tag tag--go">Start now, pays later</span></td><td data-l="Reason">The comparison and primer pages are built in month one because paid search needs them. Organic returns arrive after Day 90.</td></tr>
+          <tr><td>Webinars</td><td data-l="Decision"><span class="tag tag--go">Used as an offer</span></td><td data-l="Reason">The weekly live clinic demo and the 12-minute primer are conversion offers inside email and LinkedIn, not a separate channel.</td></tr>
+          <tr><td>Events</td><td data-l="Decision"><span class="tag tag--go">Conversion moments</span></td><td data-l="Reason">The role owns the event calendar.{{ev:s:s15}} Each event gets pre-booked meetings, a capture plan and a 48-hour follow-up rule, with its own budget.{{ev:a:a12}}</td></tr>
+          <tr><td>Content syndication</td><td data-l="Decision"><span class="tag tag--no">No</span></td><td data-l="Reason">It manufactures cheap leads that sales cannot use. The opposite of the brief.</td></tr>
+          <tr><td>TikTok, TV, consumer media</td><td data-l="Decision"><span class="tag tag--no">No</span></td><td data-l="Reason">NeuroStrip is bought by clinics and teams. Patients cannot purchase it, and consumer health claims carry the heaviest compliance exposure.</td></tr>
+        </tbody>
+      </table>
+    </details>
+
+    <div class="sub-head rv" id="budget">
+      <p class="eyebrow">Budget</p>
+      <h3>Only about half of the first 90 days is media. That is the point.</h3>
+      <p>A quarter buys the proof that makes ads worth running. An eighth buys the measurement that tells us which ads to keep. The budget was not disclosed, so the percentages are the recommendation and the dollars scale.{{ev:a:a2}}</p>
+    </div>
+
+    <div class="bud card rv" id="bud">
+      <div class="bud-ctl">
+        <div>
+          <span class="eyebrow">90-day program budget</span>
+          <output class="bud-total num" id="budTotal">$90,000</output>
+          <p class="tiny mute">Excludes salaries, event costs and the existing outbound retainer.</p>
+        </div>
+        <div class="bud-ctl-r">
+          <div class="seg" id="budScen" role="group" aria-label="Budget scenario"></div>
+          <input type="range" id="budRange" aria-label="Total 90-day budget">
+        </div>
+      </div>
+      <div class="bud-body">
+        <div class="bud-lines" id="budLines"></div>
+        <div class="bud-viz">
+          <figure class="bud-donut"><svg id="budDonut" viewBox="0 0 220 220" role="img" aria-label="Budget split by line"></svg><figcaption id="budDonutCap"></figcaption></figure>
+          <figure class="bud-months">
+            <p class="eyebrow">Spend by month, and how much of it is media</p>
+            <div id="budMonths"></div>
+            <ul class="bud-read">
+              <li><b>Month 1 builds.</b> Two thirds goes to proof assets and plumbing.</li>
+              <li><b>Month 2 learns.</b> Media doubles as the tests go live.</li>
+              <li><b>Month 3 scales.</b> The reserve follows the winners, so it is counted as media here.</li>
+            </ul>
+          </figure>
+        </div>
+      </div>
+      <p class="note">{{i:info}}Media and channel costs make up 55% of the total. Inside that 55%, the split is LinkedIn 45, search 20, email 10, retargeting 10 and capped bets 15. The 8% reserve is released at the Day 30 and Day 60 reviews to whatever is winning.</p>
+    </div>
+
+    <div class="sub-head rv" id="pipeline-model">
+      <p class="eyebrow">The math</p>
+      <h3>Working backward from 20 calls a week.</h3>
+      <p>Every input is a planning assumption with a published benchmark behind it where one exists.{{ev:a:a8,a14,a16}} Move anything. The point is not that these numbers are right. The point is that on Day 30 they get replaced with real ones, and the model already exists.</p>
+    </div>
+
+    <div class="pm card card--ink rv" id="pm">
+      <div class="pm-top">
+        <div class="pm-big">
+          <span class="eyebrow">Held, qualified calls per week at the Day 90 run rate</span>
+          <p><output class="num" id="pmTotal">15.1</output><span>of 20</span></p>
+          <div class="pm-gauge" aria-hidden="true"><i id="pmGauge"></i><b></b></div>
+          <p class="pm-read" id="pmRead"></p>
+        </div>
+        <div class="pm-presets">
+          <span class="eyebrow">Scenario</span>
+          <div class="seg" id="pmPresets" role="group" aria-label="Model scenario">
+            <button type="button" data-k="def" aria-pressed="true">Base case</button>
+            <button type="button" data-k="stretch" aria-pressed="false">Stretch</button>
+          </div>
+          <p class="tiny">Stretch keeps media spend the same and assumes three things go right: outbound is warmed and widened, a second weekly demo fills, and event follow-up lands.</p>
+        </div>
+      </div>
+      <div class="pm-rows" id="pmRows"></div>
+      <div class="pm-funnel">
+        <div class="pm-fctl" id="pmFunnelCtl"></div>
+        <div class="pm-out" id="pmOut"></div>
+      </div>
+      <p class="note">{{i:info}}Benchmarks behind the defaults: LinkedIn cost per lead averages $276 and runs $400 to $600 in healthcare technology{{ev:v:s29}}; search averages $5.42 a click and an 8.2% click-to-lead rate across industries{{ev:v:s30}}; cold email averages a 3.4% reply rate, 5.5% in the top quartile{{ev:v:s31}}. Funnel rates and contract value are placeholders until the trial backfill.{{ev:a:a6,a7}} Calls booked near Day 90 become customers around Day 150, after a 30-day pilot.</p>
+    </div>
+
+    <div class="grid g3 levers">
+      <article class="card rv"><p class="eyebrow">Lever 1</p><h4>Outbound, warmed and widened</h4><p class="mute small">In the stretch case outbound doubles from 2.7 to 5.4 calls a week at no extra media cost: warmed accounts hold about a third more calls per 100 contacts{{ev:h:h4}}, and the sequence widens from 300 to 450 contacts a week. On direct response alone LinkedIn runs at about twice the allowable cost per call, so this lift is how it earns its budget. The holdout test tells us by Day 60.</p></article>
+      <article class="card rv" style="--d:80ms"><p class="eyebrow">Lever 2</p><h4>A second weekly live demo</h4><p class="mute small">One-to-many time scales without touching the inside-sales calendar. A second slot aimed at Tier A clinic directors is the cheapest capacity in the plan. In the stretch case registrants rise from 60 to 90 a month and 18% book, which moves demos from 2.1 to 3.7 calls a week.</p></article>
+      <article class="card rv" style="--d:160ms"><p class="eyebrow">Lever 3</p><h4>The event follow-up</h4><p class="mute small">With a December start, APTA CSM lands in the scale phase.{{ev:v:s26}} Pre-booked meetings, a booth test people queue for and a 48-hour follow-up rule turn one week into a month of calls.{{ev:h:h6}} In the stretch case 200 qualified conversations a quarter and a 22% booking rate move events from 2.3 to 3.4 calls a week.</p></article>
+    </div>
+
+    <div class="allow rv">
+      <div class="allow-eq">
+        <p class="eyebrow">The guardrail that replaces cost per lead</p>
+        <p class="allow-f"><span>Allowable cost per held call</span><i>=</i><span>first-year contract value</span><i>×</i><span>call-to-customer rate</span></p>
+      </div>
+      <ul class="allow-ex">
+        <li><b class="num" id="allowLow">$433</b><span>at a $3,500 contract</span></li>
+        <li><b class="num" id="allowMid">$928</b><span>at a $7,500 contract</span></li>
+        <li><b class="num" id="allowHigh">$2,475</b><span>at a $20,000 contract</span></li>
+      </ul>
+      <p class="small">Every channel is judged against this figure, at the call-to-customer rate in the model above.{{ev:a:a6,a7}} The stated focus is on building the customer base quickly.{{ev:v:s8}} On that footing, paying up to a full first-year contract to win an account that then expands is a defensible trade. How much tolerance to allow is leadership's call, and it is one slider in the model.</p>
+    </div>
+  </div>
+</section>

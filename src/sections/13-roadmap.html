@@ -1,0 +1,33 @@
+<section class="sec sec--paper2" id="roadmap" data-title="Roadmap">
+  <div class="wrap">
+    <header class="sec-head rv">
+      <p class="kicker"><b>13</b>The 90 days</p>
+      <h2>Three phases. Three gates. <span class="em hl-signal">One decision at each.</span></h2>
+      <p class="lede">Instrument, learn, scale. Each phase ends in a review with pass conditions and a decision attached. Dates move with the start date. The sequence does not. A December start has one advantage: the launch lands in January, when new deductibles tend to soften clinic visits and owners are thinking about retention.{{ev:h:h11}}</p>
+    </header>
+
+    <div class="rm-ctl card rv">
+      <div class="rm-start">
+        <label for="rmDate"><span class="eyebrow">If Day 1 is</span></label>
+        <input type="date" id="rmDate" aria-describedby="rmNote">
+        <div class="seg" id="rmQuick" role="group" aria-label="Quick start dates">
+          <button type="button" data-d="2026-11-16">Nov 16</button>
+          <button type="button" data-d="2026-12-01" aria-pressed="true">Dec 1</button>
+          <button type="button" data-d="2027-01-04">Jan 4</button>
+        </div>
+        {{ev:a:a1}}
+      </div>
+      <div class="rm-strip" id="rmStrip" aria-hidden="true"></div>
+      <p class="rm-note" id="rmNote" aria-live="polite"></p>
+    </div>
+
+    <div class="rm-filter rv">
+      <span class="eyebrow">Highlight a workstream</span>
+      <div class="rm-chips" id="rmStreams"></div>
+    </div>
+
+    <div class="rm-cols" id="rmCols"></div>
+
+    <div class="rm-events rv" id="rmEvents"></div>
+  </div>
+</section>

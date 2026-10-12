@@ -1,0 +1,138 @@
+<section class="sec sec--paper2" id="qualify" data-title="Qualification">
+  <div class="wrap">
+    <header class="sec-head rv">
+      <p class="kicker"><b>09</b>Lead qualification <span class="q-tag">{{i:circle-help}}Answers question 4</span></p>
+      <h2>A qualified lead is a right-fit account with a named problem and <span class="em hl-signal">a path to a pilot.</span></h2>
+      <p class="lede">The definition has to be simple enough that sales uses it and strict enough that the calendar is protected. <b>Two questions</b> decide where a lead goes. <b>Five</b> decide whether a call became pipeline.</p>
+    </header>
+
+    <ol class="life rv" aria-label="Lifecycle stages">
+      <li><span class="life-n">1</span><div><h4>Inquiry</h4><p>Any identified person who engages in a tracked way: a form, a reply, a registration, a badge scan.</p></div><em>System</em></li>
+      <li><span class="life-n">2</span><div><h4>Lead</h4><p>A real person in a business context, with segment and tier assigned.</p></div><em>Marketing</em></li>
+      <li><span class="life-n">3</span><div><h4>Engaged lead</h4><p>Meaningful activity in the last 30 days: demo watched, live demo attended, pilot or pricing page viewed.</p></div><em>Marketing</em></li>
+      <li class="is-gate"><span class="life-n">4</span><div><h4>MQL</h4><p>Fit A or B plus a hand-raise, or Fit A plus sustained engagement. Routed with a response SLA.</p></div><em>Hand-off</em></li>
+      <li><span class="life-n">5</span><div><h4>SAL</h4><p>Inside sales accepts within one business day, or rejects with a reason from a fixed list.</p></div><em>Sales</em></li>
+      <li class="is-gate"><span class="life-n">6</span><div><h4>SQL</h4><p>Discovery call held and the PILOT checklist met. Converts to an opportunity.</p></div><em>Sales</em></li>
+      <li><span class="life-n">7</span><div><h4>Opportunity</h4><p>Discovery, validation demo, pilot proposed, pilot active, commercial proposal, closed.</p></div><em>Sales</em></li>
+      <li><span class="life-n">8</span><div><h4>Customer</h4><p>Paid equipment and software. Then tracked by sites live against total sites.</p></div><em>Sales and success</em></li>
+    </ol>
+
+    <div class="sub-head rv">
+      <p class="eyebrow">Marketing's side · two questions, not twenty</p>
+      <h3>Fit times intent decides the route.</h3>
+      <p>Fit comes from who they are. Intent comes from what they did. Account Engagement already has both built in as a grade and a score, so nothing new has to be invented.{{ev:a:a10}} Try a lead.</p>
+    </div>
+
+    <div class="fi card rv" id="fi">
+      <div class="fi-in">
+        <label><span>Organization</span><select id="fiSeg">
+          <option value="pt">Outpatient PT group</option>
+          <option value="sport">Pro or college sports program</option>
+          <option value="perf">Performance facility</option>
+          <option value="neuro">Neuro rehab program</option>
+          <option value="research">Research lab</option>
+          <option value="other">Student, patient or vendor</option>
+        </select></label>
+        <label id="fiSizeWrap"><span>Locations</span><select id="fiSize">
+          <option value="1">1</option>
+          <option value="2">2 to 4</option>
+          <option value="5" selected>5 to 25</option>
+          <option value="26">26 to 50</option>
+          <option value="51">More than 50</option>
+        </select></label>
+        <label><span>Role</span><select id="fiRole">
+          <option value="exec">Owner or executive</option>
+          <option value="lead" selected>Clinical or performance lead</option>
+          <option value="prac">Practitioner</option>
+        </select></label>
+        <label><span>Latest behavior</span><select id="fiIntent">
+          <option value="3">Asked for a demo, pilot or pricing</option>
+          <option value="2" selected>Attended a live demo or used the economics model</option>
+          <option value="1">Watched the trace or downloaded a guide</option>
+        </select></label>
+        <label><span>Region</span><select id="fiRegion">
+          <option value="us">United States</option>
+          <option value="au">Australia</option>
+          <option value="eu">United Kingdom or EU</option>
+          <option value="row">Elsewhere</option>
+        </select></label>
+      </div>
+      <div class="fi-out">
+        <div class="fi-grid" id="fiGrid" role="img" aria-label="Fit and intent grid"></div>
+        <div class="fi-res" id="fiRes" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="sub-head rv">
+      <p class="eyebrow">Sales' side · five questions after the call</p>
+      <h3>PILOT. Four of five, and the first two are not optional.</h3>
+      <p>Most engagements so far began as trials{{ev:v:s9}}, and some have converted to revenue.{{ev:s:s15}} So the test of a qualified opportunity is whether a pilot can start, not whether a budget line exists. The plan bets that a structured 30-day pilot converts at half or better.{{ev:h:h7}}</p>
+    </div>
+
+    <ol class="pilot rv">
+      <li class="is-must"><b>P</b><div><h4>Problem</h4><p>They named a specific problem in their own words: return-to-sport decisions, plateaued patients, drop-off, a program to sell.</p><span>Mandatory</span></div></li>
+      <li class="is-must"><b>I</b><div><h4>ICP</h4><p>Segment and size put the account in Tier A or B, in a region we can serve.</p><span>Mandatory</span></div></li>
+      <li><b>L</b><div><h4>Leader</h4><p>The person who can approve a pilot is identified and knows the conversation is happening.</p></div></li>
+      <li><b>O</b><div><h4>Operator</h4><p>A named clinician or staff member will run it, at a named site.</p></div></li>
+      <li><b>T</b><div><h4>Timing</h4><p>A pilot could start inside 60 days. For teams, the season allows it.</p></div></li>
+    </ol>
+
+    <div class="grid g2 handoff">
+      <article class="card rv">
+        <div class="card-ic">{{i:send}}</div>
+        <h4>What sales receives with every MQL</h4>
+        <ul class="list-check small">
+          <li>Segment, number of locations, tier and persona</li>
+          <li>The campaign and message that produced the hand-raise</li>
+          <li>The last three things they did, with dates</li>
+          <li>Who else at the account has engaged</li>
+          <li>Their own words from the form: the problem, and how they heard of us</li>
+        </ul>
+      </article>
+      <article class="card rv" style="--d:80ms">
+        <div class="card-ic">{{i:inbox}}</div>
+        <h4>What marketing gets back</h4>
+        <ul class="list-check small">
+          <li>Accepted or rejected within one business day, with a reason</li>
+          <li>Call held, no-show or rescheduled</li>
+          <li>The five PILOT answers on the opportunity</li>
+          <li>Pilot start, end and outcome against criteria</li>
+          <li>A loss reason from a fixed list, never "other"</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="sla rv">
+      <div class="sla-main">
+        <p class="eyebrow">Response SLA</p>
+        <h3>The fastest reply is the one the buyer books themselves.</h3>
+        <p>Research on online leads has found most companies respond far too slowly.{{ev:v:s39}} Tier A and B hand-raisers see the calendar on the thank-you page. Nobody waits for an email.</p>
+      </div>
+      <ul class="sla-list">
+        <li><b class="num">0<small>min</small></b><span>Calendar shown on the thank-you page for Fit A and B hand-raisers</span></li>
+        <li><b class="num">15<small>min</small></b><span>Target for a first call or email if they did not book, in business hours</span></li>
+        <li><b class="num">1<small>hr</small></b><span>Hard ceiling. Past it, the lead shows red on the speed-to-lead dashboard</span></li>
+        <li><b class="num">6<small>×</small></b><span>Touches over ten business days before a lead recycles to nurture</span></li>
+      </ul>
+    </div>
+
+    <div class="grid g-21 guard-row">
+      <article class="card rv">
+        <h4>Measured through revenue</h4>
+        <p class="small mute" style="margin:6px 0 14px">One scorecard, read by audience, message, channel and campaign. Cost per lead appears nowhere on it.</p>
+        <div class="score-row">
+          <span>Held qualified calls a week</span><span>Sales-accepted rate</span><span>SQL rate</span><span>Pilot starts</span><span>Pilot to paid</span><span>Days per stage</span><span>Cost per held call</span><span>Cost per pilot</span><span>Pipeline per $1</span><span>New customers</span><span>First-year revenue</span><span>Sites live per account</span>
+        </div>
+      </article>
+      <article class="card card--ink rv" style="--d:80ms">
+        <p class="eyebrow">Capacity guard</p>
+        <h4 style="font-family:var(--display);font-size:1.2rem;color:#fff;margin:8px 0 10px">One calendar holds 20 to 25 calls a week.{{ev:a:a4}}</h4>
+        <p class="small mute">Tier A gets 1:1 time. Tier B gets the group demo first. A second inside-sales seat is triggered, in writing, when either holds for two straight weeks:</p>
+        <ul class="list-check small" style="margin-top:12px">
+          <li>The next open slot is more than five business days out</li>
+          <li>SLA attainment falls under 80%</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>

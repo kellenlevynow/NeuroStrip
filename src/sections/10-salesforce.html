@@ -1,0 +1,175 @@
+<section class="sec sec--paper" id="salesforce" data-title="Salesforce">
+  <div class="wrap">
+    <header class="sec-head rv">
+      <p class="kicker"><b>10</b>Salesforce, month one <span class="q-tag">{{i:circle-help}}Answers question 5</span></p>
+      <h2>Wiring first. <span class="em hl-signal">Dashboards second.</span></h2>
+      <p class="lede">Month one builds the smallest structure that can answer one question: <b>which audiences, messages, channels and campaigns produce revenue?</b> Every item below captures that information, protects it, or reports it. Nothing else gets built yet.</p>
+    </header>
+
+    <aside class="found rv">
+      <span class="found-ic">{{i:search}}</span>
+      <div>
+        <h4>A finding from the public site</h4>
+        <p>The demo request forms on controlbionics.com post to an address in the pattern Salesforce Account Engagement uses, on a form dated January 2022.{{ev:v:s5}} So an engagement layer appears to have been in place for years. Month one is about wiring it to NeuroStrip, not buying something new. Editions, connector status and admin access get confirmed in the first week.{{ev:a:a10}}</p>
+      </div>
+    </aside>
+
+    <div class="sprint4 rv">
+      <article>
+        <header><span>Week 1</span><h4>Audit and separate</h4></header>
+        <ul>
+          <li><b>Audit what exists</b><span>Objects, fields, picklists, the connector, who has admin rights. Write a one-page data dictionary.</span></li>
+          <li><b>NeuroStrip record types</b><span>Its own lead, account and opportunity layouts and sales process, so reports never mix two businesses.</span></li>
+          <li><b>Wall off patient records</b><span>Assistive communication records are excluded from every marketing audience and report.</span></li>
+          <li><b>Segment, tier and persona fields</b><span>Without them there is no "by audience" in any report.</span></li>
+        </ul>
+      </article>
+      <article>
+        <header><span>Week 2</span><h4>Capture and route</h4></header>
+        <ul>
+          <li><b>Lifecycle stage, with a timestamp per stage</b><span>No timestamps, no velocity, no conversion rates.</span></li>
+          <li><b>Source that survives</b><span>Locked lead-source picklist, first and last touch UTMs, click IDs, and "how did you hear about us?" on every hand-raise form.</span></li>
+          <li><b>Campaign hierarchy</b><span>Period, audience, message, channel, asset. It mirrors the reporting question.</span></li>
+          <li><b>Routing and the SLA clock</b><span>Assignment rules, instant scheduling, a timer on first touch, required reject reasons.</span></li>
+        </ul>
+      </article>
+      <article>
+        <header><span>Week 3</span><h4>Pipeline and scoring</h4></header>
+        <ul>
+          <li><b>Account structure</b><span>Parent and child accounts for groups, number of locations, lead-to-account matching, buying-group roles.</span></li>
+          <li><b>Opportunity stages with pilot tracking</b><span>Exit criteria, required primary campaign, pilot dates, success criteria, the five PILOT fields.</span></li>
+          <li><b>Loss reasons from a fixed list</b><span>"Other" teaches nothing.</span></li>
+          <li><b>Fit grade and engagement score, version one</b><span>Native grading and scoring, deliberately simple, reviewed with sales monthly.</span></li>
+        </ul>
+      </article>
+      <article>
+        <header><span>Week 4</span><h4>Report and close the loop</h4></header>
+        <ul>
+          <li><b>Five dashboards</b><span>Calendar, funnel and velocity, speed to lead, source to revenue, pilot board.</span></li>
+          <li><b>Backfill the trial base</b><span>Twelve months of trials entered with segment, source, outcome and reason.</span></li>
+          <li><b>Send qualified stages back to the ad platforms</b><span>So they optimize toward sales-accepted calls, not form fills.{{ev:v:s40}}{{ev:h:h12}}</span></li>
+          <li><b>End-to-end test and training</b><span>A test lead through every path. A 30-minute walkthrough with sales.</span></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="sub-head rv">
+      <p class="eyebrow">Data model</p>
+      <h3>Account-centric, because the buyer is a group, not a person.</h3>
+    </div>
+
+    <div class="dm rv">
+      <div class="dm-row">
+        <span class="dm-lane">Marketing</span>
+        <article class="dm-obj"><h4>{{i:megaphone}}Campaign</h4><p>Hierarchy: period › audience › message › channel › asset</p><code>Type</code><code>Budgeted_Cost</code><code>Actual_Cost</code></article>
+        <i class="dm-link" aria-hidden="true">{{i:arrow-right}}</i>
+        <article class="dm-obj"><h4>{{i:user-check}}Campaign member</h4><p>One row per person per campaign</p><code>Status: Sent, Engaged, Responded, Booked, Attended</code></article>
+        <i class="dm-link" aria-hidden="true">{{i:arrow-right}}</i>
+        <article class="dm-obj dm-obj--ae"><h4>{{i:activity}}Engagement history</h4><p>From Account Engagement</p><code>Score</code><code>Grade</code><code>Last 3 activities</code></article>
+      </div>
+      <div class="dm-row">
+        <span class="dm-lane">People and accounts</span>
+        <article class="dm-obj dm-obj--key"><h4>{{i:user-round}}Lead</h4><p>NeuroStrip record type</p><code>Segment</code><code>Tier</code><code>Persona</code><code>Lifecycle_Stage + 7 dates</code><code>Lead_Source (locked)</code><code>First and last touch UTMs</code><code>Click IDs</code><code>Self_Reported_Source</code><code>Reject_Reason</code></article>
+        <i class="dm-link" aria-hidden="true">{{i:arrow-right}}</i>
+        <article class="dm-obj"><h4>{{i:users-round}}Contact</h4><p>Matched to an account on conversion</p><code>Persona</code><code>Buying_Role: Economic buyer, Champion, Operator</code></article>
+        <i class="dm-link" aria-hidden="true">{{i:arrow-right}}</i>
+        <article class="dm-obj dm-obj--key"><h4>{{i:building-2}}Account</h4><p>Group as parent, clinics as children</p><code>Locations</code><code>Tier</code><code>Six signal checkboxes</code><code>Two_Threaded</code><code>Sites_Live</code></article>
+      </div>
+      <div class="dm-row">
+        <span class="dm-lane">Revenue</span>
+        <article class="dm-obj dm-obj--key"><h4>{{i:target}}Opportunity</h4><p>NeuroStrip sales process</p><code>Stage + exit criteria</code><code>Primary_Campaign (required)</code><code>Use_Case</code><code>Sites_In_Scope</code><code>PILOT x5</code><code>Loss_Reason (locked)</code></article>
+        <i class="dm-link" aria-hidden="true">{{i:arrow-right}}</i>
+        <article class="dm-obj"><h4>{{i:flask-conical}}Pilot</h4><p>Fields on the opportunity to start; an object later if needed</p><code>Start, End</code><code>Success_Criteria</code><code>Outcome</code><code>Kit_ID</code></article>
+        <i class="dm-link" aria-hidden="true">{{i:arrow-right}}</i>
+        <article class="dm-obj"><h4>{{i:circle-dollar-sign}}Closed revenue</h4><p>Rolls up to campaign through influence</p><code>First_Year_Value</code><code>Equipment, Software</code><code>Expansion flag</code></article>
+      </div>
+      <p class="note">{{i:info}}Field names are illustrative. Activities (calls, emails, meetings) attach to leads, contacts and opportunities and carry the first-touch time used by the SLA report.</p>
+    </div>
+
+    <div class="sub-head rv">
+      <p class="eyebrow">Naming convention</p>
+      <h3>If the link is named properly, the report writes itself.</h3>
+      <p>Every paid and owned link carries the same five tags in the same order. Build one.</p>
+    </div>
+
+    <div class="utm card rv" id="utm">
+      <div class="utm-in">
+        <label><span>Period</span><select data-u="period"><option value="fy27q2">FY27 Q2</option><option value="fy27q3" selected>FY27 Q3</option></select></label>
+        <label><span>Channel</span><select data-u="channel">
+          <option value="linkedin|paid-social">LinkedIn, paid</option>
+          <option value="google|cpc">Google Search</option>
+          <option value="meta|paid-social">Meta retargeting</option>
+          <option value="account-engagement|email">Nurture email</option>
+          <option value="outbound|email">Outbound email</option>
+          <option value="event|qr">Event QR code</option>
+          <option value="partner|referral">Partner placement</option>
+        </select></label>
+        <label><span>Audience</span><select data-u="aud">
+          <option value="pt-group-exec">PT group, executive</option>
+          <option value="pt-group-clinical">PT group, clinical</option>
+          <option value="sport-pro">Sport, professional</option>
+          <option value="sport-college">Sport, college</option>
+          <option value="inbound-other">Inbound, other</option>
+        </select></label>
+        <label><span>Message territory</span><select data-u="terr">
+          <option value="trace">The trace</option>
+          <option value="output-not-activation">Output is not activation</option>
+          <option value="clinic-like-yours">A clinic like yours</option>
+          <option value="emg-left-basement">EMG left the basement</option>
+          <option value="visible-progress" selected>Visible progress</option>
+        </select></label>
+        <label><span>Offer</span><select data-u="offer">
+          <option value="trace-video">Trace video</option>
+          <option value="field-guide">Field guide</option>
+          <option value="buyers-guide">Buyer's guide</option>
+          <option value="live-demo">Live demo</option>
+          <option value="econ-model" selected>Economics model</option>
+          <option value="pilot-call">Pilot scoping call</option>
+        </select></label>
+        <label><span>Format and version</span><select data-u="fmt">
+          <option value="video-20s-a">Video, 20 seconds, A</option>
+          <option value="video-90s-a">Video, 90 seconds, A</option>
+          <option value="document-a" selected>Document, A</option>
+          <option value="document-b">Document, B</option>
+          <option value="static-a">Static, A</option>
+          <option value="text-a">Text, A</option>
+        </select></label>
+      </div>
+      <div class="utm-out">
+        <dl id="utmParts"></dl>
+        <div class="utm-url"><code id="utmUrl"></code><button type="button" class="btn btn--line" id="utmCopy">{{i:copy}}<span>Copy</span></button></div>
+        <p class="tiny mute">The campaign tag is the same string as the Salesforce campaign name, so ad platform data and CRM data join without a lookup table.</p>
+      </div>
+    </div>
+
+    <div class="sub-head rv">
+      <p class="eyebrow">Reporting</p>
+      <h3>Five dashboards. Each answers one question.</h3>
+    </div>
+    <div class="dash5 rv">
+      <article><div class="mini mini--bars" aria-hidden="true"><i style="--h:30"></i><i style="--h:42"></i><i style="--h:55"></i><i style="--h:50"></i><i style="--h:68"></i><i style="--h:80"></i><b></b></div><h4>The calendar</h4><p class="dash-q">"Are we on pace for 20?"</p><p>Calls booked and held each week against target, by segment and source, with no-show rate.</p></article>
+      <article><div class="mini mini--funnel" aria-hidden="true"><i style="--w:100"></i><i style="--w:62"></i><i style="--w:40"></i><i style="--w:22"></i><i style="--w:12"></i></div><h4>Funnel and velocity</h4><p class="dash-q">"Where do leads stall?"</p><p>Stage-to-stage conversion and days in stage, by tier and segment.</p></article>
+      <article><div class="mini mini--clock" aria-hidden="true"><svg viewBox="0 0 80 46"><path d="M8 40a32 32 0 0 1 64 0" fill="none" stroke="#E4DFD3" stroke-width="8" stroke-linecap="round"/><path d="M8 40a32 32 0 0 1 48 -27.7" fill="none" stroke="#0A8A64" stroke-width="8" stroke-linecap="round"/></svg></div><h4>Speed to lead</h4><p class="dash-q">"Are we answering fast enough?"</p><p>Median time to first touch, share inside the SLA, untouched MQLs by age.</p></article>
+      <article class="is-key"><div class="mini mini--table" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h4>Source to revenue</h4><p class="dash-q">"What is producing pipeline?"</p><p>Pipeline and revenue by audience, message, channel and campaign, with cost per accepted call, per pilot and per customer.</p></article>
+      <article><div class="mini mini--dots" aria-hidden="true"><i></i><i></i><i></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i></div><h4>Pilot board</h4><p class="dash-q">"Which pilots will convert?"</p><p>Active pilots, days in, status against criteria, and how much of the kit pool is out.</p></article>
+    </div>
+
+    <div class="grid g2 sf-foot">
+      <article class="card card--ink rv">
+        <div class="card-ic">{{i:rocket}}</div>
+        <h4 style="font-family:var(--display);font-size:1.2rem;color:#fff">The head start: backfill the trials</h4>
+        <p class="mute small" style="margin-top:8px">Control Bionics has been running trials for about a year, with organizations across the US and Australia.{{ev:s:s15}}{{ev:v:s9}} Entering each one with segment, source, outcome and reason gives real trial-to-paid and cycle-time baselines on Day 30 instead of Day 180, plus a seed list for lookalike audiences. It is the cheapest data the company will ever buy.</p>
+      </article>
+      <article class="card rv" style="--d:80ms">
+        <div class="card-ic">{{i:ban}}</div>
+        <h4 style="font-family:var(--display);font-size:1.2rem">What does not get built in month one</h4>
+        <ul class="list-dot small mute" style="margin-top:10px">
+          <li>Weighted multi-touch attribution. First touch, last touch and self-reported source are enough to start.</li>
+          <li>Predictive scoring. There is not yet enough closed data to train it.</li>
+          <li>Long qualifying forms. Four fields and a calendar.</li>
+          <li>Branching nurture trees. Three short tracks by persona.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>

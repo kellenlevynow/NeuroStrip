@@ -1,0 +1,109 @@
+<section class="sec sec--paper" id="measure" data-title="Measurement">
+  <div class="wrap">
+    <header class="sec-head rv">
+      <p class="kicker"><b>12</b>Measurement</p>
+      <h2>Three levels. <span class="em hl-signal">Only the top two are goals.</span></h2>
+      <p class="lede">Marketing indicators are instruments on the dashboard, not the destination. They tell us where to look. They never tell us whether it is working. <b>A falling cost per lead is a warning until the sales-accepted rate confirms it.</b></p>
+    </header>
+
+    <div class="pyr rv">
+      <article class="pyr-1">
+        <header><span>Level 1</span><h3>Business outcomes</h3><em>What leadership is paying for</em></header>
+        <ul><li>New customers</li><li>First-year revenue</li><li>Qualified pipeline</li><li>Customer acquisition cost</li><li>Payback period</li><li>Expansion: sites live per account</li></ul>
+      </article>
+      <article class="pyr-2">
+        <header><span>Level 2</span><h3>Funnel outcomes</h3><em>What this role is accountable for</em></header>
+        <ul><li class="is-star">Held, qualified calls a week</li><li>Sales-accepted rate</li><li>SQL rate</li><li>Pilot starts</li><li>Pilot to paid</li><li>Cycle length by stage</li><li>Cost per held call, per pilot, per customer</li></ul>
+      </article>
+      <article class="pyr-3">
+        <header><span>Level 3</span><h3>Marketing indicators</h3><em>Diagnostics only. Never a target.</em></header>
+        <ul><li>Tier A account reach and engagement</li><li>Click-through rate</li><li>Cost per click</li><li>Cost per lead</li><li>Landing-page conversion</li><li>Reply rate</li><li>Retargeting pool size</li></ul>
+      </article>
+    </div>
+
+    <div class="sub-head rv">
+      <p class="eyebrow">Why cost per lead is not on the scorecard</p>
+      <h3>The cheap lead is often the expensive one.</h3>
+      <p>Two campaigns, drawn from the kind of results this plan expects to see. The numbers are illustrative. Move them.</p>
+    </div>
+
+    <div class="trap rv" id="trap">
+      <article class="trap-card" data-card="a">
+        <p class="eyebrow">Campaign A · broad clinician audience</p>
+        <label class="pm-s"><span>Cost per lead<output data-to="a-cpl"></output></span><input type="range" min="20" max="500" step="5" value="45" data-t="a-cpl"></label>
+        <label class="pm-s"><span>Leads that become sales-accepted calls<output data-to="a-rate"></output></span><input type="range" min="1" max="60" step="1" value="4" data-t="a-rate"></label>
+        <p class="trap-res"><span>Cost per sales-accepted call</span><b class="num" data-tr="a"></b></p>
+      </article>
+      <span class="trap-vs" aria-hidden="true">vs</span>
+      <article class="trap-card" data-card="b">
+        <p class="eyebrow">Campaign B · named accounts and search</p>
+        <label class="pm-s"><span>Cost per lead<output data-to="b-cpl"></output></span><input type="range" min="20" max="500" step="5" value="240" data-t="b-cpl"></label>
+        <label class="pm-s"><span>Leads that become sales-accepted calls<output data-to="b-rate"></output></span><input type="range" min="1" max="60" step="1" value="40" data-t="b-rate"></label>
+        <p class="trap-res"><span>Cost per sales-accepted call</span><b class="num" data-tr="b"></b></p>
+      </article>
+      <p class="trap-read" id="trapRead" aria-live="polite"></p>
+    </div>
+
+    <div class="sub-head rv">
+      <p class="eyebrow">Attribution</p>
+      <h3>Three lenses, read together. None is trusted alone.</h3>
+    </div>
+    <div class="grid g3 lens3">
+      <article class="card rv"><div class="card-ic">{{i:link}}</div><h4>What the click says</h4><p class="mute small">UTMs and click IDs on first and last touch. Precise, and blind to everything that happens off a link: a colleague's mention, a podcast, a booth conversation.</p></article>
+      <article class="card rv" style="--d:80ms"><div class="card-ic">{{i:message-square}}</div><h4>What the buyer says</h4><p class="mute small">"How did you hear about us?" as an open field on every hand-raise form, read weekly. It catches the word of mouth that clinical markets run on.</p></article>
+      <article class="card rv" style="--d:160ms"><div class="card-ic">{{i:split}}</div><h4>What the holdout says</h4><p class="mute small">Account-level tests: some Tier A accounts get the air cover and some do not. In a market of 1,000 accounts this is the only clean read on what a channel caused.</p></article>
+    </div>
+
+    <div class="sub-head rv">
+      <p class="eyebrow">Dashboard concept</p>
+      <h3>What the weekly review looks at.</h3>
+    </div>
+    <figure class="board rv" aria-label="Dashboard concept with illustrative data">
+      <div class="board-bar"><span class="board-dots" aria-hidden="true"><i></i><i></i><i></i></span><b>NeuroStrip demand · week 9 review</b><em>Illustrative data</em></div>
+      <div class="board-kpis">
+        <div><span>Held qualified calls</span><b class="num">13</b><i class="up">target 20 · up 3 on last week</i><u style="--v:65"></u></div>
+        <div><span>Sales-accepted rate</span><b class="num">58%</b><i class="up">floor 50%</i><u style="--v:58"></u></div>
+        <div><span>Pilots active</span><b class="num">11</b><i>of 16 kits</i><u style="--v:69"></u></div>
+        <div><span>Cost per held call</span><b class="num">$540</b><i class="up">allowable $928</i><u style="--v:58"></u></div>
+      </div>
+      <div class="board-body">
+        <div class="board-chart">
+          <p class="eyebrow">Held calls a week, by source</p>
+          <svg viewBox="0 0 520 220" role="img" aria-label="Stacked bars showing held calls rising from 3 in week one to 13 in week nine against a target of 20">
+            <g stroke="#E4DFD3"><path d="M40 65H510M40 110H510M40 155H510M40 200H510"/></g>
+            <path d="M40 20H510" stroke="#101827" stroke-dasharray="5 5"/>
+            <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8791A3"><text x="34" y="24" text-anchor="end">20</text><text x="34" y="69" text-anchor="end">15</text><text x="34" y="114" text-anchor="end">10</text><text x="34" y="159" text-anchor="end">5</text><text x="505" y="14" text-anchor="end" fill="#101827">target</text></g>
+            <g id="boardBars"></g>
+          </svg>
+          <p class="board-key"><span><i style="background:#101827"></i>Outbound</span><span><i style="background:#2C5BDB"></i>Search</span><span><i style="background:#0A8A64"></i>Live demo</span><span><i style="background:#F5B83D"></i>LinkedIn</span><span><i style="background:#CEC7B6"></i>Other</span></p>
+        </div>
+        <div class="board-table">
+          <p class="eyebrow">Source to pipeline, quarter to date</p>
+          <table>
+            <thead><tr><th>Audience · message · channel</th><th>Calls</th><th>Accepted</th><th>Pilots</th><th>Cost per call</th></tr></thead>
+            <tbody>
+              <tr><td><b>PT exec</b> · visible progress · search</td><td>14</td><td>71%</td><td>4</td><td class="ok">$310</td></tr>
+              <tr><td><b>PT clinical</b> · trace · live demo</td><td>17</td><td>65%</td><td>5</td><td class="ok">$180</td></tr>
+              <tr><td><b>PT exec</b> · trace · outbound</td><td>19</td><td>58%</td><td>4</td><td class="ok">$240</td></tr>
+              <tr><td><b>PT exec</b> · visible progress · LinkedIn</td><td>6</td><td>50%</td><td>1</td><td class="bad">$1,950</td></tr>
+              <tr><td><b>Sport</b> · cleared is not ready · outreach</td><td>9</td><td>78%</td><td>3</td><td class="ok">$120</td></tr>
+            </tbody>
+          </table>
+          <p class="board-note">{{i:triangle-alert}}LinkedIn's direct cost per call is over twice allowable. The holdout result decides whether it stays.</p>
+        </div>
+      </div>
+      <figcaption>Every number on this board is invented to show the layout and the kind of decision it supports. Real baselines arrive on Day 30.</figcaption>
+    </figure>
+
+    <div class="sub-head rv">
+      <p class="eyebrow">Cadence</p>
+      <h3>The rhythm that keeps the loops turning.</h3>
+    </div>
+    <ul class="cad rv">
+      <li><b>Daily</b><span>10 minutes</span><p>Pacing, lead quality check, anything red on speed to lead.</p></li>
+      <li><b>Weekly</b><span>30 minutes, with sales</span><p>The calendar, accepted and rejected leads with reasons, one kill, continue or scale call per live test.</p></li>
+      <li><b>Monthly</b><span>The gate review</span><p>Day 30, 60 and 90. Unit economics by source. Budget moves.</p></li>
+      <li><b>Quarterly</b><span>One page for leadership</span><p>Customers, pipeline, cost to acquire, what was learned, what changes next.</p></li>
+    </ul>
+  </div>
+</section>
