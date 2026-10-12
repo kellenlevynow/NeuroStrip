@@ -1,0 +1,32 @@
+<section class="sec" id="budget" aria-labelledby="budget-h">
+  <div class="wrap">
+    <header class="head rv">
+      <span class="eyebrow">Budget</span>
+      <h2 id="budget-h">$90,000 for 90 days books about 15 qualified calls a week.</h2>
+      <p class="sub">Compare three budgets side by side. Choose one to see the month-by-month spend and where the calls come from.</p>
+    </header>
+
+    <div class="big cmp rv" id="cmp"></div>
+
+    <div class="block cmp-detail rv" id="cmpDetail" aria-live="polite"></div>
+
+    <details class="more more--center rv">
+      <summary>Learn more about the budget math</summary>
+      <div class="more-c" id="budgetMore">
+        <h4>How qualified calls are worked out</h4>
+        <p>Each source has a planned weekly rate at Day 90. Only Google Search and the account-based ads change with the budget: their month-three spend is divided by a planned cost per qualified call. The other sources are held constant, which is why the range between Lean and Aggressive is narrow.</p>
+        <table class="tbl tbl--stack" id="srcTable"></table>
+        <h4>How calls become customers</h4>
+        <p>Of every 100 qualified calls, about 55 become real sales opportunities, about 25 start a pilot and about 12 sign. With a first-year value of $7,500, the most a qualified call can cost and still pay back in year one is about $930.</p>
+        <h4>Try another budget</h4>
+        <div class="slider"><label for="cmpRange">Total for 90 days <output id="cmpRangeOut" class="num">$90,000</output></label><input type="range" id="cmpRange"></div>
+        <div id="cmpCustom" class="cmp-custom"></div>
+      </div>
+    </details>
+
+    <ol class="notes">
+      <li id="budget-n1">Excludes salaries, event costs and the outbound email partner's retainer. Propensity's listed fee of $3,000 a month comes out of the account-based line. The list and intent data have no published prices and are quotes in week one.</li>
+      <li id="budget-n2">Planning rates: search at $330 per qualified call from published 2026 search benchmarks for health and fitness; the account-based ads at $2,000 per qualified call until the test produces its own number. Both are replaced with live data within weeks of launch.</li>
+    </ol>
+  </div>
+</section>

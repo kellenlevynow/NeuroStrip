@@ -1,0 +1,64 @@
+<section class="sec sec--gray" id="buyers" aria-labelledby="buyers-h">
+  <div class="wrap">
+    <header class="head rv">
+      <span class="eyebrow">The buying group</span>
+      <h2 id="buyers-h">Every sale needs four kinds of yes inside the group.</h2>
+      <p class="sub">Inside each physical therapy group, the people who decide together are its <button type="button" class="term" data-term="buyinggroup">buying group</button>. The owner signs, a clinical leader approves, a clinic director runs the pilot, and the people who run operations decide if it can roll out.</p>
+    </header>
+
+    <div class="big bmap rv" role="img" aria-label="Who decides: the owner or chief executive signs, the chief clinical officer or rehab director approves clinically, a clinic director runs the pilot, and the chief operating officer and practice administrator decide if it can roll out and can block it">
+      <div class="bmap-c bmap-sign"><p class="bmap-k">Signs</p><p class="bmap-r">Owner or chief executive officer (CEO)</p></div>
+      <div class="bmap-c bmap-clin"><p class="bmap-k">Approves clinically</p><p class="bmap-r">Chief clinical officer or rehab director</p></div>
+      <div class="bmap-c bmap-run"><p class="bmap-k">Runs the pilot</p><p class="bmap-r">Clinic director</p></div>
+      <div class="bmap-c bmap-ops"><p class="bmap-k">Decides rollout and payment, and can block it</p><p class="bmap-r">Chief operating officer (COO) and practice administrator</p></div>
+    </div>
+
+    <p class="center small muted rv" style="margin-top:18px">Who to contact first depends on size. We reach at least one leader and one clinical leader in every group. Under 15 clinics, start with the owner or CEO and the rehab director or a clinic director. From 15 clinics, start with the chief clinical officer and the CEO.</p>
+    <details class="more more--center rv">
+      <summary>Learn more about who is there at each size</summary>
+      <div class="more-c">
+        <div class="tiles bsize" id="bySize"></div>
+        <p class="small muted" style="margin-top:14px">Every group hears from at least one leader and one clinician. In weeks 5 to 8 we test, by group, whether starting with the clinician or the leader books more pilots. These size patterns are planning assumptions, checked against the account list in week one.</p>
+      </div>
+    </details>
+
+    <div class="block">
+      <div class="block-head rv"><h3>Seven job titles fill those four parts, and each gets two messages of its own.</h3><p class="lead">Pick a role to see its two messages. For testing, the roles fall into three clusters: executive, operations and clinical. Learn more shows how to sell to each role, week by week.</p></div>
+      <div class="roles rv" id="roles" aria-label="Roles in the buying group"></div>
+      <p class="center small" style="margin-top:18px"><a class="arrow-link" href="https://github.com/kellenlevynow/NeuroStrip/blob/main/docs/PERSONAS.md">Read the full buyer playbook</a></p>
+    </div>
+
+    <div class="block">
+      <div class="block-head rv"><h3>The ten objections we will hear most.</h3><p class="lead">Each answer stays inside what NeuroStrip is registered as: a tool that measures muscle activity and shows it back to the patient and therapist. It does not diagnose.</p></div>
+      <div class="obj rv"><table class="tbl tbl--stack" id="objTable"></table>
+        <details class="more more--center"><summary>Learn more: seven more objections</summary><div class="more-c"><table class="tbl tbl--stack" id="objTable2"></table></div></details>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-head rv"><h3>We test two messages on each cluster and keep the one that gets more interested replies.</h3><p class="lead">From week 5, people in each <button type="button" class="term" data-term="cluster">cluster</button> are split at random between message A and message B, each in their own role's wording. We call these the persona tests.</p></div>
+      <p class="center small muted rv">Each test stops when about 150 people have had each message, or after six weeks, whichever comes first. A message wins if its share of interested replies is at least 30% higher, for example 2% against 1.5%.</p>
+      <details class="more more--center rv">
+        <summary>Learn more about the test design</summary>
+        <div class="more-c">
+          <h4>The three tests</h4>
+          <div class="tiles" id="ptClusters"></div>
+          <h4>How each test runs</h4>
+          <ul class="dots">
+            <li>Inside each cluster, contacts are split at random between message A and message B, through the Propensity ad audiences and the outbound email sequences.</li>
+            <li>Each test runs to about 150 contacts per side or six weeks, whichever comes first.</li>
+            <li>We read two numbers: positive reply rate and meetings booked.</li>
+            <li>A message wins only if its positive reply rate is 30% or more above the other, and meetings booked do not point the other way. Below that, it is a tie: we keep the simpler message and test a new one against it.</li>
+            <li>Volumes are small, so most wins will be provisional. Outbound reaches 300 contacts a week, which is 50 a week for each of the six test cells. At the planned 1.5% positive reply rate, 150 contacts give about 2 replies a side and six weeks give about 4 or 5. A win with fewer than 10 positive replies on the leading side is used, then tested again in month four with fresh contacts before it changes every sequence.</li>
+          </ul>
+          <p class="small muted">The math: 150 × 1.5% = 2.25 replies. Six weeks at 50 contacts a week is 300 contacts a side, and 300 × 1.5% = 4.5 replies. Tests this small only find large differences, which is why the bar is a 30% gap read on replies and meetings together, and why a small win is checked again.</p>
+          <h4>Who to contact first</h4>
+          <p>At the same time, we test the order of contact by account. Half of the groups in each size band start with a clinical contact. The other half start with an executive. We compare pilots started per 100 groups at Day 90.</p>
+          <h4>What sales records</h4>
+          <p>Four new Salesforce fields make this readable: persona, buying role, message variant and objection heard. Sales picks from a fixed list on every call. We review them every week and update the answers and assets every month.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>

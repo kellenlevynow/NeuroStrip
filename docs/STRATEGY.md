@@ -1,281 +1,784 @@
 # NeuroStrip 90-day demand generation plan
 
-Prepared by Kellen Levy for the Control Bionics leadership team, October 2026. This is the text version of https://kellenlevynow.github.io/NeuroStrip/.
+**A 90-day plan toward 20 qualified sales calls a week.**
 
-## 1. Summary
+Prepared by Kellen Levy for the Control Bionics leadership team, October 2026. This is the text version of https://kellenlevynow.github.io/NeuroStrip/, generated from the page so the words match. It is an independent proposal. Control Bionics did not publish it.
 
-The goal is 20 qualified discovery calls a week on the NeuroStrip sales calendar, with every call traced to the audience, message and channel that produced it.
+The buyer playbook, with every role and objection in full, is in [PERSONAS.md](PERSONAS.md).
 
-| | |
-|---|---|
-| Goal | 20 qualified discovery calls a week |
-| Base budget | $90,000 for the first 90 days |
-| Day 90 | About 15 qualified calls a week |
-| Day 120 | About 20 qualified calls a week |
+About 15 a week by Day 90 and 20 by about Day 120. Who we reach, what we say, what it costs, and what Control Bionics gets back.
 
-| Question | Answer |
-|---|---|
-| Which audience comes first? | Outpatient PT groups with 5 to 25 locations get 70% of the effort, pro and college sport gets 20% through business development, and everyone else comes in through inbound only. |
-| Which channels, and how is the budget split? | A 90-day account-based test that runs Propensity ads to half of a purchased list of about 1,000 PT groups, plus Google Search and email, at 45%, 20% and 10% of channel spend, with 10% for retargeting and 15% for small tests. |
-| What goes to an agency, and what stays in-house? | Strategy, messaging and media decisions stay in-house, while partners supply the list, intent data, ads, video, outbound sending and a four-week Salesforce build, with the data and ABM contracts in Control Bionics' name on 90-day terms. |
-| What is a qualified lead, and how is it measured? | A decision maker or clinical lead at a target account who asked for a demo, pilot or pricing and named a problem we solve, measured through to pilots and paid contracts. |
-| What gets built in Salesforce in month one? | NeuroStrip record types, dated lifecycle stages, source tracking that cannot be overwritten, fields for NPI, intent and test group, lead routing with a one-hour response limit, pilot tracking and one weekly report. |
+## 1. Follow one group
 
-At the base budget, the model reaches about 15 qualified calls a week by Day 90. At that rate about 16 pilots start each month and about 24 become paying customers each quarter, worth about $180,000 in first-year revenue. It reaches 20 calls a week by about Day 120 if outbound reply rates improve, a second weekly demo fills and the APTA CSM follow-up converts.
+**Winning one 12-clinic group takes about 13 weeks and $4,100 of marketing.**
 
-## 2. Who we target first
+Here is how one physical therapy (PT) group, a company that owns 12 clinics, moves through the plan, and what each step costs. The rest of the page explains the system behind it.
 
-Regional outpatient PT groups get most of the effort, business development works pro and college sport, and everyone else comes in through inbound.
+**$4,100** of marketing to win one new customer, a group that signs for its first clinic, at the recommended $90,000 budget. We plan on one clinic paying Control Bionics about $7,500 in its first year, about $625 a month, so the $4,100 is earned back in about seven months.[1]
 
-| Audience | Share of effort | How we work it |
-|---|---|---|
-| Outpatient PT groups with 5 to 25 locations | 70% | A purchased list of about 1,000 groups, counted in week one. Account-based ads, search and outbound reach owners, executives and lead clinicians. The path is a discovery call, a 30-day pilot at one clinic, then rollout across the group. |
-| Pro and college sport | 20% | Business development leads. Marketing supplies return-to-play content, ads to a short list of named programs and the event plan. The goal is reference customers we can show PT groups. |
-| Everyone else: independent clinics, performance facilities, researchers | 10% | Inbound only. Search, the website and a weekly live group demo. No outbound and no dedicated spend. No patient or consumer advertising. |
+- **Week 1. The group is on our list.** We buy a list from a database of healthcare providers. It finds the group's clinics by their National Provider Identifier (NPI) and shows that all 12 share one owner. It names the owner, the chief operating officer (COO), the rehabilitation (rehab) director who leads the group's therapy work, and the directors of four of the clinics. Cost: about $11, this group's share of what we pay for the list and the research data
+- **Week 3. People there start researching.** Bombora, an intent data company, shows that staff at the group are reading more than usual about rehab equipment and billing software. Bombora reports by company and does not name people. That marks the group as researching now, so it moves to the front of the line for ads and email. Cost: already counted in the $11 above
+- **Week 4. Its leaders start to see our ads.** The list is split at random into two halves. This group lands in the half that sees account-based ads, bought through Propensity, an account-based ad platform. The other half, the holdout group, gets the same emails without ads, so we can measure what the ads add. The owner sees a 15-second video on LinkedIn. The clinic directors see banner ads on physical therapy news sites. Cost: about $45 of ads over 90 days
+- **Week 5. The rehab director gets an email. The owner gets a box.** The rehab director receives the first of four short, plain emails. The owner receives a box with a sample strip on a card and a one-page economics worksheet built from the group's own visit numbers. Cost: about $5 of email. The box price is a quote in week one.
+- **Week 6. The rehab director books a call.** The rehab director replies and books a time on the calendar of Tanner, the inside-sales rep who takes these calls. The lead passes our five checks, so the call counts as one qualified call, the number this whole plan is built to grow. Cost: about $510 of marketing per qualified call in month three, about half the $930 a call can cost and still pay back in its first year
+- **Week 7. They agree to a 30-day pilot.** On the call, the rehab director, the owner and one clinic director agree to a pilot, a 30-day trial at one clinic. Before it starts, they write their own success measures, such as minutes added to a visit and how often therapists use it. Cost: sales time, outside this budget
+- **Weeks 8 to 12. One clinic runs the pilot.** The clinic director uses NeuroStrip with real patients for 30 days. The rehab director checks the results against the measures they wrote. Cost: one kit on loan from the set Control Bionics keeps for pilots, plus setup time, both outside this budget. Pilot terms: confirm in week one.
+- **Week 13. The owner signs for the first clinic.** The pilot met its measures, so the owner signs. That clinic is planned to pay Control Bionics about $7,500 in its first year, more than the $4,100 it took to win.[3] Value: about $7,500 in the first year
+- **Months 4 to 12. The group rolls it out to more clinics.** The COO plans the next clinics on the same contract. If each extra clinic were priced like the first, all 12 would bring in about $90,000 a year with no new marketing spend. The price per extra clinic is confirmed in week one. Value: up to about $90,000 a year across 12 clinics
 
-Why PT groups first:
+#### Learn more: the math
 
-1. **They can fill the calendar.** 20 calls a week is about 1,000 conversations a year. There are about 1,000 PT groups with 5 to 25 locations, running about 10,000 clinics between them. US pro teams and Division I programs together number fewer than 600.
-2. **One sale can grow to 25 sites.** A group that pilots at one clinic can add its other locations on the same contract.
-3. **The buyer is within reach.** In a group this size a clinician usually sits on the leadership team. Above 50 locations, purchases go through committees and take quarters. Below 5, the deal is small and buyers compare us with a $499 biofeedback unit.
+##### Where the $4,100 comes from
 
-## 3. What we say and offer
+At the base budget, month three spends about $33,300 and produces about 15 qualified calls a week, or about 65 a month. That is about $510 per qualified call. Of those calls, 55% become real sales opportunities, 45% of those start a pilot, and half of pilots sign. So about 12.4% of qualified calls become customers, and $510 divided by 0.124 is about $4,100 per new customer.
 
-Every message makes one point. Strength and hop tests measure how much force a limb produces. NeuroStrip adds a live view of which muscles are producing it.
+##### How the per-group costs are worked out
 
-**Positioning:** For clinicians and performance staff who decide when a patient or athlete is ready, NeuroStrip is a wearable sensor that shows which muscles are doing the work, live, next to the strength tests they already use.
+- List and data: the $10,800 data line spread over about 1,000 target groups is about $11 a group. It also pays for scheduling tools and Salesforce work.
+- Ads: the $22,500 account-based line, including Propensity's listed fee, spread over the roughly 500 groups in the half that sees ads, is about $45 a group.
+- Email: the $5,400 email line spread over all 1,000 groups is about $5 a group.
+- The direct mail box has no published price. It is quoted in week one and capped inside the small-tests line.
 
-| Buyer | Message | Offer |
-|---|---|---|
-| Clinic owner (owner, CEO, COO, VP of clinical operations) | Patients who can see their progress have a reason to finish their plan of care. NeuroStrip puts that progress on screen at each visit and gives your clinics a service nearby competitors do not offer. | A 20-minute call to scope a 30-day pilot at one clinic, with success measures you choose. |
-| Lead clinician (clinic director, sports residency lead, senior PT) | A patient can pass a strength test while other muscles cover for the injured one. NeuroStrip shows activation on up to four muscles at once, live on a tablet, and goes on like a bandage. | A 90-second demo video, then a seat at the weekly live clinic demo. |
-| Sports performance lead (head athletic trainer, director of sports medicine or performance) | Keep your force plates. Add a live read of how hard the injured muscle is working compared with the other side before each return-to-play call. | A 20-minute walkthrough for the medical and performance staff together. |
+##### What would change this story
 
-All copy stays inside NeuroStrip's registration as a non-diagnostic measurement and biofeedback tool. Nothing says it diagnoses, predicts or prevents injury.
+Three numbers matter most: how many qualified calls become customers, the real first-year value, and the real price per extra clinic. All three come from Control Bionics' last 12 months of trials, which we enter in Salesforce in month one. By Day 30 these planning figures are replaced with real ones.
 
-### The first ads, email and mailer (example)
+Notes:
 
-**Account-based video or display ad, decision makers in the test half, through Propensity:**
+1. $4,100 is the base budget's month-three cost per qualified call ($510) divided by the share of calls planned to become customers (12.4%). Seven months is $4,100 divided by $7,500 a year, or $625 a month.
+2. The 7% and 37% figures are one athlete's example from Control Bionics: three weeks after a hamstring injury, force plates showed a 7% gap between legs and NeuroStrip showed a 37% gap in muscle activation. NeuroStrip is a non-diagnostic measurement and biofeedback tool.
+3. $7,500 is a planning figure for first-year value, replaced by real contract values from the trial history in month one. Price per extra clinic is confirmed in week one.
 
-> Three weeks after a hamstring injury, force plates showed a 7% gap between the athlete's legs. With NeuroStrip on both hamstrings, the gap in muscle activation was 37%.
->
-> Same athlete, two measures. Watch the 90-second video.
+## 2. The plan at a glance
 
-The same creative runs as a video on LinkedIn and Meta and as a display or native ad. There is no form, and everyone who watches joins the retargeting audience.
+**$90,000 over 90 days fills three quarters of the sales calendar.**
 
-**Google Search ad**, for people searching for EMG and biofeedback tools (example query: "wireless emg biofeedback for physical therapy"):
+The goal is 20 qualified calls a week. Counting from Day 1 on December 1, 2026, the plan gets to about 15 by Day 90 and 20 by about Day 120, and every call is traced to where it came from.
 
-> **Wireless sEMG for the Clinic | 4 Grams, No Wires, No Lab**
-> See muscle activation live on a tablet. Up to four muscles at once. Applies like a bandage in seconds. Watch the 90-second demo or book a 20-minute walkthrough.
-> Sitelinks: Compare sEMG options · Return-to-sport use · Run a 30-day pilot · Research specifications
+- **The goal: 20 qualified calls a week.** That fills the calendar of Tanner, the inside-sales rep who takes these calls, at about 20 to 25 a week.[1]
 
-Each sitelink goes to its own page, so the click tells us the buyer type before the form does.
+- **The budget: $90,000 for the first 90 days.** Marketing money only. Salaries and conference costs are paid separately. About 55% buys ads and email, 37% pays for video, web pages, the list and Salesforce setup, and 8% is held back for whatever works best.
 
-**First outbound email**, to a lead clinician at a target account. Subject: *7% on force, 37% in the muscle*
+- **By Day 90: 15 qualified calls a week.** Tanner's calendar is three quarters full by Day 90.
 
-> Hi {first name},
->
-> A football club tested a player three weeks after a hamstring injury. On force plates his legs were 7% apart, which usually means cleared. With our sensors on both hamstrings, muscle activation was 37% apart.
->
-> The sensor is NeuroStrip. It weighs 4 grams, goes on like a bandage and shows activation live on an iPad.
->
-> Your clinicians make return-to-sport calls every week. Would a 20-minute look be useful? If the timing is wrong, I can send the 90-second video instead.
+- **By about Day 120: 20 qualified calls a week.** The calendar fills if more people reply to our emails, a second weekly live demo fills up, and people we meet at February's physical therapy conference book calls.
 
-Sent as plain text with one ask, starting with in-market practices.
+- **Cost per qualified call in month three: $510 against a $930 limit.** $930 is the most a qualified call can cost and still pay back in a year, since about one call in eight becomes a $7,500 customer. At $510 there is room to spend more on what works.
 
-**Direct mail postcard**, to owners at in-market practices. Front: *One athlete measured two ways: a 7% gap on force plates and a 37% gap in muscle activation.*
+- **New customers: 24 a quarter (every three months), once the first pilots finish.** About $180,000 in first-year value a quarter, twice the 90-day budget, before any group adds clinics.
 
-> {First name}, your clinicians make return-to-sport decisions every week.
->
-> NeuroStrip is a 4-gram wireless sensor that shows muscle activation live on a tablet, on up to four muscles at once.
->
-> We would like to run a 30-day pilot at one of your clinics, with success measures you choose. Scan the code to book a 20-minute call.
+### Control Bionics asked five questions. Here are the short answers.
 
-Sent through Propensity to owners at in-market practices only. Each scan of the code is tied to the contact in Salesforce.
+**Which audience comes first?** Physical therapy groups with 5 to 25 clinics get 70% of the team's time and attention. Pro and college sport gets 20%, sold team by team by Control Bionics' business development lead. Everyone else gets 10%: they find us through search, the website and a weekly live demo.
 
-## 4. Channels
+**Which channels, and how is the budget split?** Account-based ads to half of a purchased list of about 1,000 groups get 45% of the $49,500 for ads and email. Google Search gets 20%, email 11%, retargeting 9% and small tests 15%.
 
-Channel money goes to a 90-day account-based test, Google Search and email. LinkedIn self-serve prospecting is on hold because it converts poorly for this buyer.
+**What goes to an agency, and what stays in-house?** Strategy, messages and spending decisions stay with Control Bionics. Agencies and vendors supply the list, the research data, the ads, video, email sending and four weeks of setup in Salesforce. Every data and ad contract is in Control Bionics' name and runs for 90 days.
 
-Channel spend: account-based test 45%, Google Search 20%, email 10%, retargeting 10%, small tests 15%.
+**What is a qualified lead, and how is it measured?** We call it a sales-ready lead: a leader or clinician at a target group who asked for a demo, a pilot or pricing. Their first call counts as one qualified call once they name a problem NeuroStrip helps with and could start a pilot within 60 days. We follow each one to a pilot and a signed contract, and report the cost of each step.
 
-### The account-based test
+**What gets built in Salesforce in month one?** NeuroStrip leads kept apart from Control Bionics' communication devices business, a date on every step from call to contract, a record of where each lead came from that nobody can change, boxes for role, message and objection, a one-hour reply rule, pilot tracking and one weekly report.
 
-The test gets 45% of channel spend, which is $22,500 at the base budget, and runs for 90 days.
+#### Learn more: the assumptions
+
+Every number on this page comes from a short list of planning assumptions. Each one is replaced by a real number in the first 30 days.
+
+| Assumption | Planning value | Replaced by |
+| --- | --- | --- |
+| Calls one inside-sales calendar can hold | 20 to 25 a week | Sales, in week one |
+| Qualified calls that become sales opportunities | 55% | The last 12 months of trials, by Day 30 |
+| Opportunities that start a pilot | 45% | The same trial history |
+| Pilots that sign | 50% | The same trial history |
+| First-year value of a new customer | $7,500 | Closed trial contracts |
+| Cost per qualified call from search | $330 | Live account data within two weeks of launch |
+| Cost per qualified call from account-based ads | $2,000 | The test's own results, read at Day 60 |
+| Calls that already come in each week without ads | 3.8 | A count by source for the last eight weeks |
+
+The $930 limit is $7,500 times the 12.4% of qualified calls planned to become customers. It is the most a call can cost and still pay back in the first year from one clinic.
+
+Notes:
+
+1. The 20 a week goal is the target set for this role. The 20 to 25 calls a week capacity is a planning assumption, confirmed with sales in week one.
+
+## 3. Who we target first
+
+**Physical therapy groups with 5 to 25 clinics come first.**
+
+There are enough of them to keep the calendar full, and one sale can spread to every clinic in the group.
+
+About 1,000
+
+groups with 5 to 25 clinics, running about 10,000 clinics between them
+
+20 calls a week is about 1,000 calls a year, so the list holds about one group for every call Tanner can take in a year. If the real count in week one is far lower, we add groups with 26 to 50 clinics.
+
+70%
+
+PT groups with 5 to 25 clinics
+
+20%
+
+Pro and college sport
+
+10%
+
+Everyone else
+
+- **70% of our time and attention: Physical therapy groups with 5 to 25 clinics.** A purchased list of about 1,000 groups. Ads, search and email reach their owners, leaders and clinicians. The path is a call, a 30-day pilot at one clinic, then more clinics.
+
+- **20% of our time and attention: Pro and college sport.** Control Bionics' business development lead sells to each team directly. Marketing supplies content on return to sport (getting injured athletes back to play), ads to a short list of named programs and the event plan. The aim is sport customer stories, once cleared, to show physical therapy groups.
+
+- **10% of our time and attention: Everyone else.** Single clinics outside a group, training facilities and researchers find us on their own, through search, the website and a weekly live demo. We send them no emails they did not ask for, and run no ads aimed at patients or the public.
+
+### Groups this size can fill the calendar, grow after one sale, and have a decision maker we can reach.
+
+- **1: They can fill the calendar.** 20 calls a week is about 1,000 calls a year, and there are about 1,000 groups this size. American pro teams and top-division college programs number fewer than 600 together, too few to fill the calendar alone.[1]
+
+- **2: One sale can grow to every clinic in the group.** A group that pilots at one clinic can add its other clinics on the same contract, with no new marketing spend.
+
+- **3: The person who decides is reachable.** In a group this size a therapist usually sits on the leadership team, so the person who sees the clinical value can help say yes. Above 50 clinics, buying goes through committees and takes months. Below 5, the deal is small and buyers compare NeuroStrip with a $499 biofeedback unit that reads one muscle.[2]
+
+#### Learn more: the market math
+
+##### How big the target is
+
+The United States has about 39,000 outpatient physical therapy clinics. About 82% belong to independents and groups with fewer than 25 clinics. Groups with 5 to 25 clinics run about 10,000 clinics at an average of 6 to 15 clinics each, which gives roughly 700 to 1,700 groups. The plan uses about 1,000 and counts the real number from the purchased list in week one.[3]
+
+##### Why sport gets 20%
+
+Sport teams decide fast and know muscle testing well, so the demo lands quickly. But there are too few of them to fill 20 calls a week, budgets reset once a year, and two roles are open at Control Bionics for exactly this split: business development for named sport programs, and demand generation for volume. Sport stories then help sell to physical therapy groups.
+
+##### What would change the order
+
+If the week-one count shows far fewer than 700 groups, or the Day 30 match check finds that fewer than 60% can be reached by name, we widen to groups with 26 to 50 clinics before adding new audiences.
+
+Notes:
+
+1. Fewer than 200 top-flight American pro teams and about 350 National Collegiate Athletic Association (NCAA) Division I programs, counted from league and NCAA directories. Planning figure, recounted when the sport list is built.
+2. mTrigger biofeedback devices list from $499 on the vendor's site, viewed October 2026.
+3. Orbital, market map of outpatient physical therapy in the United States, June 2026; Stifel, Physical Therapy Market Overview, July 2025. The 1,000 groups figure is a planning estimate from these two sources.
+
+## 4. The buying group
+
+**Every sale needs four kinds of yes inside the group.**
+
+Inside each physical therapy group, the people who decide together are its buying group. The owner signs, a clinical leader approves, a clinic director runs the pilot, and the people who run operations decide if it can roll out.
+
+- **Signs:** Owner or chief executive officer (CEO)
+- **Approves clinically:** Chief clinical officer or rehab director
+- **Runs the pilot:** Clinic director
+- **Decides rollout and payment, and can block it:** Chief operating officer (COO) and practice administrator
+
+Who to contact first depends on size. We reach at least one leader and one clinical leader in every group. Under 15 clinics, start with the owner or CEO and the rehab director or a clinic director. From 15 clinics, start with the chief clinical officer and the CEO.
+
+#### Learn more: who is there at each size
+
+- **5 to 10 clinics: Contact first: The owner and one clinic director.** The owner is often also the CEO and still treats patients. Each clinic has a director. A separate COO or chief clinical officer is rare.
+
+- **11 to 14 clinics: Contact first: The owner or CEO and the rehab director.** An owner or CEO, a rehab director who leads clinical work, clinic directors and a practice administrator. A COO sometimes appears.
+
+- **15 to 25 clinics: Contact first: The chief clinical officer and the CEO. The COO joins once a pilot is scoped.** A CEO, a COO, a chief clinical officer, clinic directors and a practice administrator, each a separate person.
+
+Every group hears from at least one leader and one clinician. In weeks 5 to 8 we test, by group, whether starting with the clinician or the leader books more pilots. These size patterns are planning assumptions, checked against the account list in week one.
+
+### Seven job titles fill those four parts, and each gets two messages of its own.
+
+Pick a role to see its two messages. For testing, the roles fall into three clusters: executive, operations and clinical. Learn more shows how to sell to each role, week by week.
+
+**The seven roles.** The full playbook for each role is in [PERSONAS.md](PERSONAS.md).
+
+- **Clinic Owner** (Signs, executive cluster). The owner signs the contract and wants to know two things: whether patients who see their progress finish more of their visits, and whether a return-to-sport service sets the group apart from nearby clinics. Message A: Patients who can see their progress have a reason to finish their plan of care. Message B: A return-to-sport program the clinic down the street does not have.
+- **Chief Executive Officer (CEO)** (Signs, executive cluster). The CEO signs in larger groups and wants a program that can roll out to every clinic and be measured the same way at each one. Message A: A program you can roll out to every clinic and measure. Message B: Objective muscle data to show referring physicians and partners.
+- **Chief Operating Officer (COO)** (Decides rollout and payment, operations cluster). The COO decides whether NeuroStrip is easy to roll out across clinics and can stop it if it adds minutes, training or lost equipment. Message A: Each sensor goes on in seconds and shows live on an iPad. Message B: One standard return-to-sport test in every clinic.
+- **Chief Clinical Officer** (Approves clinically, clinical cluster). The chief clinical officer decides whether NeuroStrip is sound enough to put in front of patients and into the group's protocols. Message A: Strength tests can miss muscles covering for an injured one. Message B: A documented return-to-sport protocol.
+- **Rehab Director** (Approves clinically, clinical cluster). The rehab director controls equipment spend and how new tools reach the therapists, so this person decides whether NeuroStrip gets used every week. Message A: A live target line on screen shows patients how hard to work the muscle. Message B: One tool for joint, sports and nerve-injury patients.
+- **Practice Administrator** (Decides rollout and payment, operations cluster). The practice administrator handles the paperwork and checks the costs for rollout and payment. This person rarely makes the final call but can stall the deal if questions go unanswered. Message A: Clear annual pricing and what it includes. Message B: A monthly report on plan-of-care completion at the pilot clinic.
+- **Clinic Director** (Runs the pilot, clinical cluster). The clinic director runs one clinic and the pilot inside it, and is often the first person in a group to push for NeuroStrip. Message A: Show patients their progress at every visit. Message B: Be the first clinic in the group to run it.
+
+[Read the full buyer playbook](PERSONAS.md)
+
+### The ten objections we will hear most.
+
+Each answer stays inside what NeuroStrip is registered as: a tool that measures muscle activity and shows it back to the patient and therapist. It does not diagnose.
+
+| The objection | Who raises it | The answer | Proof to send | Follow-up question |
+| --- | --- | --- | --- | --- |
+| "We already test strength with force plates and hop tests." | Chief clinical officer, rehab director, clinic director, owner | Keep them. Force plates and hop tests show how much force a leg makes, and NeuroStrip adds which muscles are making it, in the same session. | 90-second video | When a patient passes your strength test, how do you check the injured muscle is doing its share? |
+| "My therapists do not have time." | Clinic director, COO, rehab director | Each sensor goes on like a bandage and shows on an iPad during the visit. The pilot measures the minutes it adds, so you see the real cost before any rollout. | Live demo | How many minutes could a return-to-sport visit give to this today? |
+| "It costs more than a $499 biofeedback unit." | Owner, practice administrator, COO | A single-channel unit reads one muscle. NeuroStrip reads up to four at once, wirelessly, and saves a record of each session.Confirm in week one: How a session record gets into the patient's electronic medical record (EMR) | Economics worksheet | What would one more finished plan of care a month be worth to a clinic? |
+
+#### Learn more: seven more objections
+
+| The objection | Who raises it | The answer | Proof to send | Follow-up question |
+| --- | --- | --- | --- | --- |
+| "Can we bill for it?" | Owner, practice administrator, CEO, COO | Your billing team decides that, and we make no billing promises. Control Bionics will confirm what current customers do.Confirm in week one: What current customers do about billing | Pricing and questions page | Who on your team should hear how current customers handle it? |
+| "Is surface electromyography (EMG) reliable, and where is the evidence?" | Chief clinical officer, rehab director, clinic director | We share the specification sheet and a summary of published research, including a 2022 review of eight trials of muscle-sensor biofeedback after knee surgery. The pilot lets your clinicians judge the readings on their own patients. | Specification sheet and evidence summary | What would your team need to see in a pilot to trust the readings? |
+| "We bought tech before and it sat in a drawer." | Owner, CEO, COO, rehab director | The pilot names one clinic director to run it, and you write the success measures, including how often it gets used. If it is not used, it does not roll out.Confirm in week one: Standard pilot terms | Pilot guide | What made the last tool stop being used? |
+| "Not this budget cycle." | Owner, CEO, COO, practice administrator | A 30-day pilot at one clinic can start now and give you your own numbers for the next budget.Confirm in week one: Pilot terms and cost | Pilot guide and rollout plan | When does your next budget get set, and who sets it? |
+| "Does it work with our electronic medical record (EMR)?" | COO, practice administrator, clinic director, chief clinical officer | We confirm which record systems it works with in week one, and say only what is confirmed in writing.Confirm in week one: Which EMR systems it works with today | Pricing and questions page | Which system do you use, and are you changing it this year? |
+| "Where does patient data go?" | Practice administrator, COO, chief clinical officer, CEO | We give you, in writing, where session data is stored and who can see it. Your administrator reviews it before the pilot starts.Confirm in week one: Where session data is stored and who can see it | Pilot agreement | Who signs off on new software that stores patient data? |
+| "Who else like us uses it?" | Owner, CEO, chief clinical officer, COO | We share customer stories and references once those customers clear them. Until then, the pilot gives you your own result to judge.Confirm in week one: Which customers we may name | A customer story, once cleared | Would a call with a similar group help, once we can set one up? |
+
+8 more objections, with answers, are in the [buyer playbook](PERSONAS.md#objections).
+
+### We test two messages on each cluster and keep the one that gets more interested replies.
+
+From week 5, people in each cluster are split at random between message A and message B, each in their own role's wording. We call these the persona tests.
+
+Each test stops when about 150 people have had each message, or after six weeks, whichever comes first. A message wins if its share of interested replies is at least 30% higher, for example 2% against 1.5%.
+
+#### Learn more: the test design
+
+##### The three tests
+
+- **Executive cluster: Owner.** A: Patients who can see their progress have a reason to finish their plan of care. B: A return-to-sport program the clinic down the street does not have. CEO A: A program you can roll out to every clinic and measure. B: Objective muscle data to show referring physicians and partners.
+
+- **Operations cluster: COO.** A: Each sensor goes on in seconds and shows live on an iPad. B: One standard return-to-sport test in every clinic. Practice administrator A: Clear annual pricing and what it includes. B: A monthly report on plan-of-care completion at the pilot clinic.
+
+- **Clinical cluster: Chief clinical officer.** A: Strength tests can miss muscles covering for an injured one. B: A documented return-to-sport protocol. Rehab director A: A live target line on screen shows patients how hard to work the muscle. B: One tool for joint, sports and nerve-injury patients. Clinic director A: Show patients their progress at every visit. B: Be the first clinic in the group to run it.
+
+##### How each test runs
+
+- Inside each cluster, contacts are split at random between message A and message B, through the Propensity ad audiences and the outbound email sequences.
+- Each test runs to about 150 contacts per side or six weeks, whichever comes first.
+- We read two numbers: positive reply rate and meetings booked.
+- A message wins only if its positive reply rate is 30% or more above the other, and meetings booked do not point the other way. Below that, it is a tie: we keep the simpler message and test a new one against it.
+- Volumes are small, so most wins will be provisional. Outbound reaches 300 contacts a week, which is 50 a week for each of the six test cells. At the planned 1.5% positive reply rate, 150 contacts give about 2 replies a side and six weeks give about 4 or 5. A win with fewer than 10 positive replies on the leading side is used, then tested again in month four with fresh contacts before it changes every sequence.
+
+The math: 150 × 1.5% = 2.25 replies. Six weeks at 50 contacts a week is 300 contacts a side, and 300 × 1.5% = 4.5 replies. Tests this small only find large differences, which is why the bar is a 30% gap read on replies and meetings together, and why a small win is checked again.
+
+##### Who to contact first
+
+At the same time, we test the order of contact by account. Half of the groups in each size band start with a clinical contact. The other half start with an executive. We compare pilots started per 100 groups at Day 90.
+
+##### What sales records
+
+Four new Salesforce fields make this readable: persona, buying role, message variant and objection heard. Sales picks from a fixed list on every call. We review them every week and update the answers and assets every month.
+
+## 5. What we say
+
+**Every message makes one point: see which muscles are doing the work.**
+
+Strength tests show how much force a leg or arm makes. NeuroStrip adds a live view of which muscles make it, on up to four muscles at once.
+
+### Each part of the buying group hears it a different way.
+
+From week 5, each cluster tests message A against message B, and we keep the one that earns more interested replies. Below is the pair for one role in each cluster. Every role's pair is in the buying group section.
+
+- **Executive · shown for the owner: A: Patients who can see their progress have a reason to finish their plan of care.** B: A return-to-sport program the clinic down the street does not have. What we offer: a worksheet that works out, from their own visit numbers, what one more finished plan of care is worth, then a call to plan a pilot.
+
+- **Operations · shown for the COO: A: Each sensor goes on in seconds and shows live on an iPad.** B: One standard return-to-sport test in every clinic. What we offer: a walkthrough of how it fits a clinic day, a one-page rollout plan and the pricing questions page.
+
+- **Clinical · shown for the chief clinical officer: A: Strength tests can miss muscles covering for an injured one.** B: A documented return-to-sport protocol, the written steps a clinic follows before an athlete plays again. What we offer: the clinical primer, a short guide to the research on muscle activation after injury, plus the 90-second video and a weekly live demo.
+
+For clinicians and sports performance staff who decide when a patient or athlete is ready to return to sport, NeuroStrip is a wearable sensor that shows which muscles are doing the work, live, next to the strength tests they already use.
+
+#### Learn more: what we can and cannot say
+
+NeuroStrip is registered as a non-diagnostic measurement and biofeedback tool. Every message stays inside that line, and a claims list is approved with regulatory before anything runs.
+
+| Say freely | Say only with a source | Never say |
+| --- | --- | --- |
+| Measures and shows muscle activation. Live biofeedback. Up to four muscles at once, no wires. Objective data to inform a decision. | A named customer's result, once the customer clears it. Published research, cited. Program economics, using the clinic's own numbers. | Diagnoses, predicts or prevents injury. Clears an athlete to play. Guaranteed or proven results. Billable, unless compliance signs off. |
+
+##### Why one idea, three ways
+
+Buyers already believe strength tests answer the readiness question. The message has to show what those tests leave out before it asks for a call. The trace makes that point in about five seconds and needs no technical words, so it anchors every ad. Each cluster then hears the reason it matters to their job.
+
+Notes:
+
+1. One athlete's example from Control Bionics: force plates showed a 7% gap between legs, and NeuroStrip on both hamstrings showed a 37% gap in muscle activation. The curves are drawn to those two numbers. It is not a result for any other patient.
+
+## 6. The campaign
+
+**Every ad carries one line: "See the muscle behind the number."**
+
+Most pieces show force and muscle activation side by side. Each asks for one next step: a call to plan a pilot, a live demo or a read of the clinical primer.
+
+The headline each cluster sees across its ads. The A and B messages are tested underneath it.
+
+- **Executive cluster: Let patients see their progress, in every clinic you run.**
+
+- **Operations cluster: On in seconds, live on an iPad, at one clear annual price.**
+
+- **Clinical cluster: See when other muscles cover for an injured one, and document it.**
+
+#### 15-second video, six frames (Video)
+
+- **Where it runs:** LinkedIn and Meta video placements bought through Propensity, shown only to the half of the list that gets ads
+- **Size or limits:** 15 seconds, square and vertical, captions always on
+- **Who sees it:** Chief clinical officers, rehab directors and clinic directors
+- **Message tested:** A against B in each role's wording. Chief clinical officer: strength tests can miss muscles covering for an injured one, against a documented return-to-sport protocol
+- **Call to action:** Read the clinical primer
+- **Landing page:** Clinical primer page with the 90-second video
+- **Number we read:** Interested replies and meetings per 100 clinical contacts, the half that sees ads against the holdout half
+
+#### Animated banner set, three frames (Website banners)
+
+- **Where it runs:** Banner spaces on Propensity's network of websites, shown only to the half of the list that gets ads
+- **Size or limits:** 300 × 250, 728 × 90, 160 × 600 and 320 × 50. Three frames over 15 seconds
+- **Who sees it:** All seven roles at groups in the half that gets ads
+- **Message tested:** The gap, the trace, then the pilot offer
+- **Call to action:** Book a pilot call
+- **Landing page:** Pilot page with the scheduler
+- **Number we read:** Booked pilot calls per 100 groups, the half that sees ads against the holdout half
+
+#### Five-card carousel (LinkedIn and Meta)
+
+- **Where it runs:** LinkedIn and Meta carousel placements bought through Propensity, shown only to the half of the list that gets ads
+- **Size or limits:** Five square cards, headlines up to 45 characters
+- **Who sees it:** Owners and chief executives
+- **Message tested:** A against B in each role's wording. Owner: patients who can see their progress have a reason to finish their plan of care, against a return-to-sport program the clinic down the street does not have
+- **Call to action:** Get the economics worksheet
+- **Landing page:** Economics worksheet built from their own visit numbers
+- **Number we read:** Worksheets started and meetings booked per 100 executives in the half that sees ads
+
+#### Sponsored article ad on an industry site (Sponsored articles)
+
+- **Where it runs:** Sponsored posts that look like articles, placed next to stories on physical therapy news sites, bought through Propensity
+- **Size or limits:** Headline up to 55 characters, body up to 120
+- **Who sees it:** Readers of articles on return to sport and outcomes
+- **Message tested:** Strength tests can miss muscles covering for an injured one
+- **Call to action:** Read the clinical primer
+- **Landing page:** Clinical primer page
+- **Number we read:** Primer reads from target groups, and replies that follow
+
+#### Box for owners at groups researching now (Mailed box)
+
+- **Where it runs:** Direct mail through Propensity, sent only after a group starts researching
+- **Size or limits:** A small box with a letter-size estimate and a card holding a sample strip
+- **Who sees it:** Owners at groups that are researching now, capped at 100 boxes
+- **Message tested:** Patients who can see their progress have a reason to finish their plan of care
+- **Call to action:** Scan to book a 20-minute pilot scoping call for one of your clinics.
+- **Landing page:** Pilot call booking page that shows the group's estimate
+- **Number we read:** Code scans and booked calls per 100 boxes. Each box is priced in week one
+
+#### Phone ad at the Combined Sections Meeting (Conference phone ad)
+
+- **Where it runs:** Phones inside a geofence, an ad area drawn around the Philadelphia convention center, during the American Physical Therapy Association Combined Sections Meeting (APTA CSM), February 4 to 6, 2027, through Propensity
+- **Size or limits:** 320 × 480, with a 320 × 50 version
+- **Who sees it:** Anyone inside the geofence. Most are physical therapists attending the meeting
+- **Message tested:** A 60-second activation test at the booth
+- **Call to action:** Book a demo slot
+- **Landing page:** Booth booking page
+- **Number we read:** Booth tests and meetings booked during the show
+
+#### Category search ad and landing page (Google Search)
+
+- **Where it runs:** Google Search, category search keywords
+- **Size or limits:** Headlines up to 30 characters, descriptions up to 90
+- **Who sees it:** People searching these terms, most of them clinicians and owners
+- **Message tested:** Wireless muscle sensing for the clinic
+- **Call to action:** Watch the 90-second video
+- **Landing page:** See muscle activation live, on up to four muscles at once
+- **Number we read:** 35% or more of search leads accepted by sales
+
+#### Competitor search ad and landing page (Google Search)
+
+- **Where it runs:** Google Search, competitor search keywords
+- **Size or limits:** Headlines up to 30 characters, descriptions up to 90
+- **Who sees it:** People searching these terms, most of them clinicians and owners
+- **Message tested:** Four muscles at once, wireless, with a record you can document
+- **Call to action:** See pricing and common questions
+- **Landing page:** Which muscle sensor fits which job in your clinic
+- **Number we read:** 35% or more of search leads accepted by sales
+
+#### Problem search ad and landing page (Google Search)
+
+- **Where it runs:** Google Search, problem search keywords
+- **Size or limits:** Headlines up to 30 characters, descriptions up to 90
+- **Who sees it:** People searching these terms, most of them clinicians and owners
+- **Message tested:** Strength tests can miss compensation
+- **Call to action:** Read the clinical primer
+- **Landing page:** See which muscles produce the force your strength tests measure
+- **Number we read:** 35% or more of search leads accepted by sales
+
+#### Executive email sequence (Email)
+
+- **Where it runs:** Outbound email from the rep, both halves of the list
+- **Size or limits:** Four plain-text emails, each under 110 words
+- **Who sees it:** Owners and chief executives
+- **Message tested:** A against B in each role's wording. Owner: patients who can see their progress have a reason to finish their plan of care, against a return-to-sport program the clinic down the street does not have
+- **Call to action:** Reply, or book a time on the calendar
+- **Landing page:** None. Replies go to the rep, and the calendar link books a call
+- **Number we read:** Interested replies from 1.5% or more of contacts, the rate the plan counts on, and meetings booked
+
+#### Operations email sequence (Email)
+
+- **Where it runs:** Outbound email from the rep, both halves of the list
+- **Size or limits:** Four plain-text emails, each under 110 words
+- **Who sees it:** Chief operating officers and practice administrators
+- **Message tested:** A against B in each role's wording. COO: each sensor goes on in seconds and shows live on an iPad, against one standard return-to-sport test in every clinic
+- **Call to action:** Reply, or book a time on the calendar
+- **Landing page:** None. Replies go to the rep, and the calendar link books a call
+- **Number we read:** Interested replies from 1.5% or more of contacts, the rate the plan counts on, and meetings booked
+
+#### Clinical email sequence (Email)
+
+- **Where it runs:** Outbound email from the rep, both halves of the list
+- **Size or limits:** Four plain-text emails, each under 110 words
+- **Who sees it:** Chief clinical officers, rehab directors and clinic directors
+- **Message tested:** A against B in each role's wording. Chief clinical officer: strength tests can miss muscles covering for an injured one, against a documented return-to-sport protocol
+- **Call to action:** Reply, or book a time on the calendar
+- **Landing page:** None. Replies go to the rep, and the calendar link books a call
+- **Number we read:** Interested replies from 1.5% or more of contacts, the rate the plan counts on, and meetings booked
+
+#### Learn more: how the campaign is built
+
+##### The idea
+
+Strength tests tell a clinic how much force a limb produces, and NeuroStrip shows which muscles are producing it, live on an iPad or tablet, in the same session. Every piece of the campaign puts those two views side by side and then asks each buyer to see it in their own group with a 30-day pilot at one clinic.
+
+##### What each cluster is tested on
+
+| Cluster | Message A | Message B |
+| --- | --- | --- |
+| Executive | Patients who can see their progress have one more reason to finish their plan of care, which is the full set of visits their therapist prescribes. NeuroStrip puts muscle activation on an iPad at each visit, so the patient watches the muscle they are rebuilding at work. The pilot then tracks visits per plan of care against the clinic's own baseline. | The group starts with a 30-day pilot at one clinic, with success measures its own team chooses. If the clinic meets them, other locations can join on the same contract and track the same measures, so leadership can compare clinics side by side. Pilot and contract terms: confirm in week one. |
+| Operations | Each 4-gram sensor goes on like an adhesive bandage and shows muscle activation live on an iPad or tablet, with up to four sensors at once. There are no wires to manage and no lab to book, so it fits inside a normal treatment session. | Annual pricing, what it includes and answers to common questions sit on one pricing questions page. Support, data security and electronic medical record (EMR) integration go on that page once each is confirmed in week one. Billing questions go to the clinic's billing team, and Control Bionics will confirm what current customers do. |
+| Clinical | A patient can pass a strength test while other muscles cover for the injured one. Clinicians call this compensation. NeuroStrip shows activation on up to four muscles at once, on both sides and live, so the clinician can see what a force number can miss. In one athlete's example, three weeks after a hamstring injury, force plates showed a 7% gap between legs and NeuroStrip on both hamstrings showed a 37% gap in activation. | NeuroStrip adds an activation measure to each stage of a written return-to-sport protocol, recorded with synced video, so each decision has a documented record behind it. The clinician still makes every call, and the patient can see the same screen. |
+
+##### Rules every piece follows
+
+- Every claim stays inside NeuroStrip's registration as a non-diagnostic measurement and biofeedback tool.
+- The 7% and 37% case appears only as one athlete's example.
+- No testimonials, quotes, customer names or logos until Control Bionics clears them.
+- Search ads never put a competitor's brand name in the ad text.
+- Every link carries tracking tags, so Salesforce records where each lead came from.
+
+Notes:
+
+1. Every piece is a mockup at its true size, scaled down on small screens. Frames are drawn without platform logos. Product illustrations stand in for Control Bionics photography until the image files are added.
+2. The 7% and 37% figures are one athlete's example. No customer names, logos or results appear until Control Bionics clears them.
+
+## 7. Channels
+
+**Three channels get three quarters of the ad and email money.**
+
+Ads to a named list of groups, Google Search and email. Together they are planned to bring about 7 of the 15 qualified calls a week at Day 90. Each has a number that keeps it funded and a point where we cut it.
+
+45%
+
+20%
+
+11%
+
+9%
+
+15%
+
+Account-based adsGoogle SearchEmailRetargeting (ads shown again to site visitors)Small tests (newsletters, mailed boxes)
+
+Shares of the $49,500 for ads and email in the recommended $90,000 budget.
+
+- **45% · $22,500: Account-based ads.** Ads reach the owners, leaders and clinicians at half of the target list. The other half, the holdout group, gets email only, so we can see what the ads add. Propensity's fee of $3,000 a month comes out of this, so about $13,500 buys ads. **Keeps its money if**, by Day 60, the half that sees ads replies to email at least 20% more often than the holdout half, or books more qualified calls per 100 groups. **Cut if**, at Day 30, Propensity can match fewer than 60% of groups to a named decision maker. The money then moves to search, email and the conference.
+
+- **20% · $9,900: Google Search.** Ads appear when someone searches for muscle sensors, biofeedback, a competitor or help with return-to-sport decisions. Live in week two. **Keeps its money if** sales agrees that at least 35 of every 100 leads from search are worth a call. **Cut if** a group of keywords spends $400, more than the $330 we plan to pay per qualified call from search, without a lead from a target group.
+
+- **11% · $5,400: Email.** Four short, plain emails to every contact on the list, groups that are researching now first. People who download something get the follow-up series for their role. **Keeps its money if** 1.5% or more reply with interest, about 4 or 5 replies per 300 emails, the rate the plan counts on. **Rewritten if** a series gets interested replies from under 1% of its first 300 sends.
+
+#### Learn more: the account-based ad test
+
+The test runs for 90 days on 45% of the ad and email money, $22,500 at the base budget. The owner of every step is the demand generation lead, with leadership deciding at Day 30 and Day 60.
 
 | Step | What happens |
-|---|---|
-| Build the list | A purchased list from a healthcare practitioner database, HealthLink Dimensions or CampaignLake, both of which use NPI data. It is filtered to physical therapy practices by NPI record, to the states Control Bionics sells into, and to titles such as Clinic Owner, CEO, COO, Chief Clinical Officer, Rehab Director, Practice Administrator and Clinic Director. Neither site shows a filter for number of locations, so we keep practices with 5 to 25 locations by counting each group's practice addresses. CampaignLake lists a physical therapist segment and HealthLink Dimensions does not name one, so we check both free samples in week one. |
-| Flag in-market practices | Bombora flags practices whose research on topics such as physical therapy billing software, EMR migration, rehab equipment and biofeedback has risen above their own usual level. These in-market practices get ad spend and outbound first. Bombora reports research by company and does not name people, and the exact topics are checked against its topic list in week one. |
-| Run the ads | Propensity runs the ads. It describes itself as a contact-level B2B marketing platform. It builds audiences by industry, job role, tech stack and behavior, runs ads on LinkedIn, Meta, the Propensity Display Network, native and contextual display, direct mail and geofencing, and syncs contact-level engagement into Salesforce. We upload our own list to it. Its pricing page lists the plan that includes LinkedIn, Meta and direct mail at $3,000 a month, before ad spend. |
-| Split the list | Target accounts are split at random into two halves. The test half gets ads plus outbound, and the holdout half gets outbound only. The split is made separately for in-market and not-yet-in-market practices, so both halves have the same mix. |
-| Day 30 | At least 60% of target accounts must match to a verified decision maker. If they do not, the money moves to search, email and CSM. |
-| Day 60 | The test half must reply to outbound at least 20% more often than the holdout half, or book more qualified calls per 100 accounts. If it does neither, the ads stop. |
-| Month three | Spend shifts to in-market accounts, and a geofence runs around APTA CSM in Philadelphia, February 4 to 6, 2027. |
-| Fallback | If Propensity cannot match enough of the list to run ads, the test moves to an NPI-based healthcare ad platform, PulsePoint or DeepIntent. Both target and report on healthcare professionals by individual NPI, and both accept an uploaded NPI list. They reach owners and clinic directors who hold an NPI, but not executives or administrators without one. Neither site names physical therapists, so our NPI list gets a match test first. Neither publishes prices, so both are quotes in week one. |
+| --- | --- |
+| Build the list Weeks 1 and 2 | We buy a list from a healthcare provider database, HealthLink Dimensions or CampaignLake. Both use NPI records. We keep physical therapy practices in the states Control Bionics sells into, and the seven titles in the buying group. Neither site shows a filter for number of clinics, so we keep groups with 5 to 25 clinics by counting each group's practice addresses. CampaignLake lists a physical therapist segment and HealthLink Dimensions does not name one, so we check both free samples in week one. |
+| Flag practices researching now Weekly from week 2 | Bombora shows which practices are reading more than usual about topics such as physical therapy billing software, electronic medical record (EMR) migration, rehab equipment and biofeedback. Those practices get ads and email first. Bombora reports by company and does not name people. The exact topic names are checked against Bombora's topic list in week one. |
+| Run the ads From week 4 | Propensity runs the ads. It describes itself as a contact-level business-to-business marketing platform. It builds audiences by industry, job role, tech stack and behavior, runs ads on LinkedIn, Meta, the Propensity Display Network, native and contextual display, direct mail and geofencing, and sends contact-level engagement into Salesforce. We upload our own list to it. Its pricing page lists the plan that includes LinkedIn, Meta and direct mail at $3,000 a month, before ad spend. |
+| Split the list Week 3 | Groups are split at random into two halves of about 500. The test half gets ads plus email. The holdout group gets email only. The split is made separately for practices researching now and the rest, so both halves have the same mix. |
+| Day 30 check December 30, 2026 | At least 60% of target groups must match to a named, verified decision maker. If not, the ad money moves to search, email and the APTA Combined Sections Meeting (CSM). |
+| Day 60 check January 29, 2027 | The test half must reply to email at least 20% more often than the holdout half, or book more qualified calls per 100 groups. If neither, the ads stop. If the result is close, we run 30 more days at the same spend before scaling. |
+| Month three From January 30, 2027 | Ad spend moves to practices researching now. A geofence runs around APTA CSM in Philadelphia, February 4 to 6, 2027. |
+| Fallback Decided in week 3 | If Propensity cannot match enough of the list to run ads, the test moves to a healthcare ad platform that targets by NPI, PulsePoint or DeepIntent. Both target and report on individual providers by NPI and accept an uploaded NPI list. They reach owners and clinic directors who hold an NPI, but not executives without one. Neither site names physical therapists, so our list gets a match test first. Neither publishes prices, so both are quotes in week one. |
 
-### The five areas the role asks for
+##### How sure the Day 60 read can be
 
-The role asks for "paid search, paid social, email, landing pages, and audience segmentation." This is where each one sits.
+Each half has about 500 groups and roughly 1,000 to 1,500 contacts. At the planned 1.5% positive reply rate that is about 18 replies a half, so a 20% lift is about 4 extra replies, which chance alone can produce. That is why the rule reads replies and qualified calls together, and why a close result buys 30 more days instead of more budget.
+
+#### Learn more: the five areas the job description asks for
+
+The job description asks for "paid search, paid social, email, landing pages, and audience segmentation." Here is what runs in each.
 
 | Area | What runs | Who it reaches | Share of spend | Number we watch | Cut when |
-|---|---|---|---|---|---|
-| Paid search | Google Search on brand, category, competitor and problem terms. Exact and phrase match first, negative keywords added daily for the first three weeks, and qualified stages imported back from Salesforce. | Clinicians, owners and performance staff already searching | 20% of channel spend | 35% or more of search leads accepted by sales | A keyword group spends $400 without a lead from a target account. |
-| Paid social | Propensity's LinkedIn and Meta placements to the verified contact list, plus Meta retargeting to site visitors and video viewers. | Decision makers in the test half, and people who visited the site or watched the video | Part of the 45% test, plus 10% for retargeting | Outbound reply rate in the test half against the holdout half | Day 60, if the test half's reply rate is less than 20% higher and its calls per 100 accounts are no higher. |
-| Email | Four plain-text outbound emails to the purchased contacts, in-market practices first. Three nurture tracks: one for the clinic owner, one for the lead clinician and one for the sports performance lead. | Both halves of the target list, and every inbound lead | 10% of channel spend | A positive reply rate of 2.5% or better | A sequence under 1% positive replies after 300 sends gets rewritten. Sending stops past 2% bounces or 0.1% complaints. |
-| Landing pages | Separate pilot, demo, return-to-play and comparison pages. Each has one call to action, a four-field form, an instant scheduler and UTM capture into Salesforce. Form length and offer are the first two tests. | Everyone who clicks an ad, an email or the mailer | Part of the content line, 25% of the total budget | Booked calls per 100 visitors | The losing version of each test is dropped once each version has about 300 visits. |
-| Audience segmentation | Fit from the practitioner database, intent from Bombora, and engagement from Propensity and Account Engagement, combined into in-market and not-yet-in-market tiers. Suppression lists for customers, open trials, patients, students and competitors. | Every account and contact in Salesforce | Part of the data line, 12% of the total budget | Qualified calls per 100 accounts, in-market against not-yet-in-market | Day 60, intent data stops if in-market practices book no more calls per 100 accounts than the rest. |
+| --- | --- | --- | --- | --- | --- |
+| Paid search | Google Search on category, competitor and problem terms, plus brand. Exact and phrase match first, new negative keywords every day for the first three weeks, and qualified stages sent back from Salesforce so Google learns which clicks became calls. | Clinicians, owners and performance staff already searching | 20% of the ad and email money | 35% or more of search leads accepted by sales | A keyword group spends $400 without a lead from a target practice |
+| Paid social | Propensity's LinkedIn and Meta placements to the verified contact list, plus Meta retargeting to site visitors and video viewers. | The test half of the list, and people who visited or watched | Part of the 45%, plus 9% for retargeting | Reply rate in the test half against the holdout half | Day 60, if replies are under 20% higher and qualified calls per 100 groups are no higher |
+| Email | Four plain-text emails to the purchased contacts, groups researching now first. Three follow-up series, one for each cluster: executive, operations and clinical. | Both halves of the list, and every inbound lead | 11% of the ad and email money | 1.5% or more reply with interest | A series under 1% after 300 sends gets rewritten. Sending stops past 2% bounces or 0.1% spam complaints. |
+| Landing pages | Separate pilot, demo, return-to-play and comparison pages. Each has one button, a four-field form, an instant scheduler and tracking tags that record where each visitor came from in Salesforce. Form length and offer are the first two tests. | Everyone who clicks an ad, an email or the mailer | Part of the content line, 25% of the total | Booked calls per 100 visitors | The losing version of each test is dropped once each version has about 300 visits |
+| Audience segmentation | Fit from the provider database (practice size and the seven titles), research from Bombora, and engagement from Propensity and Salesforce Account Engagement. Practices are split into researching now and not yet, and contacts into the executive, operations and clinical clusters. Suppression lists keep out customers, open trials, patients, students and competitors. | Every practice and contact in Salesforce | Part of the data line, 12% of the total | Qualified calls per 100 groups, researching now against not yet | Day 60, intent data stops if practices researching now book no more calls per 100 groups than the rest |
 
-- **APTA CSM in February:** The Combined Sections Meeting runs February 4 to 6, 2027, in Philadelphia. We book meetings with target accounts before the show, run the geofence and a 60-second muscle test at the booth during it, and follow up every conversation within 48 hours. Event costs sit in their own budget.
-- **What we are holding back on:** LinkedIn self-serve prospecting, broad Meta prospecting beyond the verified list, paid YouTube reach, content syndication, and any patient or consumer advertising.
+##### The APTA Combined Sections Meeting in February
 
-## 5. Budget
+The American Physical Therapy Association's Combined Sections Meeting (APTA CSM) runs February 4 to 6, 2027, in Philadelphia. We book meetings with target practices before the show, run the geofence and a 60-second muscle test at the booth during it, and follow up every conversation within 48 hours. Event costs sit in their own budget.
 
-The base case is $90,000 over 90 days. 55% goes to media, 37% to content and setup, and 8% stays in reserve until the Day 30 and Day 60 reviews. The budget excludes salaries, event costs and the existing outbound retainer.
+##### What we are holding back on
 
-| Line | Share | Lean $45,000 | Base $90,000 | Aggressive $150,000 |
-|---|---|---|---|---|
-| Account-based ads (Propensity test) | 25% | $11,250 | $22,500 | $37,500 |
-| Google Search | 11% | $4,950 | $9,900 | $16,500 |
-| Outbound and nurture email | 6% | $2,700 | $5,400 | $9,000 |
-| Retargeting | 5% | $2,250 | $4,500 | $7,500 |
-| Small tests | 8% | $3,600 | $7,200 | $12,000 |
-| **Media and channels** | **55%** | **$24,750** | **$49,500** | **$82,500** |
-| Video, customer stories and landing pages | 25% | $11,250 | $22,500 | $37,500 |
-| Data and Salesforce setup (practitioner list, intent data, routing tools) | 12% | $5,400 | $10,800 | $18,000 |
-| **Content and setup** | **37%** | **$16,650** | **$33,300** | **$55,500** |
-| Reserve | 8% | $3,600 | $7,200 | $12,000 |
+LinkedIn self-serve prospecting, which reaches this buyer poorly. Also broad Meta prospecting beyond the verified list, paid YouTube reach, content syndication, and any patient or consumer advertising.
 
-Spend by month: 30%, 33% and 37% of the total (at base, $27,000, $29,700 and $33,300). Media is 33% of month one, 67% of month two and 84% of month three, once the reserve goes to whatever is working.
+## 8. Budget
 
-What each budget returns:
+**$90,000 for 90 days books about 15 qualified calls a week.**
 
-| | Lean | Base | Aggressive |
+Compare three budgets side by side. Choose one to see the month-by-month spend and where the calls come from.
+
+**What you get by Day 90**
+
+| | Lean $45,000 | Base $90,000 | Aggressive $150,000 |
 |---|---|---|---|
-| Qualified calls a week by Day 90 | 13 | 15 | 18 |
-| Pilots started a month | 14 | 16 | 19 |
-| New customers a quarter, once those pilots finish | 21 | 24 | 29 |
-| First-year revenue from them each quarter | $157,500 | $180,000 | $217,500 |
-| Month-three cost per qualified call | $296 | $510 | $718 |
+| Qualified calls a week (Only search and the account-based ads grow with the budget. About 11 a week come from sources that stay the same.) | 13, Tanner's calendar 65% full | 15, Tanner's calendar 75% full | 18, Tanner's calendar 89% full |
+| Pilots started a month (Each pilot needs a kit on loan. Kit numbers: confirm in week one.) | 14 | 16 | 19 |
+| New customers a quarter (Groups signing their first clinic. Half of pilots sign.) | 21 | 24 | 29 |
+| What new customers pay in their first year, a quarter (At the planned $7,500 a clinic, before any group adds clinics.) | $157,500 | $180,000 | $217,500 |
+| Cost per qualified call, month three (Month-three spend divided by that month's calls. Lean looks cheapest because about 11 calls a week come at no extra cost, yet it books the fewest.) | $296, limit about $930 | $510, limit about $930 | $718, limit about $930 |
+| Ad money left after Propensity's $9,000 fee (At Lean, too little for a clear Day 60 result.) | $2,250 | $13,500 | $28,500 |
 
-The most we should pay for a qualified call is about $930: a $7,500 first-year contract times the 12% of qualified calls planned to become customers.
+**Where the money goes**
 
-Where the calls come from at Day 90 on the base budget: existing inbound and referrals 3.8 a week (an estimate), Google Search 2.8, outbound email 2.7, APTA CSM follow-up 2.3, the weekly live demo 2.1, and the account-based test 1.4.
+| | Lean $45,000 | Base $90,000 | Aggressive $150,000 |
+|---|---|---|---|
+| Ads and email (55% of the total) | $24,750 | $49,500 | $82,500 |
+| Account-based ads (Propensity test) | $11,250 | $22,500 | $37,500 |
+| Google Search | $4,950 | $9,900 | $16,500 |
+| Email, first contact and follow-up | $2,700 | $5,400 | $9,000 |
+| Retargeting | $2,250 | $4,500 | $7,500 |
+| Small tests | $3,600 | $7,200 | $12,000 |
+| Content and setup (37% of the total) | $16,650 | $33,300 | $55,500 |
+| Video, customer stories and landing pages | $11,250 | $22,500 | $37,500 |
+| List, research data and Salesforce setup | $5,400 | $10,800 | $18,000 |
+| Reserve (8% of the total) | $3,600 | $7,200 | $12,000 |
 
-Planning rates: 55% of qualified calls become sales opportunities, 45% of those start a pilot, and half of pilots convert, at $7,500 in first-year contract value. Search is planned at $330 per qualified call, from published 2026 benchmarks. The account-based test keeps the $2,000 per call that was planned for LinkedIn until its own results replace it. Propensity lists the plan that includes LinkedIn, Meta and direct mail at $3,000 a month. Over 90 days that fee takes $9,000 of the account-based line, which leaves about $13,500 for ads at the base budget and about $2,250 at Lean. The list and intent data have no published prices and are quoted in week one. Only search and the account-based test change with the budget. Outbound, the weekly demo, CSM and existing inbound stay constant, which is why the range between Lean and Aggressive is narrow. Real numbers from the last 12 months of trials replace these rates by Day 30.
+### Spend by month
 
-## 6. The first 90 days
+Base budget. Green is ads and email, dark gray is content and setup, light gray is the reserve.
 
-We spend month one setting up tracking and content, month two testing messages and offers, and month three putting money behind what worked. Dates assume Day 1 is December 1, 2026. Full launch then lands in the first week of January, after the holidays, and APTA CSM falls in week 10.
+- **Month 1** · 33% ads and email: $27,000
+- **Month 2** · 61% ads and email, 6% reserve: $29,700
+- **Month 3** · 68% ads and email, 16% reserve: $33,300
 
-### Days 1 to 30: set up
+Month one mostly builds. Ads about double in month two. In month three the reserve goes to whatever is working.
 
-- **Week 1:** Vendor demos and coverage counts. Propensity, HealthLink Dimensions, CampaignLake and Bombora each count the PT practices with 5 to 25 locations they cover in our states. Confirm email and ad use rights before signing. Listen to ten sales calls, interview trial customers, and agree the qualified-lead checklist with sales.
-- **Week 2:** Buy the list and load it into Salesforce with NPI, data source and intent fields. Salesforce stages, source tracking and lead routing go live. Launch Google Search. Draft the approved claims list with regulatory and book two customer video shoots.
-- **Week 3:** Build the Propensity audience, then split target accounts at random into a test half and a holdout half. If Propensity matches too little of the list, move the test to PulsePoint or DeepIntent. Build the four landing pages, produce the 90-second video and a pilot guide, and re-brief the outbound partner.
-- **Week 4:** Launch the account-based ads to the test half at low spend. Run the first weekly live demo. The weekly report goes live, and a test lead runs through every path.
+### Where the calls come from
 
-**Day 30 checkpoint: 6 to 8 qualified calls a week.** At least 60% of target accounts match to a verified decision maker, or the account-based money moves to search, email and CSM. Decide: pick the two messages to test and approve month-two spend.
+Qualified calls a week at Day 90, Base budget.
 
-### Days 31 to 60: test
+- Calls that already come in today (estimate): 3.8
+- Google Search: 2.8
+- Email to the purchased list: 2.7
+- Conference follow-up (APTA CSM, February): 2.3
+- Weekly live demo: 2.1
+- Account-based ads (Propensity test): 1.4
 
-- **Week 5:** Full launch. Outbound starts to both halves, in-market practices first, and two messages are tested against two buyer types.
-- **Week 6:** Make the first cut of ads that are not working. Add new keywords and exclusions from the search terms report. Open meeting bookings for CSM.
-- **Week 7:** Test the offers: pilot scoping call against live demo. Publish the first customer story.
-- **Week 8:** Cut the bottom half of ads and audiences. Choose the winning message and offer.
+About 4 a week already come in without this plan. Account-based ads book the fewest calls directly, at a planned $2,000 a call, so they stay funded only as a test of whether they lift replies in the half that sees them.
 
-**Day 60 checkpoint: 10 to 12 qualified calls a week.** The test half replies to outbound at least 20% more often than the holdout half, or books more qualified calls per 100 accounts. If neither, the ads stop. Decide: release the reserve to what is working.
+What Base means for Control Bionics
 
-### Days 61 to 90: scale
+This is the budget we recommend. After Propensity's fee it leaves about $13,500 for ads, enough to compare the half that sees ads fairly with the holdout half. It also holds 8% back to move to whatever is working at Day 30 and Day 60.
 
-- **Week 9:** Move ad spend to in-market practices. Raise spend on what works by up to 25% a week. Widen outbound if reply rates hold.
-- **Week 10:** APTA CSM runs February 4 to 6 in Philadelphia, with a geofence around the convention center. Hold the pre-booked meetings, run the booth muscle test, and get every badge scan into Salesforce the same day.
-- **Week 11:** Follow up every CSM conversation within 48 hours. Publish the second customer story. First newsletter sponsorship goes live.
-- **Weeks 12 and 13:** Read the first pilot results against their success measures. Hold the Day 90 review of cost per call, per pilot and per customer, by channel, audience and test half.
+#### Learn more: the budget math
 
-**Day 90 checkpoint: 15 to 20 qualified calls a week.** About 130 qualified calls held in total and 30 pilots started or scheduled. Decide: next quarter's budget, whether to renew the 90-day data and ABM contracts, a second sales seat, and the second audience to target.
+##### How qualified calls are worked out
 
-## 7. Handing leads to sales
+Each source has a planned weekly rate at Day 90. Only Google Search and the account-based ads change with the budget: their month-three spend is divided by a planned cost per qualified call. The other sources are held constant, which is why the range between Lean and Aggressive is narrow.
 
-Sales gets leads that meet five tests, and every one of them hears from us within an hour.
+| Source | Calls a week | How it is worked out |
+| --- | --- | --- |
+| Calls that already come in today (estimate) | 3.8 | Site inquiries, referrals and sport. Replaced by the real count from the last eight weeks in week one. |
+| Google Search | 2.8 | Planned at $330 per qualified call, from published 2026 search benchmarks for health and fitness. |
+| Email to the purchased list | 2.7 | 300 contacts a week. 1.5% reply positively and 60% of those hold a call, so 0.9 calls per 100 contacts. |
+| Conference follow-up (APTA CSM, February) | 2.3 | 150 good conversations at the show, and 20% of them book a call over the quarter. |
+| Weekly live demo | 2.1 | 60 people from target practices register each month and 15% book a call. |
+| Account-based ads (Propensity test) | 1.4 | Planned at $2,000 per qualified call until the test produces its own number. |
+| Total | 15.1 | Base budget of $90,000 |
 
-**What counts as a qualified lead**
+##### How calls become customers
 
-1. Works at a target account: a PT group with 5 to 25 locations, or a pro or college sports program, in a region we sell to.
-2. Can approve a purchase or would use the product: an owner or executive, or a clinical or performance lead.
-3. Asked for something: a demo, a pilot or pricing, or replied to outbound.
-4. Named a problem we solve, in their own words: return-to-sport decisions, patients who plateau or drop out, or a new service to sell.
+Of every 100 qualified calls, about 55 become real sales opportunities, about 25 start a pilot and about 12 sign. With a first-year value of $7,500, the most a qualified call can cost and still pay back in year one is about $930.
+
+##### Try another budget
+
+About **15.1** qualified calls a week by Day 90, **16** pilots a month, **24** new customers a quarter worth **$180,000**, at **$510** per qualified call in month three against the $930 limit.
+
+Notes:
+
+1. Excludes salaries, event costs and the outbound email partner's retainer. Propensity's listed fee of $3,000 a month comes out of the account-based line. The list and intent data have no published prices and are quotes in week one.
+2. Planning rates: search at $330 per qualified call from published 2026 search benchmarks for health and fitness; the account-based ads at $2,000 per qualified call until the test produces its own number. Both are replaced with live data within weeks of launch.
+
+## 9. The first 90 days
+
+**Set up in month one, test in month two, scale in month three.**
+
+Day 1 is December 1, 2026. Google Search starts in week 2 and the ads in week 4. Email and the message tests start in the first week of January, and the APTA CSM conference falls in week 10.
+
+- **Day 30: 6 to 8 qualified calls a week.** Tanner's calendar is about a third full.
+
+- **Day 60: 10 to 12 qualified calls a week.** Tanner's calendar is about half full.
+
+- **Day 90: About 15 qualified calls a week.** Three quarters full. Full at 20, by about Day 120.
+
+- **By Day 90: 130 qualified calls held in total.** Enough for about 30 pilots started or scheduled.
+
+Days 1 to 30 · December
+
+### Set up
+
+**Day 30 check, December 30.** 6 to 8 qualified calls a week, and Propensity has found a named decision maker at 60% or more of the target groups. If it finds fewer, the ads would reach too few groups, so the ad money moves to search, email and the conference. Leadership decides.
+
+1. Week 1 · December 1 to 7 Demos from four suppliers: Propensity (runs the account-based ads), HealthLink Dimensions and CampaignLake (sell provider lists) and Bombora (shows which groups are researching now). Each counts the groups with 5 to 25 clinics it covers in our states. Confirm in writing that the list can be used for email and ads. Listen to ten sales calls, interview customers from past trials, and agree the five-point checklist with sales. Owner: the demand generation lead (the marketer who runs this plan), with sales
+2. Week 2 · December 8 to 14 Buy the list and load it into Salesforce with each group's NPI, which list it came from, what Bombora says it is researching, and each person's role. The steps a lead moves through, the record of where each lead came from and the rule that sends new leads to sales go live. Launch Google Search. Draft, with the regulatory team, the list of what we may and may not say. Owner: the demand generation lead, with the Salesforce partner and regulatory
+3. Week 3 · December 15 to 21 Build the Propensity audience and split the groups at random into the test half and the holdout half. If Propensity matches too little of the list, switch to PulsePoint or DeepIntent. Build the four landing pages, the 90-second video and the pilot guide, and brief the agency that sends our first-contact emails. Owner: the demand generation lead, with the production studio
+4. Week 4 · December 22 to 28 Launch the account-based ads to the test half at low spend over the holidays. Run the first weekly live demo. The weekly report goes live, and a pretend lead goes through every form, email and calendar link to check each step works. Owner: the demand generation lead
+
+Days 31 to 60 · January
+
+### Test
+
+**Day 60 check, January 29.** 10 to 12 qualified calls a week. The half that sees ads must reply to email at least 20% more often than the holdout half, or book more qualified calls per 100 groups. If neither, the ads stop. Leadership decides, and the reserve goes to what is working.
+
+1. Week 5 · December 29 to January 4 Full launch. Email starts to both halves, groups researching now first. The persona tests begin: message A against message B in the executive, operations and clinical clusters. We also test whether contacting a group's clinical leaders first, or its executives first, books more calls. Owner: the demand generation lead, with the outbound email partner
+2. Week 6 · January 5 to 11 First cut of ads that are not working. Read Google's report of what people actually typed, add the good searches as keywords and block the ones that waste money. Start booking meetings for the conference. Owner: the demand generation lead
+3. Week 7 · January 12 to 18 Test which offer books more calls: a call to plan a pilot, or a live demo. Publish the first customer story, if a customer has cleared it. Owner: the demand generation lead, with sales
+4. Week 8 · January 19 to 25 Read the persona tests once each message has reached about 150 people. If one message's rate of interested replies is at least 30% higher, that cluster keeps it. A winner with fewer than 10 interested replies is used for now and tested again in month four. Clusters where neither message is 30% ahead keep testing for up to six weeks. Cut the bottom half of ads and audiences. Owner: the demand generation lead, reviewed with sales
+
+Days 61 to 90 · February
+
+### Scale
+
+**Day 90 check, February 28.** About 15 qualified calls a week, about 130 held in total and about 30 pilots started or scheduled. Leadership decides next quarter's budget, whether to renew the 90-day data and ad contracts, and whether to hire a second inside salesperson alongside Tanner.
+
+1. Week 9 · January 26 to February 1 Move ad spend to groups researching now. Raise spend on what works by up to 25% a week. Remaining persona tests close by the end of week 10. Owner: the demand generation lead
+2. Week 10 · February 2 to 8 APTA CSM, February 4 to 6 in Philadelphia, with phone ads shown to anyone inside the convention center. Hold the pre-booked meetings, run the 60-second muscle test at the booth, and enter every visitor badge we scan into Salesforce the same day. Owner: the demand generation lead, with sales
+3. Week 11 · February 9 to 15 Follow up every conversation from the conference within 48 hours. First newsletter sponsorship goes live. Owner: sales, with the demand generation lead
+4. Weeks 12 and 13 · February 16 to 28 Read the first pilot results against the measures each clinic wrote. Hold the Day 90 review of cost per qualified call, per pilot and per customer, by channel, role and test half. Owner: the demand generation lead, with sales and leadership
+
+#### Learn more: how the weekly call numbers are worked out
+
+The weekly calls build from about 4 that already come in today to about 15 by Day 90: 4 to 7 a week in month one as search starts, 8 to 11 in month two as email and ads run together, and 12 to 15 in month three as spend moves to what works. Added up week by week, that is about 130 qualified calls by Day 90. At 55% to opportunities and 45% of those to pilots, about 30 pilots start or are scheduled.
+
+The holidays fall in weeks 3 to 5, so month one builds and tests at low spend, and full launch waits for the first week of January.
+
+## 10. Handing leads to sales
+
+**A lead gets a sales call after three checks, and hears back within an hour.**
+
+That keeps Tanner's calendar for people who can buy, and gets to them while they are still interested.
+
+**1 hour** the longest a sales-ready lead waits for a reply in business hours. The form shows a calendar as soon as it is sent, so a lead who books there waits no time at all.
+
+### What makes a lead sales-ready, and a call qualified
+
+1. Works at a target group: a physical therapy group with 5 to 25 clinics, or a pro or college sports program, in a state we sell into.
+2. Can approve a purchase or would use the product: one of the seven roles in the buying group.
+3. Asked for a demo, a pilot or pricing, or replied to our email with interest.
+4. Named a problem we help with, in their own words: return-to-sport decisions, patients who stall or drop out, or a new service to offer.
 5. Could start a 30-day pilot within 60 days.
 
-Points 1 to 3 come from the form and Salesforce and put the lead straight on the sales calendar. Sales confirms points 4 and 5 on the call. Leads that miss point 1 or 2 go to the weekly group demo and email instead.
+A lead that passes checks 1 to 3 is sales-ready and goes on Tanner's calendar. The call counts as a qualified call once sales confirms checks 4 and 5 on it, using the three first-call (discovery) questions for that role, under Learn more in the buying group section. Leads from outside the target groups go to the weekly live demo and the follow-up emails.
 
-**Response times**
+### How fast we reply
 
-| | |
-|---|---|
-| 0 min | Qualified leads pick a time on a calendar shown right after they submit the form. |
-| 15 min | First call or email if they did not book, during business hours. |
-| 1 hr | No lead waits longer than this. Anything older shows in red on the weekly report. |
-| 1 day | Sales accepts or rejects each lead, with a reason from a fixed list. |
-| 6 touches | Over ten business days before an unresponsive lead goes back to email nurture. |
+- **0 min**The lead picks a time on a calendar shown right after the form.
+- **15 min**A call or email if they did not book, in business hours.
+- **1 hr**No lead waits longer. Anything older shows in red on the weekly report.
+- **1 day**Sales accepts or rejects each lead, with a reason picked from a list.
+- **6 tries**Sales tries six times over ten business days. With no answer, the lead goes back to the follow-up emails.
 
-**Salesforce in month one**
+### We report five numbers every week.
 
-- **Week 1:** Audit fields, the Account Engagement connection and admin access. NeuroStrip record types, kept apart from assistive communication. Patient records excluded from every marketing list and report. Fields for account type, size and role, plus NPI, data source, intent topic, and test or holdout group.
-- **Week 2:** Lifecycle stages, each with a date stamp. Lead source and UTM fields that cannot be overwritten. "How did you hear about us?" on every form. Lead routing with the response-time clock.
-- **Week 3:** Parent accounts for groups, child accounts for clinics. Opportunity stages with pilot start, end and success measures. Required loss reasons from a fixed list. Simple fit and engagement scores.
-- **Week 4:** The weekly report. The last 12 months of trials entered with source and outcome. Qualified stages sent back to Google Ads. Propensity engagement synced to each contact. A test lead through every path, and 30 minutes of training for sales.
+Each one is split by channel, by role and by half of the ad test, so we can see where every call came from.
 
-**Five numbers reported every week**
+- **1: Qualified calls held.** Against the goal of 20. It shows how full Tanner's calendar is.
 
-1. Qualified discovery calls held, against the goal of 20.
-2. Leads answered within an hour, as a share of all qualified leads.
-3. Calls that became sales opportunities, planned at 55%.
-4. Pilots started, and pilots converted to paid, planned at 45% and 50%.
-5. Cost per qualified call, by channel, against a limit of about $930.
+- **2: Leads answered within an hour.** As a share of all sales-ready leads. Slow replies waste the spend.
 
-Each number is split by channel, by audience and by test half. The $930 limit is a $7,500 first-year contract times the 12% of qualified calls planned to become customers.
+- **3: Calls that became real deals (sales opportunities).** Planned at 55 of every 100 qualified calls. A low number means the checklist lets in people who cannot buy.
 
-## 8. Team, asks and risks
+- **4: Pilots started and pilots signed.** 45 of every 100 opportunities start a pilot, and half of pilots sign. From 100 qualified calls, that is about 12 new customers, worth about $90,000 in their first year.
 
-Strategy, data decisions and media buying stay in-house. Partners supply the list, the intent data, the account-based ads, production and specialist work. I need seven answers from Control Bionics in week one.
+- **5: Cost per qualified call.** By channel. About 12 of every 100 qualified calls become a $7,500 customer, so a call can cost up to about $930 and still pay back in year one. Above that, a channel is losing money.
 
-| Work | Who does it |
-|---|---|
-| Strategy, the target account list, messaging and offers | In-house |
-| Test design and the decisions to cut or scale | In-house |
-| Ad accounts, tracking, audiences and data, always in Control Bionics' name | In-house |
-| Media buying for the first 90 days, and the weekly report | In-house |
-| Practitioner list of PT practices and decision makers | HealthLink Dimensions or CampaignLake, on 90-day terms in Control Bionics' name |
-| Intent data on which practices are researching related topics | Bombora, on 90-day terms in Control Bionics' name |
-| Account-based ads to the test half of the list | Propensity for the 90-day test, with PulsePoint or DeepIntent as the fallback |
-| Customer video shoots, demo video and design | Production studio or freelancers, per project |
-| Outbound email sending | The existing outbound partner, re-briefed |
-| Salesforce and Account Engagement build | A certified consultant for four weeks, if there is no admin time in-house |
-| Review of the search and account-based ad setup before launch | A specialist, by the hour |
+### A four-week Salesforce build tracks every lead from first click to signed contract.
 
-No media agency until media spend passes about $40,000 a month or four paid channels are live. The data and ABM contracts are signed in Control Bionics' name on 90-day terms. Every partner works on Control Bionics' accounts, is judged on qualified calls and is paid a fixed fee. Propensity publishes its prices. The list, intent and fallback vendors do not, so each of those is a quote in week one.
+Salesforce is the system sales uses to track every contact, call and deal. This is the smallest setup that shows which roles, messages and channels bring in revenue.
 
-**What I need in week one**
+- **Week 1.** Check what Salesforce already tracks and who has admin accessKeep NeuroStrip records apart from Control Bionics' communication devices businessKeep patient records out of every marketing listFields for NPI, which list a contact came from, what the group is researching, and test or holdout half
 
-1. **The budget.** The 90-day number and what it has to cover. The plan assumes $90,000, excluding salaries, events and the outbound retainer.
-2. **Salesforce access.** Admin rights, the edition we are on, and the Account Engagement connection.
-3. **Sales capacity.** How many calls one calendar can hold, assumed at 20 to 25 a week, and who covers when it is full.
-4. **Pilot kits.** How many kits are free each month, and whether a 30-day pilot works for the sales team.
-5. **History.** The last 12 months of trials with source, outcome and contract value, and a count of discovery calls by source for the last eight weeks.
-6. **Time with sales and customers.** Ten recorded sales calls and eight to ten trial customers to interview.
-7. **Where we sell.** The states Control Bionics sells into, which set the filter for the list.
+- **Week 2.** The steps a lead moves through, each with a dateWhere each lead came from, taken from the link they clicked, that nobody can overwrite"How did you hear about us?" on every formNew leads sent straight to sales with the one-hour reply clock
 
-**The six biggest risks**
+- **Week 3.** Pick lists for persona (job title), buying role, message variant (which message they got) and objection heardOne record per group, with its clinics linked underneathDeal steps with the pilot's start, end and success measuresA reason from a fixed list whenever a deal is lost
 
-| Risk | Response |
-|---|---|
-| Copy drifts into claims a non-diagnostic tool cannot make, such as preventing injury. | A claims list approved with regulatory before launch. Every outcome number tied to a named customer who agreed to it. |
-| Too few customer stories to show in early ads. | Film two customers in month one, and ask every trial site for a story when its pilot ends. |
-| Marketing books more calls than one sales calendar or the pilot kits can handle. | Smaller accounts go to the weekly group demo. A second sales seat is added when the next open slot is more than five business days out for two weeks running. |
-| The same 1,000 accounts tire of the same ads. | Frequency caps, new creative every month, and widening to groups with 26 to 50 locations if needed. |
-| The data covers too few PT practices with 5 to 25 locations, either for contacts or for intent. | The Day 30 match check. If under 60% of target accounts match to a verified decision maker, the money moves to search, email and CSM. |
-| The data license does not allow email or ad use. | Confirm email and ad use rights in writing before buying the list or the intent data. HealthLink Dimensions' standard license, for example, excludes social targeting unless the contract adds it. |
+- **Week 4.** The weekly reportEvery trial from the last 12 months, with where it came from and how it endedGoogle Ads told which clicks became qualified callsWhat each contact saw or clicked in the Propensity ads, saved on their record
+
+#### Learn more: the handoff
+
+##### What sales gets with every lead
+
+- Practice size, role, persona and which half of the test it is in
+- The ad, email or search term that produced the request
+- The last three things the person did, with dates
+- Who else at the group has engaged
+- The problem in their own words, from the form
+
+##### What marketing gets back
+
+- Accepted or rejected within a business day, with a reason
+- Call held, missed or moved
+- The objection heard, picked from the list
+- Pilot start, end and result against the clinic's own measures
+
+##### How the objection notes are used
+
+Every Monday we review the objection field by role and update the next week's emails. Once a month we update the answers and assets in the playbook. If one objection stalls more than a quarter of open deals for a role, it gets a new proof asset that month.
+
+##### When to add a second inside-sales seat
+
+When either of these holds for two weeks in a row: the next open call slot is more than five business days out, or fewer than 80% of leads are answered within an hour.
+
+## 11. Team, asks and risks
+
+**Strategy and data stay with Control Bionics. Partners do the specialist work.**
+
+Every data and ad contract is in Control Bionics' name and runs for 90 days, so Control Bionics keeps the data and can stop or switch any partner at the Day 90 review. To start on real numbers, we need twelve answers in week one.
+
+- **Stays in-house.** Strategy, the target list and the buying group playbookMessages, offers and the list of what we may say about NeuroStrip, agreed with the regulatory teamTest design and every decision to cut or scaleAd accounts, tracking and data, always in Control Bionics' nameDay-to-day ad spending and the weekly report
+
+- **Goes to partners.** The provider list: HealthLink Dimensions or CampaignLakeResearch data: BomboraAccount-based ads: Propensity, with PulsePoint or DeepIntent as the fallbackVideo shoots and design: a studio or freelancers, per projectEmail sending: the agency that already sends Control Bionics' first-contact emails, with a new briefSalesforce build: a certified consultant for four weeks, if there is no admin time in-house
+
+### Twelve answers we need in week one.
+
+Each one replaces a planning figure or settles something sales will be asked.
+
+1. **The budget.** The 90-day number and what it covers. The plan assumes $90,000, before salaries, events and the monthly fee already paid to that email agency.
+2. **Salesforce and ad accounts.** Admin access to Salesforce, Google Ads and Meta. Propensity can run Meta ads only from an account with 60 days of ad history. If Control Bionics' Meta account is newer, Meta ads through Propensity cannot start in week 4.
+3. **Sales capacity.** How many calls Tanner's calendar can hold, assumed at 20 to 25 a week, and who covers when it is full.
+4. **Pilot kits and terms.** How many kits are available to lend each month (the Base budget plans about 16 pilots a month by Day 90), and the standard pilot terms. Confirm in week one.
+5. **History.** Every trial from the last 12 months with where it came from, how it ended and what the contract was worth, plus first sales calls by where the lead came from for the last eight weeks. This replaces the estimate of about 4 qualified calls a week that already come in.
+6. **Where we sell.** The states Control Bionics sells into, which decide which groups go on the purchased list.
+7. **Medical record systems.** Whether NeuroStrip connects to the clinic's electronic medical record (EMR) today, and which ones. Confirm in week one.
+8. **Where patient data goes.** Where session data is stored and who can see it, in writing for practice administrators. Confirm in week one.
+9. **Support.** What setup, training and support a new clinic gets, and how fast. Confirm in week one.
+10. **Billing.** What current customers do about billing, so sales can describe it without making promises. The clinic's billing team always decides.
+11. **Cleared customers.** Which customer names, logos and results we may use, and in which channels.
+12. **Time with sales and customers.** Ten recorded sales calls and eight to ten customers from past trials to interview.
+
+#### Learn more: the risks and partner rules
+
+| Risk | Response | Owner |
+| --- | --- | --- |
+| Copy drifts into claims a non-diagnostic tool cannot make, such as preventing injury. | A claims list approved with regulatory before launch. Every outcome number is tied to a named customer who cleared it. Propensity's ad rules for medical products are checked in week one. | Demand generation and regulatory |
+| The data covers too few groups with 5 to 25 clinics, for names or for research signals, or the matched audience is too small for LinkedIn and Meta. | The Day 30 match check. Under 60% matched, the ad money moves to search, email and CSM. | Demand generation, leadership decides |
+| The data license does not allow email or ad use. | Confirm email and ad use in writing before buying. HealthLink Dimensions' standard license, for example, excludes social targeting unless the contract adds it. | Demand generation |
+| Marketing books more calls than one calendar or the pilot kits can handle. | Smaller groups go to the weekly live demo. A second inside-sales seat is added when the next open slot is more than five business days out for two weeks in a row. | Sales |
+| Too few customer stories to show in early ads. | Film two customers in month one, once cleared, and ask every pilot clinic for a story when its pilot ends. | Demand generation |
+| The 500 groups in the test half see the same ads too often. | A cap on how often each person sees an ad, new ads every month, and widening to groups with 26 to 50 clinics if needed. | Demand generation |
+| Tests are too small to call a winner. | Winners need a 30% gap and at least 10 replies. Close results are a tie, and a close Day 60 read buys 30 more days instead of more budget. | Demand generation |
+
+##### Rules for every partner
+
+- No media agency until ad spend passes about $40,000 a month or four paid channels are live.
+- Every partner works in Control Bionics' accounts and is judged on qualified calls.
+- Partners are paid fixed fees. No partner is paid a share of ad spend.
+- Data and ad contracts run on 90-day terms. Other partners can be ended on 30 days' notice.
+- Propensity publishes its prices. The list, intent and fallback vendors do not, so each is a quote in week one.
 
 ## Vendor pages checked
 
