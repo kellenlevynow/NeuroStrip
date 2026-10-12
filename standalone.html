@@ -219,8 +219,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .buyers td:first-child{width:22%}
 .buyers td:last-child{width:30%}
 
-.ads{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
-@media (max-width:980px){.ads{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;align-items:start}
 @media (max-width:640px){.ads{grid-template-columns:minmax(0,1fr)}}
 .ad-label{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--dim);margin-bottom:9px;line-height:1.4}
 .ad-frame{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-lg);overflow:hidden;font-size:.9rem;color:#1B1F23}
@@ -258,9 +257,17 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 /* ==========================================================================
    4 Channels
    ========================================================================== */
-.chan td:first-child{width:16%}
-.chan td:nth-child(3){width:10%}
-.chan th:nth-child(3){white-space:normal}
+.split--chan{margin-bottom:10px}
+.split--chan span{color:#fff;padding-left:10px}
+.split-key{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.84rem;color:var(--mute)}
+.split-key span{display:inline-flex;align-items:center;gap:7px}
+@media (max-width:520px){.split span{padding-left:6px;font-size:.74rem}}
+.sub-p{margin:-6px 0 14px;color:var(--mute);max-width:72ch}
+.abm td:first-child{width:20%}
+.areas{font-size:.86rem}
+.areas th,.areas td{padding:12px}
+.areas td:first-child{width:11%}
+.areas td:nth-child(4){width:12%}
 .also{margin-top:24px;display:grid;gap:10px}
 .also > div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:6px 20px;padding:14px 0;border-top:1px solid var(--line-2)}
 .also dt{font-weight:600}
@@ -369,6 +376,15 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .asks b{color:var(--text)}
 .risks{font-size:.9rem}
 .risks td:first-child{width:46%}
+.ad--post .ad-frame{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);font-family:var(--sans)}
+.post-front{background:var(--ink-900);color:#fff;padding:18px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.post-k{font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;font-weight:600;color:var(--signal)}
+.post-h{font-family:var(--display);font-weight:600;font-size:1.02rem;line-height:1.3}
+.post-back{padding:16px 18px 18px;font-size:.86rem;line-height:1.5}
+.post-back p + p{margin-top:9px}
+.post-foot{display:flex;gap:12px;align-items:flex-end;margin-top:14px;padding-top:12px;border-top:1px dashed #D5D9E0;font-size:.74rem;color:#6B7280;line-height:1.4}
+.post-qr{flex:none;width:52px;height:52px;border-radius:4px;background:conic-gradient(from 90deg,#1B1F23 25%,#fff 0 50%,#1B1F23 0 75%,#fff 0) 0 0/13px 13px;border:3px solid #1B1F23}
+@media (max-width:460px){.ad--post .ad-frame{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -424,10 +440,10 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
       <thead><tr><th>Question</th><th>Answer</th></tr></thead>
       <tbody>
         <tr><td>Which audience comes first?</td><td data-l="Answer">Outpatient PT groups with 5 to 25 locations get 70% of the effort, pro and college sport gets 20% through business development, and everyone else comes in through inbound only.</td></tr>
-        <tr><td>Which channels, and how is the budget split?</td><td data-l="Answer">LinkedIn to a named list of about 1,000 PT groups, Google Search, and outbound plus nurture email, at 45%, 20% and 10% of channel spend, with 10% for retargeting and 15% for small tests.</td></tr>
-        <tr><td>What goes to an agency, and what stays in-house?</td><td data-l="Answer">Strategy, the account list, messaging, data and media buying stay in-house, while video production, outbound execution and a four-week Salesforce build go to partners.</td></tr>
+        <tr><td>Which channels, and how is the budget split?</td><td data-l="Answer">A 90-day account-based test that runs Propensity ads to half of a purchased list of about 1,000 PT groups, plus Google Search and email, at 45%, 20% and 10% of channel spend, with 10% for retargeting and 15% for small tests.</td></tr>
+        <tr><td>What goes to an agency, and what stays in-house?</td><td data-l="Answer">Strategy, messaging and media decisions stay in-house, while partners supply the list, intent data, ads, video, outbound sending and a four-week Salesforce build, with the data and ABM contracts in Control Bionics' name on 90-day terms.</td></tr>
         <tr><td>What is a qualified lead, and how is it measured?</td><td data-l="Answer">A decision maker or clinical lead at a target account who asked for a demo, pilot or pricing and named a problem we solve, measured through to pilots and paid contracts.</td></tr>
-        <tr><td>What gets built in Salesforce in month one?</td><td data-l="Answer">NeuroStrip record types, dated lifecycle stages, source tracking that cannot be overwritten, lead routing with a one-hour response limit, pilot tracking and one weekly report.</td></tr>
+        <tr><td>What gets built in Salesforce in month one?</td><td data-l="Answer">NeuroStrip record types, dated lifecycle stages, source tracking that cannot be overwritten, fields for NPI, intent and test group, lead routing with a one-hour response limit, pilot tracking and one weekly report.</td></tr>
       </tbody>
     </table>
 
@@ -456,7 +472,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
         <tr>
           <td>Outpatient PT groups with 5 to 25 locations</td>
           <td data-l="Share of effort"><b class="num">70%</b></td>
-          <td data-l="How we work it">A named list of about 1,000 groups. LinkedIn, search and outbound reach owners, executives and lead clinicians. The path is a discovery call, a 30-day pilot at one clinic, then rollout across the group.</td>
+          <td data-l="How we work it">A purchased list of about 1,000 groups, counted in week one. Account-based ads, search and outbound reach owners, executives and lead clinicians. The path is a discovery call, a 30-day pilot at one clinic, then rollout across the group.</td>
         </tr>
         <tr>
           <td>Pro and college sport</td>
@@ -516,12 +532,12 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
     </table>
     <p class="note">All copy stays inside NeuroStrip's registration as a non-diagnostic measurement and biofeedback tool. Nothing says it diagnoses, predicts or prevents injury.</p>
 
-    <h3 class="sub">The first three ads <span class="tag">Example</span></h3>
+    <h3 class="sub">The first ads, email and mailer <span class="tag">Example</span></h3>
     <div class="ads">
       <figure class="ad">
-        <p class="ad-label">LinkedIn video · owners and clinical leads at target accounts</p>
+        <p class="ad-label">Account-based video or display ad · decision makers in the test half, through Propensity</p>
         <div class="ad-frame">
-          <header><span class="ad-av">CB</span><div><b>Control Bionics</b><i>Promoted</i></div></header>
+          <header><span class="ad-av">CB</span><div><b>Control Bionics</b><i>Sponsored</i></div></header>
           <p>Three weeks after a hamstring injury, force plates showed a 7% gap between the athlete's legs. With NeuroStrip on both hamstrings, the gap in muscle activation was 37%.</p>
           <div class="ad-media">
             <svg viewBox="0 0 400 210" role="img" aria-label="Video still: force on the left shows a 7 percent gap, muscle activation on the right shows a 37 percent gap">
@@ -540,7 +556,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
           </div>
           <footer><div><b>Same athlete, two measures. Watch the 90-second video.</b><i>controlbionics.com</i></div><span class="ad-btn">Watch</span></footer>
         </div>
-        <figcaption>There is no form to fill in. Everyone who watches joins the retargeting audience.</figcaption>
+        <figcaption>The same creative runs as a video on LinkedIn and Meta and as a display or native ad. There is no form, and everyone who watches joins the retargeting audience.</figcaption>
       </figure>
 
       <figure class="ad ad--search">
@@ -567,7 +583,24 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
             <p>Your clinicians make return-to-sport calls every week. Would a 20-minute look be useful? If the timing is wrong, I can send the 90-second video instead.</p>
           </div>
         </div>
-        <figcaption>Sent as plain text with one ask, in the same week the account starts seeing the LinkedIn video.</figcaption>
+        <figcaption>Sent as plain text with one ask, starting with in-market practices.</figcaption>
+      </figure>
+
+      <figure class="ad ad--post">
+        <p class="ad-label">Direct mail postcard · owners at in-market practices</p>
+        <div class="ad-frame">
+          <div class="post-front">
+            <p class="post-k">Control Bionics · NeuroStrip</p>
+            <p class="post-h">One athlete measured two ways: a 7% gap on force plates and a 37% gap in muscle activation.</p>
+          </div>
+          <div class="post-back">
+            <p>{First name}, your clinicians make return-to-sport decisions every week.</p>
+            <p>NeuroStrip is a 4-gram wireless sensor that shows muscle activation live on a tablet, on up to four muscles at once.</p>
+            <p>We would like to run a 30-day pilot at one of your clinics, with success measures you choose. Scan the code to book a 20-minute call.</p>
+            <div class="post-foot"><span class="post-qr" aria-hidden="true"></span><span>{Owner name}<br>{Practice name}<br>{Street address}</span></div>
+          </div>
+        </div>
+        <figcaption>Sent through Propensity to owners at in-market practices only. Each scan of the code is tied to the contact in Salesforce.</figcaption>
       </figure>
     </div>
   </div>
@@ -579,41 +612,85 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
   <div class="wrap">
     <header class="sec-head">
       <h2><span class="sec-n">4</span>Channels</h2>
-      <p class="lede">Each of the three channels has its own job. LinkedIn reaches the named accounts, search catches people already looking, and email turns interest into booked calls.</p>
+      <p class="lede">Channel money goes to a 90-day account-based test, Google Search and email. LinkedIn self-serve prospecting is on hold because it converts poorly for this buyer.</p>
     </header>
 
-    <table class="tbl tbl--stack chan">
-      <thead><tr><th>Channel</th><th>Job</th><th>Share of channel spend</th><th>Working if</th><th>Cut when</th></tr></thead>
+    <div class="split split--chan" role="img" aria-label="Share of channel spend: 45 percent account-based test, 20 percent Google Search, 10 percent email, 10 percent retargeting, 15 percent small tests">
+      <span class="bg-c1" style="--w:45">45%</span>
+      <span class="bg-c2" style="--w:20">20%</span>
+      <span class="bg-c3" style="--w:10">10%</span>
+      <span class="bg-c4" style="--w:10">10%</span>
+      <span class="bg-c5" style="--w:15">15%</span>
+    </div>
+    <p class="split-key"><span><i class="sw c1"></i>Account-based test</span><span><i class="sw c2"></i>Google Search</span><span><i class="sw c3"></i>Email</span><span><i class="sw c4"></i>Retargeting</span><span><i class="sw c5"></i>Small tests</span></p>
+
+    <h3 class="sub">The account-based test</h3>
+    <p class="sub-p">The test gets 45% of channel spend, which is $22,500 at the base budget, and runs for 90 days.</p>
+    <table class="tbl tbl--stack abm">
+      <thead><tr><th>Step</th><th>What happens</th></tr></thead>
+      <tbody>
+        <tr><td>Build the list</td><td data-l="What happens">A purchased list from a healthcare practitioner database, HealthLink Dimensions or CampaignLake, both of which use NPI data. It is filtered to physical therapy practices by NPI record, to the states Control Bionics sells into, and to titles such as Clinic Owner, CEO, COO, Chief Clinical Officer, Rehab Director, Practice Administrator and Clinic Director. Neither site shows a filter for number of locations, so we keep practices with 5 to 25 locations by counting each group's practice addresses. CampaignLake lists a physical therapist segment and HealthLink Dimensions does not name one, so we check both free samples in week one.</td></tr>
+        <tr><td>Flag in-market practices</td><td data-l="What happens">Bombora flags practices whose research on topics such as physical therapy billing software, EMR migration, rehab equipment and biofeedback has risen above their own usual level. These in-market practices get ad spend and outbound first. Bombora reports research by company and does not name people, and the exact topics are checked against its topic list in week one.</td></tr>
+        <tr><td>Run the ads</td><td data-l="What happens">Propensity runs the ads. It describes itself as a contact-level B2B marketing platform. It builds audiences by industry, job role, tech stack and behavior, runs ads on LinkedIn, Meta, the Propensity Display Network, native and contextual display, direct mail and geofencing, and syncs contact-level engagement into Salesforce. We upload our own list to it. Its pricing page lists the plan that includes LinkedIn, Meta and direct mail at $3,000 a month, before ad spend.</td></tr>
+        <tr><td>Split the list</td><td data-l="What happens">Target accounts are split at random into two halves. The test half gets ads plus outbound, and the holdout half gets outbound only. The split is made separately for in-market and not-yet-in-market practices, so both halves have the same mix.</td></tr>
+        <tr><td>Day 30</td><td data-l="What happens">At least 60% of target accounts must match to a verified decision maker. If they do not, the money moves to search, email and CSM.</td></tr>
+        <tr><td>Day 60</td><td data-l="What happens">The test half must reply to outbound at least 20% more often than the holdout half, or book more qualified calls per 100 accounts. If it does neither, the ads stop.</td></tr>
+        <tr><td>Month three</td><td data-l="What happens">Spend shifts to in-market accounts, and a geofence runs around APTA CSM in Philadelphia, February 4 to 6, 2027.</td></tr>
+        <tr><td>Fallback</td><td data-l="What happens">If Propensity cannot match enough of the list to run ads, the test moves to an NPI-based healthcare ad platform, PulsePoint or DeepIntent. Both target and report on healthcare professionals by individual NPI, and both accept an uploaded NPI list. They reach owners and clinic directors who hold an NPI, but not executives or administrators without one. Neither site names physical therapists, so our NPI list gets a match test first. Neither publishes prices, so both are quotes in week one.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub">The five areas the role asks for</h3>
+    <p class="sub-p">The role asks for "paid search, paid social, email, landing pages, and audience segmentation." This is where each one sits.</p>
+    <table class="tbl tbl--stack areas">
+      <thead><tr><th>Area</th><th>What runs</th><th>Who it reaches</th><th>Share of spend</th><th>Number we watch</th><th>Cut when</th></tr></thead>
       <tbody>
         <tr>
-          <td>LinkedIn to the named account list</td>
-          <td data-l="Job">Show the message to owners, executives and lead clinicians at about 1,000 target groups, so they recognize us when outbound arrives.</td>
-          <td data-l="Share of channel spend"><b class="num">45%</b></td>
-          <td data-l="Working if">Accounts that see the ads reply to outbound at least 20% more often than a held-out group that does not.</td>
-          <td data-l="Cut when">An ad set spends $3,000 or runs three weeks with click-through under 0.35% and no leads from target accounts. If the reply lift is under 20% at Day 60, LinkedIn drops to retargeting only.</td>
+          <td>Paid search</td>
+          <td data-l="What runs">Google Search on brand, category, competitor and problem terms. Exact and phrase match first, negative keywords added daily for the first three weeks, and qualified stages imported back from Salesforce.</td>
+          <td data-l="Who it reaches">Clinicians, owners and performance staff already searching</td>
+          <td data-l="Share of spend">20% of channel spend</td>
+          <td data-l="Number we watch">35% or more of search leads accepted by sales</td>
+          <td data-l="Cut when">A keyword group spends $400 without a lead from a target account.</td>
         </tr>
         <tr>
-          <td>Google Search</td>
-          <td data-l="Job">Answer people already searching for EMG or biofeedback tools, a competitor, or help with return-to-sport decisions. It goes live in week two.</td>
-          <td data-l="Share of channel spend"><b class="num">20%</b></td>
-          <td data-l="Working if">35% or more of search leads are accepted by sales.</td>
-          <td data-l="Cut when">A keyword group spends $400 without a lead from a target account. Broad match stays off until a search term has produced a sales opportunity.</td>
+          <td>Paid social</td>
+          <td data-l="What runs">Propensity's LinkedIn and Meta placements to the verified contact list, plus Meta retargeting to site visitors and video viewers.</td>
+          <td data-l="Who it reaches">Decision makers in the test half, and people who visited the site or watched the video</td>
+          <td data-l="Share of spend">Part of the 45% test, plus 10% for retargeting</td>
+          <td data-l="Number we watch">Outbound reply rate in the test half against the holdout half</td>
+          <td data-l="Cut when">Day 60, if the test half's reply rate is less than 20% higher and its calls per 100 accounts are no higher.</td>
         </tr>
         <tr>
-          <td>Outbound and nurture email</td>
-          <td data-l="Job">Turn interest into booked calls. Outbound opens conversations at named accounts, and nurture moves every inbound lead toward a call.</td>
-          <td data-l="Share of channel spend"><b class="num">10%</b></td>
-          <td data-l="Working if">A positive reply rate of 2.5% or better, with half of the meetings accepted by sales.</td>
-          <td data-l="Cut when">A sequence under 1% positive replies after 300 sends gets rewritten. Sending stops on any domain with bounces over 2% or complaints over 0.1%.</td>
+          <td>Email</td>
+          <td data-l="What runs">Four plain-text outbound emails to the purchased contacts, in-market practices first. Three nurture tracks: one for the clinic owner, one for the lead clinician and one for the sports performance lead.</td>
+          <td data-l="Who it reaches">Both halves of the target list, and every inbound lead</td>
+          <td data-l="Share of spend">10% of channel spend</td>
+          <td data-l="Number we watch">A positive reply rate of 2.5% or better</td>
+          <td data-l="Cut when">A sequence under 1% positive replies after 300 sends gets rewritten. Sending stops past 2% bounces or 0.1% complaints.</td>
+        </tr>
+        <tr>
+          <td>Landing pages</td>
+          <td data-l="What runs">Separate pilot, demo, return-to-play and comparison pages. Each has one call to action, a four-field form, an instant scheduler and UTM capture into Salesforce. Form length and offer are the first two tests.</td>
+          <td data-l="Who it reaches">Everyone who clicks an ad, an email or the mailer</td>
+          <td data-l="Share of spend">Part of the content line, 25% of the total budget</td>
+          <td data-l="Number we watch">Booked calls per 100 visitors</td>
+          <td data-l="Cut when">The losing version of each test is dropped once each version has about 300 visits.</td>
+        </tr>
+        <tr>
+          <td>Audience segmentation</td>
+          <td data-l="What runs">Fit from the practitioner database, intent from Bombora, and engagement from Propensity and Account Engagement, combined into in-market and not-yet-in-market tiers. Suppression lists for customers, open trials, patients, students and competitors.</td>
+          <td data-l="Who it reaches">Every account and contact in Salesforce</td>
+          <td data-l="Share of spend">Part of the data line, 12% of the total budget</td>
+          <td data-l="Number we watch">Qualified calls per 100 accounts, in-market against not-yet-in-market</td>
+          <td data-l="Cut when">Day 60, intent data stops if in-market practices book no more calls per 100 accounts than the rest.</td>
         </tr>
       </tbody>
     </table>
-    <p class="note">The other 25% of channel spend goes to retargeting (10%) and small capped tests (15%), such as newsletter sponsorships, co-marketing with testing vendors and the CSM booth.</p>
 
     <dl class="also">
-      <div><dt>Retargeting</dt><dd>Meta and YouTube ads to site visitors, video viewers and our contact lists. They keep us in front of people between touches. They are not used to find new prospects.</dd></div>
-      <div><dt>APTA CSM in February</dt><dd>The Combined Sections Meeting runs February 4 to 6, 2027, in Philadelphia. We book meetings with target accounts before the show, run a 60-second muscle test at the booth, and follow up every conversation within 48 hours. Event costs sit in their own budget.</dd></div>
-      <div><dt>What we are holding back on</dt><dd>Meta and Instagram prospecting, paid YouTube reach, content syndication, and any patient or consumer advertising. Meta prospecting gets a small test in month three if retargeting works.</dd></div>
+      <div><dt>APTA CSM in February</dt><dd>The Combined Sections Meeting runs February 4 to 6, 2027, in Philadelphia. We book meetings with target accounts before the show, run the geofence and a 60-second muscle test at the booth during it, and follow up every conversation within 48 hours. Event costs sit in their own budget.</dd></div>
+      <div><dt>What we are holding back on</dt><dd>LinkedIn self-serve prospecting, broad Meta prospecting beyond the verified list, paid YouTube reach, content syndication, and any patient or consumer advertising.</dd></div>
     </dl>
   </div>
 </section>
@@ -662,7 +739,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
         </div>
       </div>
 
-      <p class="note">Planning rates: 55% of qualified calls become sales opportunities, 45% of those start a pilot, and half of pilots convert, at $7,500 in first-year contract value. Search is planned at $330 per qualified call and LinkedIn at $2,000, from published 2026 benchmarks. Only search and LinkedIn change with the budget here. Outbound, the weekly demo, CSM and existing inbound stay constant, which is why the range between Lean and Aggressive is narrow. Real numbers from the last 12 months of trials replace these rates by Day 30.</p>
+      <p class="note">Planning rates: 55% of qualified calls become sales opportunities, 45% of those start a pilot, and half of pilots convert, at $7,500 in first-year contract value. Search is planned at $330 per qualified call, from published 2026 benchmarks. The account-based test keeps the $2,000 per call that was planned for LinkedIn until its own results replace it. Propensity lists the plan that includes LinkedIn, Meta and direct mail at $3,000 a month. Over 90 days that fee takes $9,000 of the account-based line, which leaves about $13,500 for ads at the base budget and about $2,250 at Lean. The list and intent data have no published prices and are quoted in week one. Only search and the account-based test change with the budget here. Outbound, the weekly demo, CSM and existing inbound stay constant, which is why the range between Lean and Aggressive is narrow. Real numbers from the last 12 months of trials replace these rates by Day 30.</p>
     </div>
   </div>
 </section>
@@ -681,22 +758,22 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
       <article class="phase">
         <header><p>Days 1 to 30</p><h3>Set up</h3></header>
         <ol class="weeks">
-          <li><b>Week 1</b><span>Listen to ten sales calls and interview eight to ten trial customers. Audit Salesforce, the website and tracking. Agree the qualified-lead checklist and response times with sales. Draft the approved claims list with regulatory.</span></li>
-          <li><b>Week 2</b><span>Salesforce stages, source tracking and lead routing go live. Fix the website's demo request path. Launch Google Search. Book two customer video shoots.</span></li>
-          <li><b>Week 3</b><span>Produce the 90-second demo video, two customer stories and a pilot guide. Enter the last 12 months of trials in Salesforce. Load the target account list into LinkedIn. Re-brief the outbound partner.</span></li>
-          <li><b>Week 4</b><span>LinkedIn goes live at low spend. Run the first weekly live demo. The weekly report goes live, and a test lead runs through every path.</span></li>
+          <li><b>Week 1</b><span>Vendor demos and coverage counts. Propensity, HealthLink Dimensions, CampaignLake and Bombora each count the PT practices with 5 to 25 locations they cover in our states. Confirm email and ad use rights before signing. Listen to ten sales calls, interview trial customers, and agree the qualified-lead checklist with sales.</span></li>
+          <li><b>Week 2</b><span>Buy the list and load it into Salesforce with NPI, data source and intent fields. Salesforce stages, source tracking and lead routing go live. Launch Google Search. Draft the approved claims list with regulatory and book two customer video shoots.</span></li>
+          <li><b>Week 3</b><span>Build the Propensity audience, then split target accounts at random into a test half and a holdout half. If Propensity matches too little of the list, move the test to PulsePoint or DeepIntent. Build the four landing pages, produce the 90-second video and a pilot guide, and re-brief the outbound partner.</span></li>
+          <li><b>Week 4</b><span>Launch the account-based ads to the test half at low spend. Run the first weekly live demo. The weekly report goes live, and a test lead runs through every path.</span></li>
         </ol>
         <div class="check">
           <p class="check-k">Day 30 checkpoint</p>
           <p class="check-n"><b class="num">6 to 8</b> qualified calls a week</p>
-          <p>Every new lead carries its source and audience. Decide: confirm the account list, pick the two messages to test and approve month-two spend.</p>
+          <p>At least 60% of target accounts match to a verified decision maker, or the account-based money moves to search, email and CSM. Decide: pick the two messages to test and approve month-two spend.</p>
         </div>
       </article>
 
       <article class="phase">
         <header><p>Days 31 to 60</p><h3>Test</h3></header>
         <ol class="weeks">
-          <li><b>Week 5</b><span>Full launch, with two messages tested against two buyer types. Outbound sequences start, with a held-out group of accounts that do not see LinkedIn ads.</span></li>
+          <li><b>Week 5</b><span>Full launch. Outbound starts to both halves, in-market practices first, and two messages are tested against two buyer types.</span></li>
           <li><b>Week 6</b><span>Make the first cut of ads that are not working. Add new keywords and exclusions from the search terms report. Open meeting bookings for CSM.</span></li>
           <li><b>Week 7</b><span>Test the offers: pilot scoping call against live demo. Publish the first customer story.</span></li>
           <li><b>Week 8</b><span>Cut the bottom half of ads and audiences. Choose the winning message and offer.</span></li>
@@ -704,22 +781,22 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
         <div class="check">
           <p class="check-k">Day 60 checkpoint</p>
           <p class="check-n"><b class="num">10 to 12</b> qualified calls a week</p>
-          <p>Half of target accounts have seen the ads three or more times. Decide: release the reserve to what is working and decide on a Meta test.</p>
+          <p>The test half replies to outbound at least 20% more often than the holdout half, or books more qualified calls per 100 accounts. If neither, the ads stop. Decide: release the reserve to what is working.</p>
         </div>
       </article>
 
       <article class="phase">
         <header><p>Days 61 to 90</p><h3>Scale</h3></header>
         <ol class="weeks">
-          <li><b>Week 9</b><span>Raise spend on what works by up to 25% a week. Widen outbound if reply rates hold.</span></li>
-          <li><b>Week 10</b><span>APTA CSM runs February 4 to 6. Hold the pre-booked meetings, run the booth muscle test, and get every badge scan into Salesforce the same day.</span></li>
+          <li><b>Week 9</b><span>Move ad spend to in-market practices. Raise spend on what works by up to 25% a week. Widen outbound if reply rates hold.</span></li>
+          <li><b>Week 10</b><span>APTA CSM runs February 4 to 6 in Philadelphia, with a geofence around the convention center. Hold the pre-booked meetings, run the booth muscle test, and get every badge scan into Salesforce the same day.</span></li>
           <li><b>Week 11</b><span>Follow up every CSM conversation within 48 hours. Publish the second customer story. First newsletter sponsorship goes live.</span></li>
-          <li><b>Weeks 12 and 13</b><span>Send qualified stages back to LinkedIn and Google. Read the first pilot results against their success measures. Hold the Day 90 review of cost per call, per pilot and per customer, by channel and audience.</span></li>
+          <li><b>Weeks 12 and 13</b><span>Read the first pilot results against their success measures. Hold the Day 90 review of cost per call, per pilot and per customer, by channel, audience and test half.</span></li>
         </ol>
         <div class="check">
           <p class="check-k">Day 90 checkpoint</p>
           <p class="check-n"><b class="num">15 to 20</b> qualified calls a week</p>
-          <p>About 130 qualified calls held in total and 30 pilots started or scheduled. Decide: next quarter's budget, a second sales seat, and the second audience to target.</p>
+          <p>About 130 qualified calls held in total and 30 pilots started or scheduled. Decide: next quarter's budget, whether to renew the 90-day data and ABM contracts, a second sales seat, and the second audience to target.</p>
         </div>
       </article>
     </div>
@@ -761,10 +838,10 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 
     <h3 class="sub">Salesforce in month one</h3>
     <div class="sf">
-      <article><p class="sf-w">Week 1</p><ul class="list-dot"><li>Audit fields, the Account Engagement connection and admin access</li><li>NeuroStrip record types, kept apart from assistive communication</li><li>Patient records excluded from every marketing list and report</li><li>Fields for account type, size and role</li></ul></article>
+      <article><p class="sf-w">Week 1</p><ul class="list-dot"><li>Audit fields, the Account Engagement connection and admin access</li><li>NeuroStrip record types, kept apart from assistive communication</li><li>Patient records excluded from every marketing list and report</li><li>Fields for account type, size and role, plus NPI, data source, intent topic, and test or holdout group</li></ul></article>
       <article><p class="sf-w">Week 2</p><ul class="list-dot"><li>Lifecycle stages, each with a date stamp</li><li>Lead source and UTM fields that cannot be overwritten</li><li>"How did you hear about us?" on every form</li><li>Lead routing with the response-time clock</li></ul></article>
       <article><p class="sf-w">Week 3</p><ul class="list-dot"><li>Parent accounts for groups, child accounts for clinics</li><li>Opportunity stages with pilot start, end and success measures</li><li>Required loss reasons from a fixed list</li><li>Simple fit and engagement scores</li></ul></article>
-      <article><p class="sf-w">Week 4</p><ul class="list-dot"><li>The weekly report</li><li>The last 12 months of trials entered with source and outcome</li><li>Qualified stages sent back to LinkedIn and Google</li><li>A test lead through every path, and 30 minutes of training for sales</li></ul></article>
+      <article><p class="sf-w">Week 4</p><ul class="list-dot"><li>The weekly report</li><li>The last 12 months of trials entered with source and outcome</li><li>Qualified stages sent back to Google Ads</li><li>Propensity engagement synced to each contact</li><li>A test lead through every path, and 30 minutes of training for sales</li></ul></article>
     </div>
 
     <h3 class="sub">Five numbers reported every week</h3>
@@ -775,7 +852,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
       <li><b>Pilots started, and pilots converted to paid</b><span>planned at 45% and 50%</span></li>
       <li><b>Cost per qualified call</b><span>by channel, against a limit of about $930</span></li>
     </ol>
-    <p class="note">Each number is split by channel and by audience. The $930 limit is a $7,500 first-year contract times the 12% of qualified calls planned to become customers.</p>
+    <p class="note">Each number is split by channel, by audience and by test half. The $930 limit is a $7,500 first-year contract times the 12% of qualified calls planned to become customers.</p>
   </div>
 </section>
 
@@ -785,7 +862,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
   <div class="wrap">
     <header class="sec-head">
       <h2><span class="sec-n">8</span>Team, asks and risks</h2>
-      <p class="lede">Strategy, data and media buying stay in-house. Partners handle production and specialist work. I need six answers from Control Bionics in week one.</p>
+      <p class="lede">Strategy, data decisions and media buying stay in-house. Partners supply the list, the intent data, the account-based ads, production and specialist work. I need seven answers from Control Bionics in week one.</p>
     </header>
 
     <table class="tbl tbl--stack team">
@@ -795,35 +872,41 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
         <tr><td>Test design and the decisions to cut or scale</td><td data-l="Who does it">In-house</td></tr>
         <tr><td>Ad accounts, tracking, audiences and data, always in Control Bionics' name</td><td data-l="Who does it">In-house</td></tr>
         <tr><td>Media buying for the first 90 days, and the weekly report</td><td data-l="Who does it">In-house</td></tr>
+        <tr><td>Practitioner list of PT practices and decision makers</td><td data-l="Who does it">HealthLink Dimensions or CampaignLake, on 90-day terms in Control Bionics' name</td></tr>
+        <tr><td>Intent data on which practices are researching related topics</td><td data-l="Who does it">Bombora, on 90-day terms in Control Bionics' name</td></tr>
+        <tr><td>Account-based ads to the test half of the list</td><td data-l="Who does it">Propensity for the 90-day test, with PulsePoint or DeepIntent as the fallback</td></tr>
         <tr><td>Customer video shoots, demo video and design</td><td data-l="Who does it">Production studio or freelancers, per project</td></tr>
         <tr><td>Outbound email sending</td><td data-l="Who does it">The existing outbound partner, re-briefed</td></tr>
         <tr><td>Salesforce and Account Engagement build</td><td data-l="Who does it">A certified consultant for four weeks, if there is no admin time in-house</td></tr>
-        <tr><td>Review of the LinkedIn and search setup before launch</td><td data-l="Who does it">A specialist, by the hour</td></tr>
+        <tr><td>Review of the search and account-based ad setup before launch</td><td data-l="Who does it">A specialist, by the hour</td></tr>
       </tbody>
     </table>
-    <p class="note">No media agency until media spend passes about $40,000 a month or four paid channels are live. Every partner works on Control Bionics' accounts, is judged on qualified calls, is paid a fixed fee, and can be ended on 30 days' notice.</p>
+    <p class="note">No media agency until media spend passes about $40,000 a month or four paid channels are live. The data and ABM contracts are signed in Control Bionics' name on 90-day terms. Every partner works on Control Bionics' accounts, is judged on qualified calls and is paid a fixed fee. Propensity publishes its prices. The list, intent and fallback vendors do not, so each of those is a quote in week one.</p>
 
     <div class="two">
       <div>
         <h3 class="sub">What I need in week one</h3>
         <ol class="asks">
           <li><b>The budget.</b> The 90-day number and what it has to cover. The plan assumes $90,000, excluding salaries, events and the outbound retainer.</li>
-          <li><b>Salesforce access.</b> Admin rights, the edition we are on, and the Account Engagement connection.</li>
+          <li><b>Salesforce and ad account access.</b> Admin rights in Salesforce, Google Ads and Meta, and the Account Engagement connection. Propensity can run Meta ads only from an account with 60 days of campaign history.</li>
           <li><b>Sales capacity.</b> How many calls one calendar can hold, assumed at 20 to 25 a week, and who covers when it is full.</li>
           <li><b>Pilot kits.</b> How many kits are free each month, and whether a 30-day pilot works for the sales team.</li>
           <li><b>History.</b> The last 12 months of trials with source, outcome and contract value, and a count of discovery calls by source for the last eight weeks.</li>
           <li><b>Time with sales and customers.</b> Ten recorded sales calls and eight to ten trial customers to interview.</li>
+          <li><b>Where we sell.</b> The states Control Bionics sells into, which set the filter for the list.</li>
         </ol>
       </div>
       <div>
-        <h3 class="sub">The four biggest risks</h3>
+        <h3 class="sub">The six biggest risks</h3>
         <table class="tbl tbl--stack risks">
           <thead><tr><th>Risk</th><th>Response</th></tr></thead>
           <tbody>
-            <tr><td>Copy drifts into claims a non-diagnostic tool cannot make, such as preventing injury.</td><td data-l="Response">A claims list approved with regulatory before launch. Every outcome number tied to a named customer who agreed to it.</td></tr>
+            <tr><td>Copy drifts into claims a non-diagnostic tool cannot make, such as preventing injury.</td><td data-l="Response">A claims list approved with regulatory before launch. Every outcome number tied to a named customer who agreed to it. Propensity's display network needs advertiser approval for medical device ads, so that request goes in during week one.</td></tr>
             <tr><td>Too few customer stories to show in early ads.</td><td data-l="Response">Film two customers in month one, and ask every trial site for a story when its pilot ends.</td></tr>
             <tr><td>Marketing books more calls than one sales calendar or the pilot kits can handle.</td><td data-l="Response">Smaller accounts go to the weekly group demo. A second sales seat is added when the next open slot is more than five business days out for two weeks running.</td></tr>
             <tr><td>The same 1,000 accounts tire of the same ads.</td><td data-l="Response">Frequency caps, new creative every month, and widening to groups with 26 to 50 locations if needed.</td></tr>
+            <tr><td>The data covers too few PT practices with 5 to 25 locations, for contacts or for intent, or the matched audience is too small for LinkedIn and Meta.</td><td data-l="Response">The Day 30 match check. If under 60% of target accounts match to a verified decision maker, the money moves to search, email and CSM.</td></tr>
+            <tr><td>The data license does not allow email or ad use.</td><td data-l="Response">Confirm email and ad use rights in writing before buying the list or the intent data. HealthLink Dimensions' standard license, for example, excludes social targeting unless the contract adds it.</td></tr>
           </tbody>
         </table>
       </div>
@@ -850,20 +933,20 @@ window.NS = {
     min: 30000, max: 200000, step: 5000, def: 90000,
     groups: [['channel', 'Media and channels'], ['build', 'Content and setup'], ['reserve', 'Reserve']],
     lines: [
-      { id: 'li',     name: 'LinkedIn',                              pct: 25, m: [3, 9, 13],    group: 'channel', color: 'c1',
-        note: 'Video and document ads to the named account list. Spend starts small in month one.' },
+      { id: 'abm',    name: 'Account-based ads (Propensity test)',   pct: 25, m: [3, 9, 13],    group: 'channel', color: 'c1',
+        note: 'Propensity\'s platform fee plus ads to the test half of the target list. Spend shifts to in-market practices in month three.' },
       { id: 'search', name: 'Google Search',                         pct: 11, m: [2.5, 4, 4.5], group: 'channel', color: 'c2',
         note: 'Ads on brand, category, competitor and problem searches, live from week two.' },
       { id: 'email',  name: 'Outbound and nurture email',            pct: 6,  m: [2, 2, 2],     group: 'channel', color: 'c3',
-        note: 'Contact data for target accounts, sending tools and sequences. The outbound partner\'s retainer is separate.' },
+        note: 'Sending tools, separate sending domains and sequences. The outbound partner\'s retainer is separate.' },
       { id: 'rt',     name: 'Retargeting',                           pct: 5,  m: [0.5, 2, 2.5], group: 'channel', color: 'c4',
-        note: 'Meta and YouTube ads to site visitors, video viewers and our contact lists.' },
+        note: 'Meta ads to site visitors and video viewers.' },
       { id: 'tests',  name: 'Small tests',                           pct: 8,  m: [2, 3, 3],     group: 'channel', color: 'c5',
         note: 'Newsletter sponsorships, co-marketing with testing vendors and the CSM booth build, each capped and tracked on its own.' },
       { id: 'assets', name: 'Video, customer stories and landing pages', pct: 25, m: [14, 8, 3], group: 'build', color: 'c6',
         note: 'The 90-second demo video, two filmed customer stories, a pilot guide and landing pages.' },
       { id: 'data',   name: 'Data and Salesforce setup',             pct: 12, m: [6, 3, 3],     group: 'build',   color: 'c7',
-        note: 'Account list and contact data, scheduling and routing tools, analytics, and a fixed-scope Salesforce build if needed.' },
+        note: 'The practitioner list and Bombora intent data, quoted in week one. Also scheduling and routing tools, and a fixed-scope Salesforce build if needed.' },
       { id: 'res',    name: 'Reserve',                               pct: 8,  m: [0, 2, 6],     group: 'reserve', color: 'c8',
         note: 'Held until the Day 30 and Day 60 reviews, then given to whatever is working.' }
     ]
@@ -872,7 +955,9 @@ window.NS = {
   /* ------------------------------------------------------------------ */
   /* Qualified calls a week at the Day 90 run rate, by source            */
   /*   rate:      a contacts a week, b calls per 100 contacts            */
-  /*   cost:      month-three spend on budget line `line`, b per call    */
+  /*   cost:      month-three spend on budget line `line`, b per call.   */
+  /*              The account-based test keeps the $2,000 planned for    */
+  /*              LinkedIn until its own results replace it.             */
   /*   monthly:   a registrants a month, b% book a call                  */
   /*   quarterly: a conversations a quarter, b% book a call              */
   /*   direct:    a calls a week                                         */
@@ -885,7 +970,7 @@ window.NS = {
       { name: 'Outbound email', kind: 'rate', a: 300, b: 0.9 },
       { name: 'APTA CSM follow-up', kind: 'quarterly', a: 150, b: 20 },
       { name: 'Weekly live demo', kind: 'monthly', a: 60, b: 15 },
-      { name: 'LinkedIn', kind: 'cost', line: 'li', b: 2000 }
+      { name: 'Account-based ads (Propensity test)', kind: 'cost', line: 'abm', b: 2000 }
     ],
     /* percentages: calls to opportunities, opportunities to pilots, pilots to paid; first-year contract value */
     funnel: { opp: 55, pilot: 45, paid: 50, acv: 7500 }

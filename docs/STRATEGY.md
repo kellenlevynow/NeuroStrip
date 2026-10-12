@@ -16,10 +16,10 @@ The goal is 20 qualified discovery calls a week on the NeuroStrip sales calendar
 | Question | Answer |
 |---|---|
 | Which audience comes first? | Outpatient PT groups with 5 to 25 locations get 70% of the effort, pro and college sport gets 20% through business development, and everyone else comes in through inbound only. |
-| Which channels, and how is the budget split? | LinkedIn to a named list of about 1,000 PT groups, Google Search, and outbound plus nurture email, at 45%, 20% and 10% of channel spend, with 10% for retargeting and 15% for small tests. |
-| What goes to an agency, and what stays in-house? | Strategy, the account list, messaging, data and media buying stay in-house, while video production, outbound execution and a four-week Salesforce build go to partners. |
+| Which channels, and how is the budget split? | A 90-day account-based test that runs Propensity ads to half of a purchased list of about 1,000 PT groups, plus Google Search and email, at 45%, 20% and 10% of channel spend, with 10% for retargeting and 15% for small tests. |
+| What goes to an agency, and what stays in-house? | Strategy, messaging and media decisions stay in-house, while partners supply the list, intent data, ads, video, outbound sending and a four-week Salesforce build, with the data and ABM contracts in Control Bionics' name on 90-day terms. |
 | What is a qualified lead, and how is it measured? | A decision maker or clinical lead at a target account who asked for a demo, pilot or pricing and named a problem we solve, measured through to pilots and paid contracts. |
-| What gets built in Salesforce in month one? | NeuroStrip record types, dated lifecycle stages, source tracking that cannot be overwritten, lead routing with a one-hour response limit, pilot tracking and one weekly report. |
+| What gets built in Salesforce in month one? | NeuroStrip record types, dated lifecycle stages, source tracking that cannot be overwritten, fields for NPI, intent and test group, lead routing with a one-hour response limit, pilot tracking and one weekly report. |
 
 At the base budget, the model reaches about 15 qualified calls a week by Day 90. At that rate about 16 pilots start each month and about 24 become paying customers each quarter, worth about $180,000 in first-year revenue. It reaches 20 calls a week by about Day 120 if outbound reply rates improve, a second weekly demo fills and the APTA CSM follow-up converts.
 
@@ -29,7 +29,7 @@ Regional outpatient PT groups get most of the effort, business development works
 
 | Audience | Share of effort | How we work it |
 |---|---|---|
-| Outpatient PT groups with 5 to 25 locations | 70% | A named list of about 1,000 groups. LinkedIn, search and outbound reach owners, executives and lead clinicians. The path is a discovery call, a 30-day pilot at one clinic, then rollout across the group. |
+| Outpatient PT groups with 5 to 25 locations | 70% | A purchased list of about 1,000 groups, counted in week one. Account-based ads, search and outbound reach owners, executives and lead clinicians. The path is a discovery call, a 30-day pilot at one clinic, then rollout across the group. |
 | Pro and college sport | 20% | Business development leads. Marketing supplies return-to-play content, ads to a short list of named programs and the event plan. The goal is reference customers we can show PT groups. |
 | Everyone else: independent clinics, performance facilities, researchers | 10% | Inbound only. Search, the website and a weekly live group demo. No outbound and no dedicated spend. No patient or consumer advertising. |
 
@@ -53,15 +53,15 @@ Every message makes one point. Strength and hop tests measure how much force a l
 
 All copy stays inside NeuroStrip's registration as a non-diagnostic measurement and biofeedback tool. Nothing says it diagnoses, predicts or prevents injury.
 
-### The first three ads (example)
+### The first ads, email and mailer (example)
 
-**LinkedIn video**, to owners and clinical leads at target accounts:
+**Account-based video or display ad, decision makers in the test half, through Propensity:**
 
 > Three weeks after a hamstring injury, force plates showed a 7% gap between the athlete's legs. With NeuroStrip on both hamstrings, the gap in muscle activation was 37%.
 >
 > Same athlete, two measures. Watch the 90-second video.
 
-There is no form to fill in. Everyone who watches joins the retargeting audience.
+The same creative runs as a video on LinkedIn and Meta and as a display or native ad. There is no form, and everyone who watches joins the retargeting audience.
 
 **Google Search ad**, for people searching for EMG and biofeedback tools (example query: "wireless emg biofeedback for physical therapy"):
 
@@ -81,23 +81,53 @@ Each sitelink goes to its own page, so the click tells us the buyer type before 
 >
 > Your clinicians make return-to-sport calls every week. Would a 20-minute look be useful? If the timing is wrong, I can send the 90-second video instead.
 
-Sent as plain text with one ask, in the same week the account starts seeing the LinkedIn video.
+Sent as plain text with one ask, starting with in-market practices.
+
+**Direct mail postcard**, to owners at in-market practices. Front: *One athlete measured two ways: a 7% gap on force plates and a 37% gap in muscle activation.*
+
+> {First name}, your clinicians make return-to-sport decisions every week.
+>
+> NeuroStrip is a 4-gram wireless sensor that shows muscle activation live on a tablet, on up to four muscles at once.
+>
+> We would like to run a 30-day pilot at one of your clinics, with success measures you choose. Scan the code to book a 20-minute call.
+
+Sent through Propensity to owners at in-market practices only. Each scan of the code is tied to the contact in Salesforce.
 
 ## 4. Channels
 
-Each of the three channels has its own job. LinkedIn reaches the named accounts, search catches people already looking, and email turns interest into booked calls.
+Channel money goes to a 90-day account-based test, Google Search and email. LinkedIn self-serve prospecting is on hold because it converts poorly for this buyer.
 
-| Channel | Job | Share of channel spend | Working if | Cut when |
-|---|---|---|---|---|
-| LinkedIn to the named account list | Show the message to owners, executives and lead clinicians at about 1,000 target groups, so they recognize us when outbound arrives. | 45% | Accounts that see the ads reply to outbound at least 20% more often than a held-out group that does not. | An ad set spends $3,000 or runs three weeks with click-through under 0.35% and no leads from target accounts. If the reply lift is under 20% at Day 60, LinkedIn drops to retargeting only. |
-| Google Search | Answer people already searching for EMG or biofeedback tools, a competitor, or help with return-to-sport decisions. It goes live in week two. | 20% | 35% or more of search leads are accepted by sales. | A keyword group spends $400 without a lead from a target account. Broad match stays off until a search term has produced a sales opportunity. |
-| Outbound and nurture email | Turn interest into booked calls. Outbound opens conversations at named accounts, and nurture moves every inbound lead toward a call. | 10% | A positive reply rate of 2.5% or better, with half of the meetings accepted by sales. | A sequence under 1% positive replies after 300 sends gets rewritten. Sending stops on any domain with bounces over 2% or complaints over 0.1%. |
+Channel spend: account-based test 45%, Google Search 20%, email 10%, retargeting 10%, small tests 15%.
 
-The other 25% of channel spend goes to retargeting (10%) and small capped tests (15%), such as newsletter sponsorships, co-marketing with testing vendors and the CSM booth.
+### The account-based test
 
-- **Retargeting:** Meta and YouTube ads to site visitors, video viewers and our contact lists. They keep us in front of people between touches. They are not used to find new prospects.
-- **APTA CSM in February:** The Combined Sections Meeting runs February 4 to 6, 2027, in Philadelphia. We book meetings with target accounts before the show, run a 60-second muscle test at the booth, and follow up every conversation within 48 hours. Event costs sit in their own budget.
-- **What we are holding back on:** Meta and Instagram prospecting, paid YouTube reach, content syndication, and any patient or consumer advertising. Meta prospecting gets a small test in month three if retargeting works.
+The test gets 45% of channel spend, which is $22,500 at the base budget, and runs for 90 days.
+
+| Step | What happens |
+|---|---|
+| Build the list | A purchased list from a healthcare practitioner database, HealthLink Dimensions or CampaignLake, both of which use NPI data. It is filtered to physical therapy practices by NPI record, to the states Control Bionics sells into, and to titles such as Clinic Owner, CEO, COO, Chief Clinical Officer, Rehab Director, Practice Administrator and Clinic Director. Neither site shows a filter for number of locations, so we keep practices with 5 to 25 locations by counting each group's practice addresses. CampaignLake lists a physical therapist segment and HealthLink Dimensions does not name one, so we check both free samples in week one. |
+| Flag in-market practices | Bombora flags practices whose research on topics such as physical therapy billing software, EMR migration, rehab equipment and biofeedback has risen above their own usual level. These in-market practices get ad spend and outbound first. Bombora reports research by company and does not name people, and the exact topics are checked against its topic list in week one. |
+| Run the ads | Propensity runs the ads. It describes itself as a contact-level B2B marketing platform. It builds audiences by industry, job role, tech stack and behavior, runs ads on LinkedIn, Meta, the Propensity Display Network, native and contextual display, direct mail and geofencing, and syncs contact-level engagement into Salesforce. We upload our own list to it. Its pricing page lists the plan that includes LinkedIn, Meta and direct mail at $3,000 a month, before ad spend. |
+| Split the list | Target accounts are split at random into two halves. The test half gets ads plus outbound, and the holdout half gets outbound only. The split is made separately for in-market and not-yet-in-market practices, so both halves have the same mix. |
+| Day 30 | At least 60% of target accounts must match to a verified decision maker. If they do not, the money moves to search, email and CSM. |
+| Day 60 | The test half must reply to outbound at least 20% more often than the holdout half, or book more qualified calls per 100 accounts. If it does neither, the ads stop. |
+| Month three | Spend shifts to in-market accounts, and a geofence runs around APTA CSM in Philadelphia, February 4 to 6, 2027. |
+| Fallback | If Propensity cannot match enough of the list to run ads, the test moves to an NPI-based healthcare ad platform, PulsePoint or DeepIntent. Both target and report on healthcare professionals by individual NPI, and both accept an uploaded NPI list. They reach owners and clinic directors who hold an NPI, but not executives or administrators without one. Neither site names physical therapists, so our NPI list gets a match test first. Neither publishes prices, so both are quotes in week one. |
+
+### The five areas the role asks for
+
+The role asks for "paid search, paid social, email, landing pages, and audience segmentation." This is where each one sits.
+
+| Area | What runs | Who it reaches | Share of spend | Number we watch | Cut when |
+|---|---|---|---|---|---|
+| Paid search | Google Search on brand, category, competitor and problem terms. Exact and phrase match first, negative keywords added daily for the first three weeks, and qualified stages imported back from Salesforce. | Clinicians, owners and performance staff already searching | 20% of channel spend | 35% or more of search leads accepted by sales | A keyword group spends $400 without a lead from a target account. |
+| Paid social | Propensity's LinkedIn and Meta placements to the verified contact list, plus Meta retargeting to site visitors and video viewers. | Decision makers in the test half, and people who visited the site or watched the video | Part of the 45% test, plus 10% for retargeting | Outbound reply rate in the test half against the holdout half | Day 60, if the test half's reply rate is less than 20% higher and its calls per 100 accounts are no higher. |
+| Email | Four plain-text outbound emails to the purchased contacts, in-market practices first. Three nurture tracks: one for the clinic owner, one for the lead clinician and one for the sports performance lead. | Both halves of the target list, and every inbound lead | 10% of channel spend | A positive reply rate of 2.5% or better | A sequence under 1% positive replies after 300 sends gets rewritten. Sending stops past 2% bounces or 0.1% complaints. |
+| Landing pages | Separate pilot, demo, return-to-play and comparison pages. Each has one call to action, a four-field form, an instant scheduler and UTM capture into Salesforce. Form length and offer are the first two tests. | Everyone who clicks an ad, an email or the mailer | Part of the content line, 25% of the total budget | Booked calls per 100 visitors | The losing version of each test is dropped once each version has about 300 visits. |
+| Audience segmentation | Fit from the practitioner database, intent from Bombora, and engagement from Propensity and Account Engagement, combined into in-market and not-yet-in-market tiers. Suppression lists for customers, open trials, patients, students and competitors. | Every account and contact in Salesforce | Part of the data line, 12% of the total budget | Qualified calls per 100 accounts, in-market against not-yet-in-market | Day 60, intent data stops if in-market practices book no more calls per 100 accounts than the rest. |
+
+- **APTA CSM in February:** The Combined Sections Meeting runs February 4 to 6, 2027, in Philadelphia. We book meetings with target accounts before the show, run the geofence and a 60-second muscle test at the booth during it, and follow up every conversation within 48 hours. Event costs sit in their own budget.
+- **What we are holding back on:** LinkedIn self-serve prospecting, broad Meta prospecting beyond the verified list, paid YouTube reach, content syndication, and any patient or consumer advertising.
 
 ## 5. Budget
 
@@ -105,14 +135,14 @@ The base case is $90,000 over 90 days. 55% goes to media, 37% to content and set
 
 | Line | Share | Lean $45,000 | Base $90,000 | Aggressive $150,000 |
 |---|---|---|---|---|
-| LinkedIn | 25% | $11,250 | $22,500 | $37,500 |
+| Account-based ads (Propensity test) | 25% | $11,250 | $22,500 | $37,500 |
 | Google Search | 11% | $4,950 | $9,900 | $16,500 |
 | Outbound and nurture email | 6% | $2,700 | $5,400 | $9,000 |
 | Retargeting | 5% | $2,250 | $4,500 | $7,500 |
 | Small tests | 8% | $3,600 | $7,200 | $12,000 |
 | **Media and channels** | **55%** | **$24,750** | **$49,500** | **$82,500** |
 | Video, customer stories and landing pages | 25% | $11,250 | $22,500 | $37,500 |
-| Data and Salesforce setup | 12% | $5,400 | $10,800 | $18,000 |
+| Data and Salesforce setup (practitioner list, intent data, routing tools) | 12% | $5,400 | $10,800 | $18,000 |
 | **Content and setup** | **37%** | **$16,650** | **$33,300** | **$55,500** |
 | Reserve | 8% | $3,600 | $7,200 | $12,000 |
 
@@ -130,9 +160,9 @@ What each budget returns:
 
 The most we should pay for a qualified call is about $930: a $7,500 first-year contract times the 12% of qualified calls planned to become customers.
 
-Where the calls come from at Day 90 on the base budget: existing inbound and referrals 3.8 a week (an estimate), Google Search 2.8, outbound email 2.7, APTA CSM follow-up 2.3, the weekly live demo 2.1, and LinkedIn 1.4.
+Where the calls come from at Day 90 on the base budget: existing inbound and referrals 3.8 a week (an estimate), Google Search 2.8, outbound email 2.7, APTA CSM follow-up 2.3, the weekly live demo 2.1, and the account-based test 1.4.
 
-Planning rates: 55% of qualified calls become sales opportunities, 45% of those start a pilot, and half of pilots convert, at $7,500 in first-year contract value. Search is planned at $330 per qualified call and LinkedIn at $2,000, from published 2026 benchmarks. Only search and LinkedIn change with the budget. Outbound, the weekly demo, CSM and existing inbound stay constant, which is why the range between Lean and Aggressive is narrow. Real numbers from the last 12 months of trials replace these rates by Day 30.
+Planning rates: 55% of qualified calls become sales opportunities, 45% of those start a pilot, and half of pilots convert, at $7,500 in first-year contract value. Search is planned at $330 per qualified call, from published 2026 benchmarks. The account-based test keeps the $2,000 per call that was planned for LinkedIn until its own results replace it. Propensity lists the plan that includes LinkedIn, Meta and direct mail at $3,000 a month. Over 90 days that fee takes $9,000 of the account-based line, which leaves about $13,500 for ads at the base budget and about $2,250 at Lean. The list and intent data have no published prices and are quoted in week one. Only search and the account-based test change with the budget. Outbound, the weekly demo, CSM and existing inbound stay constant, which is why the range between Lean and Aggressive is narrow. Real numbers from the last 12 months of trials replace these rates by Day 30.
 
 ## 6. The first 90 days
 
@@ -140,30 +170,30 @@ We spend month one setting up tracking and content, month two testing messages a
 
 ### Days 1 to 30: set up
 
-- **Week 1:** Listen to ten sales calls and interview eight to ten trial customers. Audit Salesforce, the website and tracking. Agree the qualified-lead checklist and response times with sales. Draft the approved claims list with regulatory.
-- **Week 2:** Salesforce stages, source tracking and lead routing go live. Fix the website's demo request path. Launch Google Search. Book two customer video shoots.
-- **Week 3:** Produce the 90-second demo video, two customer stories and a pilot guide. Enter the last 12 months of trials in Salesforce. Load the target account list into LinkedIn. Re-brief the outbound partner.
-- **Week 4:** LinkedIn goes live at low spend. Run the first weekly live demo. The weekly report goes live, and a test lead runs through every path.
+- **Week 1:** Vendor demos and coverage counts. Propensity, HealthLink Dimensions, CampaignLake and Bombora each count the PT practices with 5 to 25 locations they cover in our states. Confirm email and ad use rights before signing. Listen to ten sales calls, interview trial customers, and agree the qualified-lead checklist with sales.
+- **Week 2:** Buy the list and load it into Salesforce with NPI, data source and intent fields. Salesforce stages, source tracking and lead routing go live. Launch Google Search. Draft the approved claims list with regulatory and book two customer video shoots.
+- **Week 3:** Build the Propensity audience, then split target accounts at random into a test half and a holdout half. If Propensity matches too little of the list, move the test to PulsePoint or DeepIntent. Build the four landing pages, produce the 90-second video and a pilot guide, and re-brief the outbound partner.
+- **Week 4:** Launch the account-based ads to the test half at low spend. Run the first weekly live demo. The weekly report goes live, and a test lead runs through every path.
 
-**Day 30 checkpoint: 6 to 8 qualified calls a week.** Every new lead carries its source and audience. Decide: confirm the account list, pick the two messages to test and approve month-two spend.
+**Day 30 checkpoint: 6 to 8 qualified calls a week.** At least 60% of target accounts match to a verified decision maker, or the account-based money moves to search, email and CSM. Decide: pick the two messages to test and approve month-two spend.
 
 ### Days 31 to 60: test
 
-- **Week 5:** Full launch, with two messages tested against two buyer types. Outbound sequences start, with a held-out group of accounts that do not see LinkedIn ads.
+- **Week 5:** Full launch. Outbound starts to both halves, in-market practices first, and two messages are tested against two buyer types.
 - **Week 6:** Make the first cut of ads that are not working. Add new keywords and exclusions from the search terms report. Open meeting bookings for CSM.
 - **Week 7:** Test the offers: pilot scoping call against live demo. Publish the first customer story.
 - **Week 8:** Cut the bottom half of ads and audiences. Choose the winning message and offer.
 
-**Day 60 checkpoint: 10 to 12 qualified calls a week.** Half of target accounts have seen the ads three or more times. Decide: release the reserve to what is working and decide on a Meta test.
+**Day 60 checkpoint: 10 to 12 qualified calls a week.** The test half replies to outbound at least 20% more often than the holdout half, or books more qualified calls per 100 accounts. If neither, the ads stop. Decide: release the reserve to what is working.
 
 ### Days 61 to 90: scale
 
-- **Week 9:** Raise spend on what works by up to 25% a week. Widen outbound if reply rates hold.
-- **Week 10:** APTA CSM runs February 4 to 6. Hold the pre-booked meetings, run the booth muscle test, and get every badge scan into Salesforce the same day.
+- **Week 9:** Move ad spend to in-market practices. Raise spend on what works by up to 25% a week. Widen outbound if reply rates hold.
+- **Week 10:** APTA CSM runs February 4 to 6 in Philadelphia, with a geofence around the convention center. Hold the pre-booked meetings, run the booth muscle test, and get every badge scan into Salesforce the same day.
 - **Week 11:** Follow up every CSM conversation within 48 hours. Publish the second customer story. First newsletter sponsorship goes live.
-- **Weeks 12 and 13:** Send qualified stages back to LinkedIn and Google. Read the first pilot results against their success measures. Hold the Day 90 review of cost per call, per pilot and per customer, by channel and audience.
+- **Weeks 12 and 13:** Read the first pilot results against their success measures. Hold the Day 90 review of cost per call, per pilot and per customer, by channel, audience and test half.
 
-**Day 90 checkpoint: 15 to 20 qualified calls a week.** About 130 qualified calls held in total and 30 pilots started or scheduled. Decide: next quarter's budget, a second sales seat, and the second audience to target.
+**Day 90 checkpoint: 15 to 20 qualified calls a week.** About 130 qualified calls held in total and 30 pilots started or scheduled. Decide: next quarter's budget, whether to renew the 90-day data and ABM contracts, a second sales seat, and the second audience to target.
 
 ## 7. Handing leads to sales
 
@@ -191,10 +221,10 @@ Points 1 to 3 come from the form and Salesforce and put the lead straight on the
 
 **Salesforce in month one**
 
-- **Week 1:** Audit fields, the Account Engagement connection and admin access. NeuroStrip record types, kept apart from assistive communication. Patient records excluded from every marketing list and report. Fields for account type, size and role.
+- **Week 1:** Audit fields, the Account Engagement connection and admin access. NeuroStrip record types, kept apart from assistive communication. Patient records excluded from every marketing list and report. Fields for account type, size and role, plus NPI, data source, intent topic, and test or holdout group.
 - **Week 2:** Lifecycle stages, each with a date stamp. Lead source and UTM fields that cannot be overwritten. "How did you hear about us?" on every form. Lead routing with the response-time clock.
 - **Week 3:** Parent accounts for groups, child accounts for clinics. Opportunity stages with pilot start, end and success measures. Required loss reasons from a fixed list. Simple fit and engagement scores.
-- **Week 4:** The weekly report. The last 12 months of trials entered with source and outcome. Qualified stages sent back to LinkedIn and Google. A test lead through every path, and 30 minutes of training for sales.
+- **Week 4:** The weekly report. The last 12 months of trials entered with source and outcome. Qualified stages sent back to Google Ads. Propensity engagement synced to each contact. A test lead through every path, and 30 minutes of training for sales.
 
 **Five numbers reported every week**
 
@@ -202,13 +232,13 @@ Points 1 to 3 come from the form and Salesforce and put the lead straight on the
 2. Leads answered within an hour, as a share of all qualified leads.
 3. Calls that became sales opportunities, planned at 55%.
 4. Pilots started, and pilots converted to paid, planned at 45% and 50%.
-5. Cost per qualified call by channel, against a limit of about $930.
+5. Cost per qualified call, by channel, against a limit of about $930.
 
-Each number is split by channel and by audience.
+Each number is split by channel, by audience and by test half. The $930 limit is a $7,500 first-year contract times the 12% of qualified calls planned to become customers.
 
 ## 8. Team, asks and risks
 
-Strategy, data and media buying stay in-house. Partners handle production and specialist work. I need six answers from Control Bionics in week one.
+Strategy, data decisions and media buying stay in-house. Partners supply the list, the intent data, the account-based ads, production and specialist work. I need seven answers from Control Bionics in week one.
 
 | Work | Who does it |
 |---|---|
@@ -216,12 +246,15 @@ Strategy, data and media buying stay in-house. Partners handle production and sp
 | Test design and the decisions to cut or scale | In-house |
 | Ad accounts, tracking, audiences and data, always in Control Bionics' name | In-house |
 | Media buying for the first 90 days, and the weekly report | In-house |
+| Practitioner list of PT practices and decision makers | HealthLink Dimensions or CampaignLake, on 90-day terms in Control Bionics' name |
+| Intent data on which practices are researching related topics | Bombora, on 90-day terms in Control Bionics' name |
+| Account-based ads to the test half of the list | Propensity for the 90-day test, with PulsePoint or DeepIntent as the fallback |
 | Customer video shoots, demo video and design | Production studio or freelancers, per project |
 | Outbound email sending | The existing outbound partner, re-briefed |
 | Salesforce and Account Engagement build | A certified consultant for four weeks, if there is no admin time in-house |
-| Review of the LinkedIn and search setup before launch | A specialist, by the hour |
+| Review of the search and account-based ad setup before launch | A specialist, by the hour |
 
-No media agency until media spend passes about $40,000 a month or four paid channels are live. Every partner works on Control Bionics' accounts, is judged on qualified calls, is paid a fixed fee, and can be ended on 30 days' notice.
+No media agency until media spend passes about $40,000 a month or four paid channels are live. The data and ABM contracts are signed in Control Bionics' name on 90-day terms. Every partner works on Control Bionics' accounts, is judged on qualified calls and is paid a fixed fee. Propensity publishes its prices. The list, intent and fallback vendors do not, so each of those is a quote in week one.
 
 **What I need in week one**
 
@@ -231,8 +264,9 @@ No media agency until media spend passes about $40,000 a month or four paid chan
 4. **Pilot kits.** How many kits are free each month, and whether a 30-day pilot works for the sales team.
 5. **History.** The last 12 months of trials with source, outcome and contract value, and a count of discovery calls by source for the last eight weeks.
 6. **Time with sales and customers.** Ten recorded sales calls and eight to ten trial customers to interview.
+7. **Where we sell.** The states Control Bionics sells into, which set the filter for the list.
 
-**The four biggest risks**
+**The six biggest risks**
 
 | Risk | Response |
 |---|---|
@@ -240,6 +274,19 @@ No media agency until media spend passes about $40,000 a month or four paid chan
 | Too few customer stories to show in early ads. | Film two customers in month one, and ask every trial site for a story when its pilot ends. |
 | Marketing books more calls than one sales calendar or the pilot kits can handle. | Smaller accounts go to the weekly group demo. A second sales seat is added when the next open slot is more than five business days out for two weeks running. |
 | The same 1,000 accounts tire of the same ads. | Frequency caps, new creative every month, and widening to groups with 26 to 50 locations if needed. |
+| The data covers too few PT practices with 5 to 25 locations, either for contacts or for intent. | The Day 30 match check. If under 60% of target accounts match to a verified decision maker, the money moves to search, email and CSM. |
+| The data license does not allow email or ad use. | Confirm email and ad use rights in writing before buying the list or the intent data. HealthLink Dimensions' standard license, for example, excludes social targeting unless the contract adds it. |
+
+## Vendor pages checked
+
+Each vendor is described from its own site, checked in October 2026.
+
+- Propensity: https://www.propensity.com/ and https://www.propensity.com/pricing
+- Bombora: https://bombora.com/blog/personalize-healthcare-abm-strategy-with-bomboras-intent-data/ and https://bombora.com/intent/
+- HealthLink Dimensions: https://healthlinkdimensions.com/healthlink-profile and https://healthlinkdimensions.com/terms-conditions
+- CampaignLake: https://www.campaignlake.com/healthcare-email-list/therapists/
+- PulsePoint: https://www.pulsepoint.com/platform/platform
+- DeepIntent: https://deepintent.com/about and https://deepintent.com/channels
 
 ---
 
