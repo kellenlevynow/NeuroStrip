@@ -7,7 +7,7 @@
   const O = SITE.objections || [], Z = SITE.bySize || [], AB = SITE.ab || {};
   const list = (a) => `<ul class="dots">${(a || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
   const CL = { executive: 'Executive', operations: 'Operations', clinical: 'Clinical' };
-  const TAB = { owner: 'Owner', ceo: 'CEO', coo: 'COO', cco: 'Chief clinical officer', rehab: 'Rehab director', admin: 'Practice administrator', director: 'Clinic director' };
+  const TAB = { owner: 'Owner', ceo: 'CEO', coo: 'COO', cco: 'Chief clinical officer', rehab: 'Clinical director', admin: 'Practice administrator', director: 'Clinic director' };
   const PLAYBOOK = 'https://github.com/kellenlevynow/NeuroStrip/blob/main/docs/PERSONAS.md';
 
   /* who exists at each size */

@@ -45,7 +45,7 @@ Words like account-based ads, intent data, NPI, pipeline, cost per qualified cal
 
 ## The buyer playbook
 
-[`docs/PERSONAS.md`](docs/PERSONAS.md) covers the seven titles in the buying group (clinic owner, CEO, COO, chief clinical officer, rehab director, practice administrator and clinic director). For each role it gives the role in the decision, other titles, what they are measured on, worries, signs they are ready to talk with Bombora research topics, two test messages, the offer and landing page, a six-week sequence, the top four objections, proof, three discovery questions, what a yes looks like and when to stop. It also has all 18 objections, the Salesforce picklists and the weekly and monthly review.
+[`docs/PERSONAS.md`](docs/PERSONAS.md) covers the seven titles in the buying group (clinic owner, CEO, COO, chief clinical officer, clinical director, practice administrator and clinic director). For each role it gives the role in the decision, other titles, what they are measured on, worries, signs they are ready to talk with Bombora research topics, two test messages, the offer and landing page, a six-week sequence, the top four objections, proof, three discovery questions, what a yes looks like and when to stop. It also has all 18 objections, the Salesforce picklists and the weekly and monthly review.
 
 The playbook is generated from the same data as the page. After changing role or objection data, run:
 

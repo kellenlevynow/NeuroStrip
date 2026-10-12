@@ -265,9 +265,9 @@
     h += row(`<span>What new customers pay in their first year, a quarter <span class="cmp-means">At the planned $7,500 a clinic, before any group adds clinics.</span></span>`, (o) => `<span class="num">${money(o.revenue)}</span>`);
     h += row(`<span>Cost per qualified call the budget pays for, month three <span class="cmp-means">Leaves out about 4 calls a week that come in today and about 2 from the February conference, which has its own budget. The limit is about $930.</span></span>`, (o) => `<span class="num ${o.perPaidCall <= limit ? 'ok' : 'over'}">${money(Math.round(o.perPaidCall / 10) * 10)}</span>`);
     h += row(`<span>Cost per qualified call, every call counted <span class="cmp-means">Includes the calls that cost this budget nothing, so it flatters every budget.</span></span>`, (o) => `<span class="num">${money(Math.round(o.perCall / 10) * 10)}</span>`);
-    h += row(`<span>Each extra call over the next smaller budget <span class="cmp-means">About twice the limit. More money buys calls slowly, so it goes only to channels that beat $930.</span></span>`, (o, s) => { const i = S.indexOf(s); return i ? `<span class="num over">${money(Math.round(marginal(O[S[i - 1].id], o) / 10) * 10)}</span>` : '<span class="muted">None smaller</span>'; });
-    h += row(`<span>Ad money left after Propensity\'s $9,000 fee <span class="cmp-means">At Lean, too little for a clear Day 60 result.</span></span>`, (o) => `<span class="num">${money(o.adsLeft)}</span>`);
-    h += `<div class="cmp-sec">Where the money goes</div>`;
+    h += row(`<span>Each extra call over the next smaller budget <span class="cmp-means">About twice the limit. Additional spend buys calls slowly, so it goes only to channels that beat $930.</span></span>`, (o, s) => { const i = S.indexOf(s); return i ? `<span class="num over">${money(Math.round(marginal(O[S[i - 1].id], o) / 10) * 10)}</span>` : '<span class="muted">None smaller</span>'; });
+    h += row(`<span>Media budget remaining after Propensity\'s $9,000 fee <span class="cmp-means">At Lean, too little for a clear Day 60 result.</span></span>`, (o) => `<span class="num">${money(o.adsLeft)}</span>`);
+    h += `<div class="cmp-sec">Budget allocation</div>`;
     B.groups.forEach(([g, gl]) => {
       const ls = B.lines.filter((l) => l.group === g);
       const pct = ls.reduce((a, l) => a + l.pct, 0);
@@ -343,7 +343,7 @@
   const O = SITE.objections || [], Z = SITE.bySize || [], AB = SITE.ab || {};
   const list = (a) => `<ul class="dots">${(a || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
   const CL = { executive: 'Executive', operations: 'Operations', clinical: 'Clinical' };
-  const TAB = { owner: 'Owner', ceo: 'CEO', coo: 'COO', cco: 'Chief clinical officer', rehab: 'Rehab director', admin: 'Practice administrator', director: 'Clinic director' };
+  const TAB = { owner: 'Owner', ceo: 'CEO', coo: 'COO', cco: 'Chief clinical officer', rehab: 'Clinical director', admin: 'Practice administrator', director: 'Clinic director' };
   const PLAYBOOK = 'https://github.com/kellenlevynow/NeuroStrip/blob/main/docs/PERSONAS.md';
 
   /* who exists at each size */
@@ -445,12 +445,12 @@
 
   const LIMITS = { headline: 30, description: 90 };
   const CL = { executive: 'Executive', operations: 'Operations', clinical: 'Clinical' };
-  const ROLES = { executive: 'Owners and chief executives', operations: 'Chief operating officers and practice administrators', clinical: 'Chief clinical officers, rehab directors and clinic directors' };
+  const ROLES = { executive: 'Owners and chief executives', operations: 'Chief operating officers and practice administrators', clinical: 'Chief clinical officers, clinical directors and clinic directors' };
   const clusterOf = (id) => (C.clusters || []).find((c) => c.cluster === id) || {};
   const AB = {
     executive: 'A against B in each role\'s wording. Owner: patients who can see their progress at each visit have a reason to keep coming back, against a return-to-sport service you can start at one clinic, measure, then add to the rest',
     operations: 'A against B in each role\'s wording. COO: each sensor goes on like a bandage and the pilot times setup at one clinic, against one page with the annual price and a rollout plan for each new clinic',
-    clinical: 'A against B in each role\'s wording. Chief clinical officer: strength tests can miss muscles covering for an injured one, against a documented return-to-sport protocol for the whole group',
+    clinical: 'A against B in each role\'s wording. Chief clinical officer: strength tests can miss compensation, against a documented return-to-sport protocol for the whole group',
   };
 
   /* ---------- Control Bionics product photography (literal paths so the build can embed them offline) ---------- */
@@ -528,7 +528,7 @@
     items.push({
       cl: ['clinical', 'executive'], ch: 'native', chName: 'Sponsored articles', title: 'Sponsored article ad on an industry site',
       mock: scale(`<div class="nat"><div class="nat-site"><span></span><span></span><span></span></div><p class="nat-ctx">${esc(N.context)}</p><div class="nat-ad"><div class="nat-img">${photo('arm')}</div><div><p class="nat-sp">Sponsored · Control Bionics</p><p class="nat-hd">${esc(N.headline)}</p><p class="nat-bd">${esc(N.body)}</p></div></div><div class="nat-lines"><i></i><i></i><i></i></div></div>`, 340, 470),
-      labels: { where: 'Native and contextual ads bought through Propensity, shown next to articles on return-to-sport and rehab topics. Which physical therapy sites carry them: confirm with Propensity in week one', size: 'Headline up to 55 characters, body up to 120', who: 'Readers of articles on return to sport and outcomes', message: 'Strength tests can miss muscles covering for an injured one', cta: 'Read the clinical primer', landing: 'Clinical primer page', metric: 'Primer reads from target groups, and replies that follow' },
+      labels: { where: 'Native and contextual ads bought through Propensity, shown next to articles on return-to-sport and rehab topics. Which physical therapy sites carry them: confirm with Propensity in week one', size: 'Headline up to 55 characters, body up to 120', who: 'Readers of articles on return to sport and outcomes', message: 'Strength tests can miss compensation', cta: 'Read the clinical primer', landing: 'Clinical primer page', metric: 'Primer reads from target groups, and replies that follow' },
     });
   }
 

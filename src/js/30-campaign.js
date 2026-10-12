@@ -9,12 +9,12 @@
 
   const LIMITS = { headline: 30, description: 90 };
   const CL = { executive: 'Executive', operations: 'Operations', clinical: 'Clinical' };
-  const ROLES = { executive: 'Owners and chief executives', operations: 'Chief operating officers and practice administrators', clinical: 'Chief clinical officers, rehab directors and clinic directors' };
+  const ROLES = { executive: 'Owners and chief executives', operations: 'Chief operating officers and practice administrators', clinical: 'Chief clinical officers, clinical directors and clinic directors' };
   const clusterOf = (id) => (C.clusters || []).find((c) => c.cluster === id) || {};
   const AB = {
     executive: 'A against B in each role\'s wording. Owner: patients who can see their progress at each visit have a reason to keep coming back, against a return-to-sport service you can start at one clinic, measure, then add to the rest',
     operations: 'A against B in each role\'s wording. COO: each sensor goes on like a bandage and the pilot times setup at one clinic, against one page with the annual price and a rollout plan for each new clinic',
-    clinical: 'A against B in each role\'s wording. Chief clinical officer: strength tests can miss muscles covering for an injured one, against a documented return-to-sport protocol for the whole group',
+    clinical: 'A against B in each role\'s wording. Chief clinical officer: strength tests can miss compensation, against a documented return-to-sport protocol for the whole group',
   };
 
   /* ---------- Control Bionics product photography (literal paths so the build can embed them offline) ---------- */
@@ -92,7 +92,7 @@
     items.push({
       cl: ['clinical', 'executive'], ch: 'native', chName: 'Sponsored articles', title: 'Sponsored article ad on an industry site',
       mock: scale(`<div class="nat"><div class="nat-site"><span></span><span></span><span></span></div><p class="nat-ctx">${esc(N.context)}</p><div class="nat-ad"><div class="nat-img">${photo('arm')}</div><div><p class="nat-sp">Sponsored · Control Bionics</p><p class="nat-hd">${esc(N.headline)}</p><p class="nat-bd">${esc(N.body)}</p></div></div><div class="nat-lines"><i></i><i></i><i></i></div></div>`, 340, 470),
-      labels: { where: 'Native and contextual ads bought through Propensity, shown next to articles on return-to-sport and rehab topics. Which physical therapy sites carry them: confirm with Propensity in week one', size: 'Headline up to 55 characters, body up to 120', who: 'Readers of articles on return to sport and outcomes', message: 'Strength tests can miss muscles covering for an injured one', cta: 'Read the clinical primer', landing: 'Clinical primer page', metric: 'Primer reads from target groups, and replies that follow' },
+      labels: { where: 'Native and contextual ads bought through Propensity, shown next to articles on return-to-sport and rehab topics. Which physical therapy sites carry them: confirm with Propensity in week one', size: 'Headline up to 55 characters, body up to 120', who: 'Readers of articles on return to sport and outcomes', message: 'Strength tests can miss compensation', cta: 'Read the clinical primer', landing: 'Clinical primer page', metric: 'Primer reads from target groups, and replies that follow' },
     });
   }
 

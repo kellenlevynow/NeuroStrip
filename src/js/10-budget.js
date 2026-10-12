@@ -63,9 +63,9 @@
     h += row(`<span>What new customers pay in their first year, a quarter <span class="cmp-means">At the planned $7,500 a clinic, before any group adds clinics.</span></span>`, (o) => `<span class="num">${money(o.revenue)}</span>`);
     h += row(`<span>Cost per qualified call the budget pays for, month three <span class="cmp-means">Leaves out about 4 calls a week that come in today and about 2 from the February conference, which has its own budget. The limit is about $930.</span></span>`, (o) => `<span class="num ${o.perPaidCall <= limit ? 'ok' : 'over'}">${money(Math.round(o.perPaidCall / 10) * 10)}</span>`);
     h += row(`<span>Cost per qualified call, every call counted <span class="cmp-means">Includes the calls that cost this budget nothing, so it flatters every budget.</span></span>`, (o) => `<span class="num">${money(Math.round(o.perCall / 10) * 10)}</span>`);
-    h += row(`<span>Each extra call over the next smaller budget <span class="cmp-means">About twice the limit. More money buys calls slowly, so it goes only to channels that beat $930.</span></span>`, (o, s) => { const i = S.indexOf(s); return i ? `<span class="num over">${money(Math.round(marginal(O[S[i - 1].id], o) / 10) * 10)}</span>` : '<span class="muted">None smaller</span>'; });
-    h += row(`<span>Ad money left after Propensity\'s $9,000 fee <span class="cmp-means">At Lean, too little for a clear Day 60 result.</span></span>`, (o) => `<span class="num">${money(o.adsLeft)}</span>`);
-    h += `<div class="cmp-sec">Where the money goes</div>`;
+    h += row(`<span>Each extra call over the next smaller budget <span class="cmp-means">About twice the limit. Additional spend buys calls slowly, so it goes only to channels that beat $930.</span></span>`, (o, s) => { const i = S.indexOf(s); return i ? `<span class="num over">${money(Math.round(marginal(O[S[i - 1].id], o) / 10) * 10)}</span>` : '<span class="muted">None smaller</span>'; });
+    h += row(`<span>Media budget remaining after Propensity\'s $9,000 fee <span class="cmp-means">At Lean, too little for a clear Day 60 result.</span></span>`, (o) => `<span class="num">${money(o.adsLeft)}</span>`);
+    h += `<div class="cmp-sec">Budget allocation</div>`;
     B.groups.forEach(([g, gl]) => {
       const ls = B.lines.filter((l) => l.group === g);
       const pct = ls.reduce((a, l) => a + l.pct, 0);

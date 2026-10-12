@@ -5,7 +5,7 @@ global.window = {};
 require(path.join(root, 'assets/js/data.js'));
 const N = window.NS, R = N.roles, T = N.personaTests, AB = N.site.ab;
 const byId = Object.fromEntries(R.map((r) => [r.id, r]));
-const SHORT = { owner: 'Clinic owner', ceo: 'CEO', coo: 'COO', cco: 'Chief clinical officer', rehab: 'Rehab director', admin: 'Practice administrator', director: 'Clinic director' };
+const SHORT = { owner: 'Clinic owner', ceo: 'CEO', coo: 'COO', cco: 'Chief clinical officer', rehab: 'Clinical director', admin: 'Practice administrator', director: 'Clinic director' };
 const CL = { executive: 'Executive', operations: 'Operations', clinical: 'Clinical' };
 const cell = (x) => String(x || '').replace(/\|/g, '\\|').replace(/\n+/g, ' ');
 const ul = (a) => (a || []).map((x) => `- ${x}`).join('\n');
@@ -55,11 +55,11 @@ w('',
 '| Part of the decision | Who usually holds it | What they need before saying yes |',
 '|---|---|---|',
 '| Signs | Clinic owner, or the CEO in larger and investor-backed groups | A clear business case, a pilot with measures they agreed, and a yes from the clinical and operations leads |',
-'| Approves clinically | Chief clinical officer, or the rehab director where there is no chief clinical officer | Confidence the readings are sound, the evidence summary, and a protocol their clinicians accept |',
+'| Approves clinically | Chief clinical officer, or the clinical director where there is no chief clinical officer | Confidence the readings are sound, the evidence summary, and a protocol their clinicians accept |',
 '| Runs the pilot | A clinic director | A tool that fits into a normal visit, training, and a simple way to report results |',
 '| Decides rollout and payment, and can block it | COO and practice administrator | Annual price, what it includes, how it fits workflow and records, and written answers on patient data |',
 '',
-'Every group hears from at least one contact in the executive or operations cluster (owner, CEO, COO or practice administrator) and one in the clinical cluster (chief clinical officer, rehab director or clinic director).',
+'Every group hears from at least one contact in the executive or operations cluster (owner, CEO, COO or practice administrator) and one in the clinical cluster (chief clinical officer, clinical director or clinic director).',
 '',
 '## Who is there at each size, and who to contact first',
 '');
