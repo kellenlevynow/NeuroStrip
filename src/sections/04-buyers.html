@@ -13,12 +13,12 @@
       <div class="bmap-c bmap-ops"><p class="bmap-k">Decides rollout and payment, and can block it</p><p class="bmap-r">Chief operating officer (COO) and practice administrator</p></div>
     </div>
 
-    <p class="center small muted rv" style="margin-top:18px">Who to contact first depends on size. We reach at least one leader and one clinical leader in every group. Under 15 clinics, start with the owner or CEO and the rehab director or a clinic director. From 15 clinics, start with the chief clinical officer and the CEO.</p>
+    <p class="center small muted rv" style="margin-top:18px">Who to contact first depends on size. Every group hears from at least one contact in the executive or operations cluster and one in the clinical cluster. Under 15 clinics, start with the owner or CEO and the rehab director or a clinic director. From 15 clinics, start with the chief clinical officer and the CEO.</p>
     <details class="more more--center rv">
       <summary>Learn more about who is there at each size</summary>
       <div class="more-c">
         <div class="tiles bsize" id="bySize"></div>
-        <p class="small muted" style="margin-top:14px">Every group hears from at least one leader and one clinician. In weeks 5 to 8 we test, by group, whether starting with the clinician or the leader books more pilots. These size patterns are planning assumptions, checked against the account list in week one.</p>
+        <p class="small muted" style="margin-top:14px">Every group hears from at least one contact in the executive or operations cluster and one in the clinical cluster. From week 5 we test, by group, whether starting with the clinical contact or the executive books more qualified calls. These size patterns are planning assumptions, checked against the account list in week one.</p>
       </div>
     </details>
 
@@ -36,8 +36,8 @@
     </div>
 
     <div class="block">
-      <div class="block-head rv"><h3>We test two messages on each cluster and keep the one that gets more interested replies.</h3><p class="lead">From week 5, people in each <button type="button" class="term" data-term="cluster">cluster</button> are split at random between message A and message B, each in their own role's wording. We call these the persona tests.</p></div>
-      <p class="center small muted rv">Each test is read in week 8, once about 150 people have had each message. A message wins if its share of interested replies is at least 30% higher. If neither is ahead, the test runs to six weeks and closes by the end of week 10.</p>
+      <div class="block-head rv"><h3>We test two messages on each cluster and keep one only if it earns at least 30% more interested replies.</h3><p class="lead">From week 5, people in each <button type="button" class="term" data-term="cluster">cluster</button> are split at random between message A and message B, each in their own role's wording. We call these the persona tests.</p></div>
+      <p class="center small muted rv">Each test is read in week 8, once about 150 people have had each message. A message wins if its share of interested replies is at least 30% higher. If neither is ahead, the test runs to six weeks and closes by February 15.</p>
       <details class="more more--center rv">
         <summary>Learn more about the test design</summary>
         <div class="more-c">
@@ -46,14 +46,14 @@
           <h4>How each test runs</h4>
           <ul class="dots">
             <li>Inside each cluster, contacts are split at random between message A and message B, through the Propensity ad audiences and the outbound email sequences.</li>
-            <li>Each test is read at about 150 contacts per side, in week 8. If neither message is 30% ahead, it runs to six weeks, about 300 a side, and closes by the end of week 10.</li>
+            <li>Each test is read at about 150 contacts per side, in week 8. If neither message is 30% ahead, it runs to six weeks, about 300 a side, and closes by February 15, the end of week 11.</li>
             <li>We read two numbers: positive reply rate and meetings booked.</li>
-            <li>A message wins only if its positive reply rate is 30% or more above the other, and meetings booked do not point the other way. Below that, it is a tie: we keep the simpler message and test a new one against it.</li>
+            <li>A message wins only if its positive reply rate is 30% or more above the other, and meetings booked do not point the other way. If neither is ahead when the test closes, it is a tie: we keep the simpler message and test a new one against it in month four.</li>
             <li>Volumes are small, so every win this quarter is provisional. Outbound reaches 300 contacts a week, which is 50 a week for each of the six test cells. At the planned 1.5% positive reply rate, 150 contacts give about 2 replies a side and six weeks give about 4 or 5. A firm win needs about 10 interested replies a side, about 670 people a message, which this quarter cannot reach. So every win is used for now and tested again in month four with fresh contacts, and a gap of one reply counts as a tie.</li>
           </ul>
           <p class="small muted">The math: 150 × 1.5% = 2.25 replies. Six weeks at 50 contacts a week is 300 contacts a side, and 300 × 1.5% = 4.5 replies. Tests this small only find large differences, which is why the bar is a 30% gap read on replies and meetings together, and why a small win is checked again.</p>
           <h4>Who to contact first</h4>
-          <p>At the same time, we test the order of contact by account. Half of the groups in each size band start with a clinical contact. The other half start with an executive. We compare qualified calls per 100 groups at Day 90 and pilots started per 100 groups at Day 180. With about 500 groups a half, only a large gap counts.</p>
+          <p>At the same time, the demand generation lead tests the order of contact by group. Half of the groups in each size band start with a clinical contact, and the other half start with an executive. At Day 90 we compare qualified calls per 100 groups in each half. If one order is at least 30% ahead, it becomes the default for next quarter's new groups. If not, both orders stay, and we read pilots started per 100 groups at Day 180.</p>
           <h4>What sales records</h4>
           <p>Four new Salesforce fields make this readable: persona, buying role, message variant and objection heard. Sales picks from a fixed list on every call. We review them every week and update the answers and assets every month.</p>
         </div>

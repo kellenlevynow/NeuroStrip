@@ -378,7 +378,8 @@
             <div><h5>Landing page</h5><p>${esc(r.landing_page)}</p></div>
           </div>
           <h4>Six-week sequence</h4>
-          <table class="tbl tbl--stack seq"><thead><tr><th>Week</th><th>Channel</th><th>Touch</th></tr></thead><tbody>${(r.sequence || []).map((s) => `<tr><td>Week ${esc(s.week)}</td><td data-l="Channel">${esc(s.channel)}</td><td data-l="Touch">${esc(s.touch)}</td></tr>`).join('')}</tbody></table>
+          <p class="small muted">Sequence week 1 is the week this contact gets the first email, from plan week 5 on.</p>
+          <table class="tbl tbl--stack seq"><thead><tr><th>Sequence week</th><th>Channel</th><th>Touch</th></tr></thead><tbody>${(r.sequence || []).map((s) => `<tr><td>Sequence week ${esc(s.week)}</td><td data-l="Channel">${esc(s.channel)}</td><td data-l="Touch">${esc(s.touch)}</td></tr>`).join('')}</tbody></table>
           <h4>Top four objections</h4>
           <table class="tbl tbl--stack"><thead><tr><th>Objection</th><th>Answer</th></tr></thead><tbody>${(r.objections || []).map((o) => `<tr><td>${esc(o.objection)}</td><td data-l="Answer">${esc(o.answer)}</td></tr>`).join('')}</tbody></table>
           <div class="role-grid">
@@ -440,7 +441,7 @@
   const clusterOf = (id) => (C.clusters || []).find((c) => c.cluster === id) || {};
   const AB = {
     executive: 'A against B in each role\'s wording. Owner: patients who can see their progress at each visit have a reason to keep coming back, against a return-to-sport service you can start at one clinic, measure, then add to the rest',
-    operations: 'A against B in each role\'s wording. COO: each sensor goes on like a bandage and shows live on an iPad, against a rollout plan that shows what each new clinic needs',
+    operations: 'A against B in each role\'s wording. COO: each sensor goes on like a bandage and the pilot times setup at one clinic, against one page with the annual price and a rollout plan for each new clinic',
     clinical: 'A against B in each role\'s wording. Chief clinical officer: strength tests can miss muscles covering for an injured one, against a documented return-to-sport protocol for the whole group',
   };
 
@@ -549,11 +550,12 @@
 
   /* 8. four-email sequence per cluster */
   (C.emails || []).forEach((e) => {
-    const emr = e.emr_variant && e.emr_variant.subject ? `<div class="em-alt"><p class="em-alt-k">If Bombora shows the group researching a move to a new electronic medical record (EMR) system, email 1 becomes:</p><p class="em-s">${esc(e.emr_variant.subject)}</p><p class="em-b">${esc(e.emr_variant.body)}</p></div>` : '';
+    const bv = (e.b_variant || []).length ? `<div class="em-alt"><p class="em-alt-k">Contacts assigned message B get these as emails 1 and 2 instead:</p>${e.b_variant.map((s, i) => `<p class="em-d">Email ${i + 1} · message B version</p><p class="em-s">${esc(s.subject)}</p><p class="em-b">${esc(s.body)}</p>`).join('')}</div>` : '';
+    const emr = e.emr_variant && e.emr_variant.subject ? `<div class="em-alt"><p class="em-alt-k">If Bombora shows the group researching a move to a new electronic medical record (EMR) system, email 1 becomes, for either version:</p><p class="em-s">${esc(e.emr_variant.subject)}</p><p class="em-b">${esc(e.emr_variant.body)}</p></div>` : '';
     items.push({
       wide: true, cl: [e.cluster], ch: 'email', chName: 'Email', title: `${CL[e.cluster]} email sequence`,
-      mock: `<div class="em">${e.steps.map((s, i) => `<div class="em-m"><p class="em-d">Email ${i + 1} · day ${s.day}</p><p class="em-s">${esc(s.subject)}</p><p class="em-b">${esc(s.body)}</p></div>`).join('')}${emr}</div>`,
-      labels: { where: 'Outbound email from the rep, both halves of the list', size: 'Four plain-text emails, each under 110 words', who: ROLES[e.cluster], message: AB[e.cluster], cta: 'Reply, or book a time on the calendar', landing: 'None. Replies go to the rep, and the calendar link books a call', metric: 'Interested replies from 1.5% or more of contacts, the rate the plan counts on, and meetings booked' },
+      mock: `<div class="em">${e.steps.map((s, i) => `<div class="em-m"><p class="em-d">Email ${i + 1} · sequence week ${s.week}${i < 2 ? ' · message A version' : ' · same for everyone'}</p><p class="em-s">${esc(s.subject)}</p><p class="em-b">${esc(s.body)}</p></div>`).join('')}${bv}${emr}</div>`,
+      labels: { where: 'Outbound email from the rep, both halves of the list', size: 'Four plain-text emails, each under 110 words, in sequence weeks 1, 3, 4 and 6. Each contact gets one assigned message in emails 1 and 2',  who: ROLES[e.cluster], message: AB[e.cluster], cta: 'Reply, or book a time on the calendar', landing: 'None. Replies go to the rep, and the calendar link books a call', metric: 'Interested replies from 1.5% or more of contacts, the rate the plan counts on, and meetings booked' },
     });
   });
 

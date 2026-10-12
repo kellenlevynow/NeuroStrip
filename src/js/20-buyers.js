@@ -50,7 +50,8 @@
             <div><h5>Landing page</h5><p>${esc(r.landing_page)}</p></div>
           </div>
           <h4>Six-week sequence</h4>
-          <table class="tbl tbl--stack seq"><thead><tr><th>Week</th><th>Channel</th><th>Touch</th></tr></thead><tbody>${(r.sequence || []).map((s) => `<tr><td>Week ${esc(s.week)}</td><td data-l="Channel">${esc(s.channel)}</td><td data-l="Touch">${esc(s.touch)}</td></tr>`).join('')}</tbody></table>
+          <p class="small muted">Sequence week 1 is the week this contact gets the first email, from plan week 5 on.</p>
+          <table class="tbl tbl--stack seq"><thead><tr><th>Sequence week</th><th>Channel</th><th>Touch</th></tr></thead><tbody>${(r.sequence || []).map((s) => `<tr><td>Sequence week ${esc(s.week)}</td><td data-l="Channel">${esc(s.channel)}</td><td data-l="Touch">${esc(s.touch)}</td></tr>`).join('')}</tbody></table>
           <h4>Top four objections</h4>
           <table class="tbl tbl--stack"><thead><tr><th>Objection</th><th>Answer</th></tr></thead><tbody>${(r.objections || []).map((o) => `<tr><td>${esc(o.objection)}</td><td data-l="Answer">${esc(o.answer)}</td></tr>`).join('')}</tbody></table>
           <div class="role-grid">

@@ -6,13 +6,13 @@ window.NS = {
   /* Plain-word definitions shown on hover or tap                        */
   /* ------------------------------------------------------------------ */
   glossary: {
-    abm: { term: 'Account-based ads', def: 'Ads shown only to people at a named list of practices, instead of to anyone who fits a profile.' },
+    abm: { term: 'Account-based ads', def: 'Ads shown only to the people at a named list of groups.' },
     intent: { term: 'Intent data', def: 'A sign that people at a practice are reading more than usual about a topic, such as billing software. It shows which practices are actively researching. It does not name the people.' },
     researching: { term: 'Researching now', def: 'A practice whose staff are reading more than usual about topics close to NeuroStrip, according to Bombora intent data, in the last few weeks.' },
     npi: { term: 'National Provider Identifier (NPI)', def: 'The 10-digit ID every American healthcare provider and practice uses for billing. It lets us find physical therapy practices in a provider database.' },
     pipeline: { term: 'Pipeline', def: 'All the open sales conversations that could become paying customers, and what they could be worth.' },
     cpqc: { term: 'Cost per qualified call', def: 'Marketing spend in a period divided by the qualified calls it paid for. The plan keeps it under about $930, the most a call can cost and still be covered by first-year payments.' },
-    holdout: { term: 'Holdout group', def: 'Half of the target list that gets no ads, only email. Comparing it with the half that sees ads shows what the ads add.' },
+    holdout: { term: 'Holdout half', def: 'The half of the target list that gets email and no ads. Comparing it with the test half, the half that sees ads, shows what the ads add.' },
     qcall: { term: 'Qualified call', def: 'A first sales call that actually happens, with someone who passes the five-point checklist in the sales section.' },
     salesready: { term: 'Sales-ready lead', def: 'A person who passes the first three checks in the sales section (target group, buying role, asked for something) and is ready for a sales call.' },
     pilot: { term: 'Pilot', def: 'A 30-day trial of NeuroStrip at one clinic, with success measures the clinic writes before it starts.' },
@@ -47,7 +47,7 @@ window.NS = {
       { id: 'search', name: 'Google Search',                       pct: 11, m: [2.5, 4, 4.5], group: 'channel',
         note: 'Ads on category, competitor, problem and brand searches, live from week two.' },
       { id: 'email',  name: 'Email, first contact and follow-up',  pct: 6,  m: [2, 2, 2],     group: 'channel',
-        note: 'Sending tools, separate sending domains and sequences. The outbound partner\'s retainer is separate.' },
+        note: 'Sending tools, separate sending domains and sequences. The email agency\'s monthly fee is separate.' },
       { id: 'rt',     name: 'Retargeting',                         pct: 5,  m: [0.5, 2, 2.5], group: 'channel',
         note: 'Meta ads to site visitors and video viewers.' },
       { id: 'tests',  name: 'Small tests',                         pct: 8,  m: [1, 4, 3],     group: 'channel',
@@ -108,10 +108,10 @@ window.NS = {
     ab: {
       owner: ['Patients who can see their progress at each visit have a reason to keep coming back.', 'A return-to-sport service you can start at one clinic, measure, then add to the rest.'],
       ceo: ['Track plan-of-care completion the same way in every clinic.', 'One program you can roll out to every clinic and measure.'],
-      coo: ['Each sensor goes on like a bandage and shows live on an iPad.', 'A rollout plan that shows what each new clinic needs.'],
+      coo: ['Each sensor goes on like a bandage, and the pilot times setup at one clinic.', 'One page with the annual price and a rollout plan for each new clinic.'],
       cco: ['Strength tests can miss muscles covering for an injured one.', 'A documented return-to-sport protocol for the whole group.'],
       rehab: ['See which muscles do the work, live, and coach the next rep.', 'The same return-to-sport steps for every therapist in the group.'],
-      admin: ['See the office time for a pilot before anyone signs.', 'One page that lists what the annual price includes.'],
+      admin: ['Setup and office time, both timed in the pilot.', 'One page that lists what the annual price includes.'],
       director: ['Show patients which muscles are doing the work during the test.', 'Run the group\'s first documented return-to-sport protocol at your clinic.']
     },
     bySize: [
@@ -124,7 +124,7 @@ window.NS = {
       { q: 'My therapists do not have time.', who: 'Clinic director, COO, rehab director', a: 'Each sensor goes on like a bandage and shows on an iPad during the visit. The pilot measures the minutes it adds, so you see the real cost before any rollout.', proof: 'Live demo', next: 'How many minutes could a return-to-sport visit give to this today?' },
       { q: 'It costs more than a $499 biofeedback unit.', who: 'Owner, practice administrator, COO', a: 'A single-channel unit reads one muscle. NeuroStrip reads up to four at once, wirelessly, and saves a record of each session.', proof: 'Economics worksheet', next: 'What would one more finished plan of care a month be worth to a clinic?', w1: 'How a session record gets into the patient\'s electronic medical record (EMR)' },
       { q: 'Can we bill for it?', who: 'Owner, practice administrator, CEO, COO', a: 'Your billing team decides that, and we make no billing promises. Control Bionics will confirm what current customers do.', proof: 'Pricing and questions page', next: 'Who on your team should hear how current customers handle it?', w1: 'What current customers do about billing' },
-      { q: 'Is surface electromyography (EMG) reliable, and where is the evidence?', who: 'Chief clinical officer, rehab director, clinic director', a: 'We share the specification sheet and a summary of published research, including a 2022 review of eight trials of muscle-sensor biofeedback after knee surgery. The pilot lets your clinicians judge the readings on their own patients.', proof: 'Specification sheet and evidence summary', next: 'What would your team need to see in a pilot to trust the readings?' },
+      { q: 'Is surface electromyography (sEMG) reliable, and where is the evidence?', who: 'Chief clinical officer, rehab director, clinic director', a: 'We share the specification sheet and a summary of published research, including a 2022 review of eight trials of muscle-sensor biofeedback after knee surgery. The pilot lets your clinicians judge the readings on their own patients.', proof: 'Specification sheet and evidence summary', next: 'What would your team need to see in a pilot to trust the readings?' },
       { q: 'We bought tech before and it sat in a drawer.', who: 'Owner, CEO, COO, rehab director', a: 'The pilot names one clinic director to run it, and you write the success measures, including how often it gets used. If it is not used, it does not roll out.', proof: 'Pilot guide', next: 'What made the last tool stop being used?', w1: 'Standard pilot terms' },
       { q: 'Not this budget cycle.', who: 'Owner, CEO, COO, practice administrator', a: 'A 30-day pilot at one clinic can start now and give you your own numbers for the next budget.', proof: 'Pilot guide and rollout plan', next: 'When does your next budget get set, and who sets it?', w1: 'Pilot terms and cost' },
       { q: 'Does it work with our electronic medical record (EMR)?', who: 'COO, practice administrator, clinic director, chief clinical officer', a: 'We confirm which record systems it works with in week one, and say only what is confirmed in writing.', proof: 'Pricing and questions page', next: 'Which system do you use, and are you changing it this year?', w1: 'Which EMR systems it works with today' },
@@ -139,7 +139,7 @@ window.NS = {
   roles: /*@roles*/[
  {
   "id": "owner",
-  "title": "Clinic Owner",
+  "title": "Owner",
   "cluster": "executive",
   "buying_role": "Signs",
   "one_line": "The owner signs the contract and wants to know two things: whether patients who see their progress finish more of their visits, and whether a return-to-sport service sets the group apart from nearby clinics.",
@@ -191,7 +191,7 @@ window.NS = {
    {
     "week": 1,
     "channel": "Outbound email and account-based ads through Propensity",
-    "touch": "Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, offering the economics worksheet or a 20-minute call. Ads with the 90-second video start now and run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads."
+    "touch": "Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, offering the economics worksheet or a 20-minute call. Ads, including the 15-second video and the banners, start now and run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads."
    },
    {
     "week": 2,
@@ -305,7 +305,7 @@ window.NS = {
    {
     "week": 1,
     "channel": "Outbound email and account-based ads through Propensity",
-    "touch": "Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, asking for 20 minutes to scope a one-clinic pilot. Ads with the 90-second video run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads."
+    "touch": "Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, asking for 20 minutes to scope a one-clinic pilot. Ads, including the 15-second video and the banners, run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads."
    },
    {
     "week": 2,
@@ -419,7 +419,7 @@ window.NS = {
    {
     "week": 1,
     "channel": "Outbound email and account-based ads through Propensity",
-    "touch": "Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, offering the one-page rollout plan. Ads with the 90-second video run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads."
+    "touch": "Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, offering the one-page rollout plan. Ads, including the 15-second video and the banners, run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads."
    },
    {
     "week": 2,
@@ -529,12 +529,12 @@ window.NS = {
   "message_a": "Strength tests can miss compensation: a patient can pass a strength or hop test while other muscles cover for the injured one. NeuroStrip shows activation on up to four muscles at once, so your therapists can see it during the test.",
   "message_b": "Build a documented return-to-sport protocol for the group, with the same sensor placement, the same tests and a recorded activation reading at each step, alongside the strength and hop tests you already use.",
   "offer": "The clinical primer, the spec sheet and a one-page evidence summary, then a 20-minute clinical review where the chief clinical officer writes the pilot criteria.",
-  "landing_page": "The return-to-play page, with the primer, spec sheet and evidence summary open to read without a form. One call to action: book a 20-minute clinical review to set the pilot criteria.",
+  "landing_page": "The return-to-sport page, with the primer, spec sheet and evidence summary open to read without a form. One call to action: book a 20-minute clinical review to set the pilot criteria.",
   "sequence": [
    {
     "week": 1,
     "channel": "Outbound email and account-based ads through Propensity",
-    "touch": "Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random. It cites Forelli and colleagues (2025, Journal of Clinical Medicine), who write that traditional functional tests alone may not reveal arthrogenic muscle inhibition, where the thigh muscle does not fully switch on after anterior cruciate ligament reconstruction, and it offers the evidence summary. Ads with the 90-second video run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads."
+    "touch": "Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random. It cites Forelli and colleagues (2025, Journal of Clinical Medicine), who write that traditional functional tests alone may not reveal arthrogenic muscle inhibition, where the thigh muscle does not fully switch on after anterior cruciate ligament reconstruction, and it offers the evidence summary. Ads, including the 15-second video and the banners, run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads."
    },
    {
     "week": 2,
@@ -1511,88 +1511,118 @@ window.NS = {
    "cluster": "executive",
    "steps": [
     {
-     "day": 1,
      "subject": "Progress your patients can see",
-     "body": "Hi {first name},\n\nPatients who can see their progress have one more reason to finish their plan of care. NeuroStrip is a 4-gram wireless sensor that shows muscle activation live on an iPad, so at each visit the patient sees the muscle they are rebuilding at work.\n\nThe way to test this at {practice} is a 30-day pilot at one clinic, with success measures your team chooses, such as visits per plan of care against your own baseline. [Pilot terms: confirm in week one.]\n\nWould a 20-minute call to scope it be useful?\n\n{rep name}"
+     "body": "Hi {first name},\n\nPatients who can see their progress have one more reason to finish their plan of care. NeuroStrip is a 4-gram wireless sensor that shows muscle activation live on an iPad, so at each visit the patient sees the muscle they are rebuilding at work.\n\nThe way to test this at {practice} is a 30-day pilot at one clinic, with success measures your team chooses, such as visits per plan of care against your own baseline. [Pilot terms: confirm in week one.]\n\nWould a 20-minute call to scope it be useful?\n\n{rep name}",
+     "week": 1
     },
     {
-     "day": 4,
+     "subject": "What the pilot would measure",
+     "body": "Hi {first name},\n\nIf patients at {practice} could see their progress at each visit, would more of them finish their plan of care? A 30-day pilot at one clinic is the way to find out. Your team picks the measures, such as visits per plan of care, and compares them with the clinic's own numbers from before the pilot. [Pilot terms: confirm in week one.]\n\nI can walk you through how a pilot is set up on a 20-minute call. Would next week suit you?\n\n{rep name}",
+     "week": 3
+    },
+    {
      "subject": "What one clinic would need to show",
-     "body": "Hi {first name},\n\nBefore anyone at {practice} gives time to a pilot, it helps to know what the pilot would have to show. Our economics worksheet starts from your own numbers: weekly visits, visits per plan of care and net revenue per visit. It shows what one extra visit per plan of care is worth across the group, and how many extra visits a year would cover one clinic.\n\nIt makes no assumption about what NeuroStrip changes. The pilot measures that.\n\nShall I send you the worksheet?\n\n{rep name}"
+     "body": "Hi {first name},\n\nBefore anyone at {practice} gives time to a pilot, it helps to know what the pilot would have to show. Our economics worksheet starts from your own numbers: weekly visits, visits per plan of care and net revenue per visit. It shows what one extra visit per plan of care is worth across the group, and how many extra visits a year would cover one clinic.\n\nIt makes no assumption about what NeuroStrip changes. The pilot measures that.\n\nShall I send you the worksheet?\n\n{rep name}",
+     "week": 4
     },
     {
-     "day": 9,
-     "subject": "After the first clinic",
-     "body": "Hi {first name},\n\nIf a pilot clinic meets the measures your team set, the next question is rollout. Other clinics at {practice} can join on the same contract, and each one tracks the same measures, so you can compare clinics side by side.\n\n[Add a customer story, once cleared. Rollout and contract terms: confirm in week one.]\n\nI can walk you through what a group rollout looks like on a 20-minute pilot scoping call. Would next week suit you?\n\n{rep name}"
-    },
-    {
-     "day": 16,
      "subject": "Closing the loop",
-     "body": "Hi {first name},\n\nI have not heard back, so I will assume the timing is wrong for {practice} and stop here.\n\nIf patient retention or plan-of-care completion comes up at your next leadership meeting, the 90-second video shows what a patient sees on screen. It is the quickest way to judge whether a pilot is worth a call.\n\nThank you for reading.\n\n{rep name}"
+     "body": "Hi {first name},\n\nI have not heard back, so I will assume the timing is wrong for {practice} and stop here.\n\nIf this comes up at your next leadership meeting, the 90-second video shows what a patient sees on screen. It is the quickest way to judge whether a pilot is worth a call.\n\nThank you for reading.\n\n{rep name}",
+     "week": 6
     }
    ],
    "emr_variant": {
     "subject": "",
     "body": ""
-   }
+   },
+   "b_variant": [
+    {
+     "subject": "A return-to-sport service, one clinic first",
+     "body": "Hi {first name},\n\nOne way to add a return-to-sport service is to start at one clinic, measure it, then add it to the rest. NeuroStrip is a 4-gram wireless sensor that shows muscle activation live on an iPad, next to the strength and hop tests your therapists already run.\n\nA 30-day pilot at one clinic at {practice} would show whether it is worth adding to the others, judged on measures your team sets. [Pilot terms: confirm in week one.]\n\nWould a 20-minute call to scope it be useful?\n\n{rep name}"
+    },
+    {
+     "subject": "After the first clinic",
+     "body": "Hi {first name},\n\nIf a pilot clinic meets the measures your team set, the next question is rollout. Other clinics at {practice} can join on the same contract, and each one tracks the same measures, so you can compare clinics side by side.\n\n[Add a customer story, once cleared. Rollout and contract terms: confirm in week one.]\n\nI can walk you through what a group rollout looks like on a 20-minute pilot scoping call. Would next week suit you?\n\n{rep name}"
+    }
+   ]
   },
   {
    "cluster": "operations",
    "steps": [
     {
-     "day": 1,
      "subject": "Goes on like a bandage, live on an iPad",
-     "body": "Hi {first name},\n\nWhen a clinic adds new equipment, operations carries the setup, the training and the cost. NeuroStrip keeps the setup small. Each sensor weighs 4 grams, goes on like an adhesive bandage and shows muscle activation live on an iPad or tablet. Clinicians can run up to four at once, with synced video and motion data.\n\nA 20-minute live demo would let you time the setup yourself before anyone at {practice} asks you about it.\n\nWorth a look?\n\n{rep name}"
+     "body": "Hi {first name},\n\nWhen a clinic adds new equipment, operations carries the setup, the training and the cost. NeuroStrip keeps the setup small. Each sensor weighs 4 grams, goes on like an adhesive bandage and shows muscle activation live on an iPad or tablet. Clinicians can run up to four at once, with synced video and motion data.\n\nA 20-minute live demo would let you time the setup yourself before anyone at {practice} asks you about it.\n\nWorth a look?\n\n{rep name}",
+     "week": 1
     },
     {
-     "day": 4,
-     "subject": "Pricing questions, answered",
-     "body": "Hi {first name},\n\nPrice is usually the next question. Our pricing questions page answers the common ones. [Contract length, annual price, what it includes and support terms: confirm in week one.]\n\nIf someone at {practice} has priced a single-channel biofeedback unit, one maker lists them from $499. NeuroStrip covers up to four muscles at once, wirelessly, with video in the same session. The page sets both out so you can judge the difference.\n\nHere is the link: {pricing link}\n\n{rep name}"
+     "subject": "Timing the setup in a pilot",
+     "body": "Hi {first name},\n\nThe simplest way to judge the extra work is to time it. In a 30-day pilot at one clinic, your team records how long setup takes in the treatment room and what the office handles, from vendor setup to where kits are kept. You see the real minutes before anyone decides on more clinics. [Pilot terms: confirm in week one.]\n\nWould a 20-minute live demo help you plan it?\n\n{rep name}",
+     "week": 3
     },
     {
-     "day": 9,
      "subject": "Billing and pilot logistics",
-     "body": "Hi {first name},\n\nTwo questions tend to follow price, so here is where each one stands.\n\nBilling: your billing team decides how sessions are billed and coded. We make no billing promises, and Control Bionics will confirm what current customers do.\n\nPilot logistics: one clinic for 30 days, with measures your team picks. [Kits, setup help, support and data security: confirm in week one.]\n\nIf either question is holding things up at {practice}, a 20-minute live demo with your clinic director is the quickest way through it.\n\n{rep name}"
+     "body": "Hi {first name},\n\nTwo questions tend to follow price, so here is where each one stands.\n\nBilling: your billing team decides how sessions are billed and coded. We make no billing promises, and Control Bionics will confirm what current customers do.\n\nPilot logistics: one clinic for 30 days, with measures your team picks. [Kits, setup help, support and data security: confirm in week one.]\n\nIf either question is holding things up at {practice}, a 20-minute live demo with your clinic director is the quickest way through it.\n\n{rep name}",
+     "week": 4
     },
     {
-     "day": 16,
      "subject": "Should I close the file?",
-     "body": "Hi {first name},\n\nI will stop here so I do not crowd your inbox.\n\nIf NeuroStrip comes up at {practice} later, the pricing questions page answers the operations questions in one place, and a live demo shows the setup in about 20 minutes.\n\nThank you for your time.\n\n{rep name}"
+     "body": "Hi {first name},\n\nI will stop here so I do not crowd your inbox.\n\nIf NeuroStrip comes up at {practice} later, the pricing questions page answers the operations questions in one place, and a live demo shows the setup in about 20 minutes.\n\nThank you for your time.\n\n{rep name}",
+     "week": 6
     }
    ],
    "emr_variant": {
     "subject": "Your record system review",
     "body": "Hi {first name},\n\nWhen a group reviews its electronic medical record (EMR) system, it also checks which tools need to send data to it. NeuroStrip is a 4-gram wireless sensor that shows muscle activation live on an iPad or tablet and saves a record of each session. Before we speak, I will confirm whether those records can reach your EMR and how. [EMR integration and data security: confirm in week one.]\n\nWould a 20-minute live demo help while your team compares systems?\n\n{rep name}"
-   }
+   },
+   "b_variant": [
+    {
+     "subject": "The annual price, on one page",
+     "body": "Hi {first name},\n\nWhen a clinic adds equipment, operations needs the full picture before anyone signs. Our pricing questions page lists what the annual price includes and answers the common questions. [Contract length, annual price, what it includes and support terms: confirm in week one.]\n\nNeuroStrip is a 4-gram wireless sensor that shows muscle activation live on an iPad, on up to four muscles at once.\n\nHere is the link: {pricing link}\n\n{rep name}"
+    },
+    {
+     "subject": "A rollout plan for each new clinic",
+     "body": "Hi {first name},\n\nIf a pilot clinic at {practice} meets its measures, the next question is what each new clinic needs. Our rollout plan lists it on one page: kits, training and the same test steps, clinic by clinic. [Rollout terms, kits and support: confirm in week one.]\n\nI can walk you through it on a 20-minute call. Would next week suit you?\n\n{rep name}"
+    }
+   ]
   },
   {
    "cluster": "clinical",
    "steps": [
     {
-     "day": 1,
      "subject": "One athlete: 7% on force, 37% in the muscle",
-     "body": "Hi {first name},\n\nOne athlete's example: three weeks after a hamstring injury, force plates showed a 7% gap between legs. With NeuroStrip on both hamstrings, the gap in muscle activation was 37%.\n\nStrength tests show how much force a limb produces. A patient can pass one while other muscles cover for the injured one. NeuroStrip is a 4-gram wireless sensor that shows activation live on an iPad, on up to four muscles at once.\n\nWould the 90-second video be useful for the clinicians at {practice}?\n\n{rep name}"
+     "body": "Hi {first name},\n\nOne athlete's example: three weeks after a hamstring injury, force plates showed a 7% gap between legs. With NeuroStrip on both hamstrings, the gap in muscle activation was 37%.\n\nStrength tests show how much force a limb produces. A patient can pass one while other muscles cover for the injured one. NeuroStrip is a 4-gram wireless sensor that shows activation live on an iPad, on up to four muscles at once.\n\nWould the 90-second video be useful for the clinicians at {practice}?\n\n{rep name}",
+     "week": 1
     },
     {
-     "day": 4,
+     "subject": "When other muscles cover for an injured one",
+     "body": "Hi {first name},\n\nA patient can pass a strength or hop test while other muscles cover for the injured one. With NeuroStrip on both sides, your therapists see activation live on an iPad during the same test, on up to four muscles at once. The clinician still makes every call.\n\nWe run a live clinic demo each week and show this on a real test. Can I save a seat for someone from {practice}?\n\n{rep name}",
+     "week": 3
+    },
+    {
      "subject": "What the research says about activation",
-     "body": "Hi {first name},\n\nForelli and colleagues (Journal of Clinical Medicine, 2025) write that traditional functional assessments alone may miss arthrogenic muscle inhibition, a reflex that can stop the quadriceps from fully switching on after knee ligament surgery. A 2022 systematic review in Disability and Rehabilitation by Karaborklu Argut and colleagues looked at 8 randomized trials. In most, electromyography biofeedback in general beat the comparison rehab for quadriceps strength. These trials did not test NeuroStrip, and the authors note that high-quality evidence is limited.\n\nOur clinical primer covers both papers and how to use activation in daily care. Shall I send a copy for {practice}?\n\n{rep name}"
+     "body": "Hi {first name},\n\nForelli and colleagues (Journal of Clinical Medicine, 2025) write that traditional functional assessments alone may miss arthrogenic muscle inhibition, a reflex that can stop the quadriceps from fully switching on after knee ligament surgery. A 2022 systematic review in Disability and Rehabilitation by Karaborklu Argut and colleagues looked at 8 randomized trials. In most, electromyography biofeedback in general beat the comparison rehab for quadriceps strength. These trials did not test NeuroStrip, and the authors note that high-quality evidence is limited.\n\nOur clinical primer covers both papers and how to use activation in daily care. Shall I send a copy for {practice}?\n\n{rep name}",
+     "week": 4
     },
     {
-     "day": 9,
-     "subject": "Activation in your return-to-sport protocol",
-     "body": "Hi {first name},\n\nIf your clinicians follow a written return-to-sport protocol, NeuroStrip can add one more measure to each stage: muscle activation on both sides, recorded with synced video. The clinician still makes every call. What changes is that each call has a documented record behind it, and the patient can see it too.\n\nWe run a live clinic demo each week and walk through this step by step. Can I save a seat for someone from {practice}?\n\n{rep name}"
-    },
-    {
-     "day": 16,
      "subject": "Last note from me",
-     "body": "Hi {first name},\n\nI will leave it here. If activation comes up at {practice} later, two things may help. The 90-second video shows the sensors going on and the live view on an iPad. The clinical primer covers the research on activation after knee surgery, with every source cited.\n\n{One cleared customer example, once Control Bionics approves it in week one.}\n\nThank you for reading.\n\n{rep name}"
+     "body": "Hi {first name},\n\nI will leave it here. If activation comes up at {practice} later, two things may help. The 90-second video shows the sensors going on and the live view on an iPad. The clinical primer covers the research on activation after knee surgery, with every source cited.\n\n{One cleared customer example, once Control Bionics approves it in week one.}\n\nThank you for reading.\n\n{rep name}",
+     "week": 6
     }
    ],
    "emr_variant": {
     "subject": "",
     "body": ""
-   }
+   },
+   "b_variant": [
+    {
+     "subject": "The same return-to-sport steps in every clinic",
+     "body": "Hi {first name},\n\nIf your group follows a written return-to-sport protocol, NeuroStrip can add one recorded measure to each stage: muscle activation on both sides, with synced video. Every therapist uses the same sensor placement and the same tests, so you can review the same record from every clinic. The clinician still makes every call.\n\nWould the 90-second video be useful for the clinicians at {practice}?\n\n{rep name}"
+    },
+    {
+     "subject": "Activation in your return-to-sport protocol",
+     "body": "Hi {first name},\n\nIf your clinicians follow a written return-to-sport protocol, NeuroStrip can add one more measure to each stage: muscle activation on both sides, recorded with synced video. The clinician still makes every call. What changes is that each call has a documented record behind it, and the patient can see it too.\n\nWe run a live clinic demo each week and walk through this step by step. Can I save a seat for someone from {practice}?\n\n{rep name}"
+    }
+   ]
   }
  ],
  "sub": "Most pieces show force and muscle activation side by side. Each asks for one next step: a call to plan a pilot, a live demo or a read of the clinical primer."

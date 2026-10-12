@@ -59,7 +59,7 @@ w('',
 '| Runs the pilot | A clinic director | A tool that fits into a normal visit, training, and a simple way to report results |',
 '| Decides rollout and payment, and can block it | COO and practice administrator | Annual price, what it includes, how it fits workflow and records, and written answers on patient data |',
 '',
-'Every account gets at least one executive contact (owner, CEO, COO or practice administrator) and at least one clinical contact (chief clinical officer, rehab director or clinic director).',
+'Every group hears from at least one contact in the executive or operations cluster (owner, CEO, COO or practice administrator) and one in the clinical cluster (chief clinical officer, rehab director or clinic director).',
 '',
 '## Who is there at each size, and who to contact first',
 '');
@@ -68,11 +68,11 @@ for (const z of N.bySize) {
 }
 w('### The contact-order test',
 '',
-'From week 5, groups in each size band are split at random. Half start with a clinical contact and half start with an executive. The second contact hears from us a week later. We compare qualified calls per 100 groups at Day 90 and pilots started per 100 groups at Day 180. With about 500 groups a half, only a large gap counts: if it is under 30%, both orders stay in use and the test runs another quarter.',
+'From week 5, the demand generation lead splits groups in each size band at random. Half start with a clinical contact and half start with an executive. The second contact hears from us a week later. At Day 90 we compare qualified calls per 100 groups in each half. If one order is at least 30% ahead, it becomes the default for next quarter\'s new groups. If not, both orders stay, and we read pilots started per 100 groups at Day 180.',
 '',
 '## How we test messages',
 '',
-`The seven roles fall into three clusters, so each test reaches enough people. Each cluster tests message A against message B in weeks 5 to 8, through the Propensity ad audiences and the outbound email sequences.`,
+`The seven roles fall into three clusters, so each test reaches enough people. Each cluster tests message A against message B from January 4, read in week 8 and closed by February 15, through the Propensity ad audiences and the outbound email sequences.`,
 '',
 '| Cluster | Roles | Message A | Message B |',
 '|---|---|---|---|');
@@ -138,7 +138,7 @@ N.objections.forEach((o, i) => {
 w('',
 '## What sales records in Salesforce',
 '',
-'Four picklists are added in week 3 so the tests can be read. Sales picks from the list on every call, and "Other" needs a note.',
+'Four pick lists make the tests readable. Persona and buying role are added in Salesforce week 1, and message variant and objection heard in week 3. Sales picks from the list on every call, and "Other" needs a note.',
 '',
 '| Field | Values |',
 '|---|---|',
@@ -153,14 +153,19 @@ w('',
 '',
 '## Confirm in week one',
 '',
-'These answers depend on facts only Control Bionics can confirm. They are part of the week-one asks in the plan.',
-'');
-const seen = new Set();
-N.objections.filter((o) => o.week_one).forEach((o) => { const k = o.week_one_item.trim(); if (!seen.has(k)) { seen.add(k); w(`- ${k}`); } });
-w('- Which Bombora research topics match the ones named in this playbook.',
-'- Which size patterns above hold for the purchased list, checked against the first 100 accounts.',
+'These answers depend on facts only Control Bionics can confirm. They are part of the fourteen week-one asks in the plan, and Control Bionics names one person to answer each by December 7. Until then, every answer that depends on one stays marked confirm in week one.',
+'',
+'- Billing: what current customers do, with no coding advice.',
+'- Pilot cost and terms, including kits on loan.',
+'- Training and support for a new clinic.',
+'- Electronic medical record (EMR): whether and how NeuroStrip records can get into each system.',
+'- Patient data: where session data is stored, who can see it, and whether Control Bionics signs a business associate agreement under the Health Insurance Portability and Accountability Act (HIPAA).',
+'- Cleared customers: which names, logos and results may be used, and where.',
+'- Price: the annual price for one clinic, each extra clinic, what it includes and replacement sensors.',
+'- Bombora: which research topics match the ones named in this playbook.',
+'- Size patterns: which hold for the purchased list, checked against the first 100 groups.',
 '');
 let md = out.join('\n').replace(/\n{3,}/g, '\n\n');
-if (/[–—]/.test(md)) { console.error('dash found'); process.exit(1); }
+if (/[\u2013\u2014]/.test(md)) { console.error('dash found'); process.exit(1); }
 fs.writeFileSync(path.join(root, 'docs/PERSONAS.md'), md);
 console.log('wrote', md.length, 'chars');

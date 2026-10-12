@@ -28,8 +28,8 @@ The plan targets physical therapy (PT) groups with 5 to 25 clinics. Inside each 
 | Sales-ready lead | A person who passes the first three checks in the sales section (target group, buying role, asked for something) and is ready for a sales call. |
 | Intent data | A sign that people at a practice are reading more than usual about a topic, such as billing software. It shows which practices are actively researching. It does not name the people. |
 | Researching now | A practice whose staff are reading more than usual about topics close to NeuroStrip, according to Bombora intent data, in the last few weeks. |
-| Account-based ads | Ads shown only to people at a named list of practices, instead of to anyone who fits a profile. |
-| Holdout group | Half of the target list that gets no ads, only email. Comparing it with the half that sees ads shows what the ads add. |
+| Account-based ads | Ads shown only to the people at a named list of groups. |
+| Holdout half | The half of the target list that gets email and no ads. Comparing it with the test half, the half that sees ads, shows what the ads add. |
 | National Provider Identifier (NPI) | The 10-digit ID every American healthcare provider and practice uses for billing. It lets us find physical therapy practices in a provider database. |
 | Surface electromyography (sEMG) | Measuring the electrical activity of muscles through sensors on the skin. NeuroStrip is a wireless sEMG sensor. |
 | Electronic medical record (EMR) | The software a clinic uses for patient notes, scheduling and billing. |
@@ -55,7 +55,7 @@ Job titles are spelled out once and then shortened: chief executive officer (CEO
 | Runs the pilot | A clinic director | A tool that fits into a normal visit, training, and a simple way to report results |
 | Decides rollout and payment, and can block it | COO and practice administrator | Annual price, what it includes, how it fits workflow and records, and written answers on patient data |
 
-Every account gets at least one executive contact (owner, CEO, COO or practice administrator) and at least one clinical contact (chief clinical officer, rehab director or clinic director).
+Every group hears from at least one contact in the executive or operations cluster (owner, CEO, COO or practice administrator) and one in the clinical cluster (chief clinical officer, rehab director or clinic director).
 
 ## Who is there at each size, and who to contact first
 
@@ -85,16 +85,16 @@ Every account gets at least one executive contact (owner, CEO, COO or practice a
 
 ### The contact-order test
 
-From week 5, groups in each size band are split at random. Half start with a clinical contact and half start with an executive. The second contact hears from us a week later. We compare qualified calls per 100 groups at Day 90 and pilots started per 100 groups at Day 180. With about 500 groups a half, only a large gap counts: if it is under 30%, both orders stay in use and the test runs another quarter.
+From week 5, the demand generation lead splits groups in each size band at random. Half start with a clinical contact and half start with an executive. The second contact hears from us a week later. At Day 90 we compare qualified calls per 100 groups in each half. If one order is at least 30% ahead, it becomes the default for next quarter's new groups. If not, both orders stay, and we read pilots started per 100 groups at Day 180.
 
 ## How we test messages
 
-The seven roles fall into three clusters, so each test reaches enough people. Each cluster tests message A against message B in weeks 5 to 8, through the Propensity ad audiences and the outbound email sequences.
+The seven roles fall into three clusters, so each test reaches enough people. Each cluster tests message A against message B from January 4, read in week 8 and closed by February 15, through the Propensity ad audiences and the outbound email sequences.
 
 | Cluster | Roles | Message A | Message B |
 |---|---|---|---|
-| Executive | Clinic Owner, Chief Executive Officer (CEO) | Clinic owner: Patients who can see their progress at each visit have a reason to keep coming back.<br>CEO: Track plan-of-care completion the same way in every clinic. | Clinic owner: A return-to-sport service you can start at one clinic, measure, then add to the rest.<br>CEO: One program you can roll out to every clinic and measure. |
-| Operations | Chief Operating Officer (COO), Practice Administrator | COO: Each sensor goes on like a bandage and shows live on an iPad.<br>Practice administrator: See the office time for a pilot before anyone signs. | COO: A rollout plan that shows what each new clinic needs.<br>Practice administrator: One page that lists what the annual price includes. |
+| Executive | Owner, Chief Executive Officer (CEO) | Clinic owner: Patients who can see their progress at each visit have a reason to keep coming back.<br>CEO: Track plan-of-care completion the same way in every clinic. | Clinic owner: A return-to-sport service you can start at one clinic, measure, then add to the rest.<br>CEO: One program you can roll out to every clinic and measure. |
+| Operations | Chief Operating Officer (COO), Practice Administrator | COO: Each sensor goes on like a bandage, and the pilot times setup at one clinic.<br>Practice administrator: Setup and office time, both timed in the pilot. | COO: One page with the annual price and a rollout plan for each new clinic.<br>Practice administrator: One page that lists what the annual price includes. |
 | Clinical | Chief Clinical Officer, Rehab Director, Clinic Director | Chief clinical officer: Strength tests can miss muscles covering for an injured one.<br>Rehab director: See which muscles do the work, live, and coach the next rep.<br>Clinic director: Show patients which muscles are doing the work during the test. | Chief clinical officer: A documented return-to-sport protocol for the whole group.<br>Rehab director: The same return-to-sport steps for every therapist in the group.<br>Clinic director: Run the group's first documented return-to-sport protocol at your clinic. |
 
 Each role hears its own wording of the cluster's message A or B, so the test compares the two ideas while the copy still fits the reader. The full copy for each role is in its section below.
@@ -112,7 +112,7 @@ Each role hears its own wording of the cluster's message A or B, so the test com
 
 Each role follows the same order: role in the decision, other titles, what they are measured on, what worries them, signs they are ready to talk, the two messages, the offer and landing page, the six-week sequence, the top four objections, proof, discovery questions, what a yes looks like, and when to stop.
 
-- [Clinic Owner](#clinic-owner)
+- [Owner](#owner)
 - [Chief Executive Officer (CEO)](#chief-executive-officer-ceo)
 - [Chief Operating Officer (COO)](#chief-operating-officer-coo)
 - [Chief Clinical Officer](#chief-clinical-officer)
@@ -120,7 +120,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 - [Practice Administrator](#practice-administrator)
 - [Clinic Director](#clinic-director)
 
-### Clinic Owner
+### Owner
 
 **Signs.** Executive cluster. The owner signs the contract and wants to know two things: whether patients who see their progress finish more of their visits, and whether a return-to-sport service sets the group apart from nearby clinics.
 
@@ -168,7 +168,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 
 | Week | Channel | Touch |
 |---|---|---|
-| 1 | Outbound email and account-based ads through Propensity | Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, offering the economics worksheet or a 20-minute call. Ads with the 90-second video start now and run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads. |
+| 1 | Outbound email and account-based ads through Propensity | Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, offering the economics worksheet or a 20-minute call. Ads, including the 15-second video and the banners, start now and run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads. |
 | 2 | Rep call and LinkedIn connection | The rep calls the main line, asks for the owner, and sends a LinkedIn connection request with a one-line note about the worksheet. |
 | 3 | Outbound email | Second email on the same assigned message, adding the one-athlete hamstring example and a link to the 90-second video. |
 | 4 | Direct mail box | If the group is in the test half and Bombora shows it researching now, the owner gets the direct mail box with a code to book the pilot scoping call. Other owners get a short email with the economics worksheet. |
@@ -252,7 +252,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 
 | Week | Channel | Touch |
 |---|---|---|
-| 1 | Outbound email and account-based ads through Propensity | Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, asking for 20 minutes to scope a one-clinic pilot. Ads with the 90-second video run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads. |
+| 1 | Outbound email and account-based ads through Propensity | Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, asking for 20 minutes to scope a one-clinic pilot. Ads, including the 15-second video and the banners, run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads. |
 | 2 | LinkedIn connection from the rep | The rep sends a connection request and, once connected, shares the one-page rollout plan. |
 | 3 | Outbound email | Second email on the same assigned message, with the 90-second video and one question: which clinic would go first? |
 | 4 | Rep call | The rep calls the CEO's assistant or the main line to ask for a pilot scoping call, and mentions any clinical contact at the group who has already engaged. |
@@ -337,7 +337,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 
 | Week | Channel | Touch |
 |---|---|---|
-| 1 | Outbound email and account-based ads through Propensity | Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, offering the one-page rollout plan. Ads with the 90-second video run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads. |
+| 1 | Outbound email and account-based ads through Propensity | Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, offering the one-page rollout plan. Ads, including the 15-second video and the banners, run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads. |
 | 2 | Rep call | The rep calls to offer the operations walkthrough and asks which electronic medical record (EMR) system the clinics use, noting that whether and how NeuroStrip records can get into that system is something we confirm in week one. |
 | 3 | Outbound email | Second email on the same assigned message, with the rollout plan attached and a link to the pricing questions page. |
 | 4 | Weekly live demo | Invitation to the weekly live demo, which shows setup from start to finish. |
@@ -415,13 +415,13 @@ Each role follows the same order: role in the decision, other titles, what they 
 
 **Offer.** The clinical primer, the spec sheet and a one-page evidence summary, then a 20-minute clinical review where the chief clinical officer writes the pilot criteria.
 
-**Landing page.** The return-to-play page, with the primer, spec sheet and evidence summary open to read without a form. One call to action: book a 20-minute clinical review to set the pilot criteria.
+**Landing page.** The return-to-sport page, with the primer, spec sheet and evidence summary open to read without a form. One call to action: book a 20-minute clinical review to set the pilot criteria.
 
 **Six-week sequence**
 
 | Week | Channel | Touch |
 |---|---|---|
-| 1 | Outbound email and account-based ads through Propensity | Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random. It cites Forelli and colleagues (2025, Journal of Clinical Medicine), who write that traditional functional tests alone may not reveal arthrogenic muscle inhibition, where the thigh muscle does not fully switch on after anterior cruciate ligament reconstruction, and it offers the evidence summary. Ads with the 90-second video run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads. |
+| 1 | Outbound email and account-based ads through Propensity | Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random. It cites Forelli and colleagues (2025, Journal of Clinical Medicine), who write that traditional functional tests alone may not reveal arthrogenic muscle inhibition, where the thigh muscle does not fully switch on after anterior cruciate ligament reconstruction, and it offers the evidence summary. Ads, including the 15-second video and the banners, run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads. |
 | 2 | LinkedIn connection from the rep | The rep sends a connection request with the spec sheet. |
 | 3 | Outbound email | Second email on the same assigned message, linking to the clinical primer. |
 | 4 | Weekly live demo | Invitation to the weekly live demo for the chief clinical officer and one or two senior therapists, plus an offer to meet at the American Physical Therapy Association's Combined Sections Meeting in Philadelphia, February 4 to 6, 2027. |
@@ -734,11 +734,11 @@ All 18 objections we expect, in rough order of how often we think they will come
 
 ## What sales records in Salesforce
 
-Four picklists are added in week 3 so the tests can be read. Sales picks from the list on every call, and "Other" needs a note.
+Four pick lists make the tests readable. Persona and buying role are added in Salesforce week 1, and message variant and objection heard in week 3. Sales picks from the list on every call, and "Other" needs a note.
 
 | Field | Values |
 |---|---|
-| Persona | Clinic Owner, Chief Executive Officer (CEO), Chief Operating Officer (COO), Chief Clinical Officer, Rehab Director, Practice Administrator, Clinic Director, Other |
+| Persona | Owner, Chief Executive Officer (CEO), Chief Operating Officer (COO), Chief Clinical Officer, Rehab Director, Practice Administrator, Clinic Director, Other |
 | Buying role | Signs, Approves clinically, Runs the pilot, Decides rollout and payment |
 | Message variant | Executive A, Executive B, Operations A, Operations B, Clinical A, Clinical B, Operations email with the record-system opener |
 | Objection heard | 1. We already test strength with force plates and hop tests.<br>2. My therapists don't have time.<br>3. It costs more than a $499 biofeedback unit.<br>4. Can we bill for it?<br>5. Is surface electromyography (sEMG) reliable, and where is the evidence?<br>6. We bought tech before and it sat in a drawer.<br>7. Not this budget cycle.<br>8. Does it work with our electronic medical record (EMR)?<br>9. Where does patient data go?<br>10. Who else like us uses it?<br>11. Is it cleared by the Food and Drug Administration (FDA)?<br>12. Most of our patients are older adults and post-surgical cases, and we see few athletes.<br>13. What happens when a sensor gets lost or breaks?<br>14. Training will pull therapists off the schedule.<br>15. What does the pilot cost, and what are we signing?<br>16. Are there costs beyond the annual price?<br>17. Corporate won't approve another tool.<br>18. We're in the middle of an electronic medical record (EMR) migration.<br>Other |
@@ -749,19 +749,14 @@ Four picklists are added in week 3 so the tests can be read. Sales picks from th
 
 ## Confirm in week one
 
-These answers depend on facts only Control Bionics can confirm. They are part of the week-one asks in the plan.
+These answers depend on facts only Control Bionics can confirm. They are part of the fourteen week-one asks in the plan, and Control Bionics names one person to answer each by December 7. Until then, every answer that depends on one stays marked confirm in week one.
 
-- What current customers do about billing, gathered by Control Bionics and checked by compliance, with no coding advice in it.
-- Training and support offered during the 30-day pilot and after rollout.
-- Pilot cost and terms, including whether a pilot can start before a budget is approved.
-- Whether and how NeuroStrip records can get into the main physical therapy electronic medical record (EMR) systems, and how current customers record sessions in the patient's chart.
-- Where data is stored, who can access it, and whether Control Bionics signs a business associate agreement, the patient privacy contract that clinics ask vendors to sign under the Health Insurance Portability and Accountability Act (HIPAA).
-- Which customers Control Bionics has cleared to name, and which will take a reference call.
-- What current customers do about billing, confirmed by Control Bionics, with no coding advice in it.
-- Replacement policy and cost for lost or damaged sensors, and support hours.
-- Training format, length and who delivers it, during the pilot and at each new clinic.
-- Pilot cost, number of kits, return terms and what happens at day 30.
-- What the annual price includes, and the cost of replacement sensors and support.
-- Whether and how NeuroStrip records can get into the main physical therapy electronic medical record (EMR) systems.
-- Which Bombora research topics match the ones named in this playbook.
-- Which size patterns above hold for the purchased list, checked against the first 100 accounts.
+- Billing: what current customers do, with no coding advice.
+- Pilot cost and terms, including kits on loan.
+- Training and support for a new clinic.
+- Electronic medical record (EMR): whether and how NeuroStrip records can get into each system.
+- Patient data: where session data is stored, who can see it, and whether Control Bionics signs a business associate agreement under the Health Insurance Portability and Accountability Act (HIPAA).
+- Cleared customers: which names, logos and results may be used, and where.
+- Price: the annual price for one clinic, each extra clinic, what it includes and replacement sensors.
+- Bombora: which research topics match the ones named in this playbook.
+- Size patterns: which hold for the purchased list, checked against the first 100 groups.
