@@ -1,80 +1,48 @@
-# Filling the pipeline
+# NeuroStrip 90-day demand generation plan
 
-A 90-day demand generation plan for Control Bionics' NeuroStrip, built as an interactive strategy site instead of a slide deck.
+A one-page marketing plan for Control Bionics' NeuroStrip, prepared by Kellen Levy for the Control Bionics leadership team in October 2026. It reads in about ten minutes.
 
-Prepared by Kellen Levy as an independent candidate proposal. It is not a Control Bionics publication and is not endorsed by Control Bionics.
+It is an independent candidate proposal. It is not a Control Bionics publication and is not endorsed by Control Bionics.
 
 ## View it
 
 | How | Where |
 |---|---|
-| Hosted | `https://kellenlevynow.github.io/NeuroStrip/` once GitHub Pages is switched on (steps below) |
+| Hosted | https://kellenlevynow.github.io/NeuroStrip/ |
 | Offline, one file | Open `standalone.html` in any browser. Fonts, styles, scripts and data are all inside it. |
 | Text only | [`docs/STRATEGY.md`](docs/STRATEGY.md) |
 
 The page asks search engines not to index it, sets no cookies and runs no analytics.
 
-### Turning on the hosted page
-
-1. On GitHub, open **Settings**, then **Pages**, for this repository.
-2. Under "Build and deployment", set **Source** to "Deploy from a branch".
-3. Choose the `main` branch and the `/ (root)` folder, then **Save**.
-4. Give it about a minute, then open `https://kellenlevynow.github.io/NeuroStrip/`.
-
-The repository is public, so its files can already be read on GitHub. Pages adds the hosted address. There is no build step on GitHub: `index.html` is committed ready to serve.
+GitHub Pages serves the `main` branch from the repository root. There is no build step on GitHub: `index.html` is committed ready to serve.
 
 ## What is in it
 
-| # | Chapter | Interview question it answers |
+| # | Section | What it covers |
 |---|---|---|
-| 01 | Five answers | All five, on one screen |
-| 02 | The idea | |
-| 03 | Ground truth: what is publicly verifiable, plus a nine-point site audit | |
-| 04 | Audience: adjustable nine-segment matrix, tie-breakers, tiers | Q1 |
-| 05 | Positioning, message house, claims guardrail, awareness ladder | |
-| 06 | The system: seven stations, three feedback loops, flywheel | |
-| 07 | Channels, budget tool, pipeline model | Q2 |
-| 08 | Creative engine: territories, test tree, example ads, landing journeys | |
-| 09 | Qualification: lifecycle, fit and intent router, PILOT, SLA | Q4 |
-| 10 | Salesforce month one: sprint plan, data model, UTM builder, dashboards | Q5 |
-| 11 | Agency and in-house | Q3 |
-| 12 | Measurement: hierarchy, cost-per-lead trap, dashboard concept | |
-| 13 | Roadmap with a movable start date | |
-| 14 | Experiments: decision rules and a ranked backlog | |
-| 15 | Risks and week-one confirmations | |
-| 16 | Day 91 onward | |
-| 17 | Evidence ledger | |
-
-## Reading the evidence labels
-
-Every claim carries a marker. Select one to see where it came from.
-
-| Marker | Meaning |
-|---|---|
-| Verified | Stated in a public source, linked in the ledger |
-| Shared | From the first conversation, or my own observation |
-| Assumption | A planning input, with the step that validates it |
-| Hypothesis | Something the plan is built to test |
-
-Turn on the evidence lens (the button in the side rail, or press `e`) to expand every marker at once.
+| 1 | Summary | The goal of 20 qualified discovery calls a week, a one-sentence answer to each of the five interview questions, the base budget and the Day 90 result |
+| 2 | Who we target first | PT groups with 5 to 25 locations, sport through business development, everyone else inbound only (70, 20, 10) |
+| 3 | What we say and offer | The positioning line, a message and offer for three buyers, and three example ads |
+| 4 | Channels | LinkedIn, Google Search and email, each with its job, share of spend, the number that shows it is working and the point where it gets cut |
+| 5 | Budget | Lean, Base and Aggressive, a slider, line items, the monthly split, and the calls, pilots, customers and revenue each budget returns |
+| 6 | The first 90 days | Three 30-day phases by week, with checkpoints at Day 30, 60 and 90 |
+| 7 | Handing leads to sales | The five-point qualified-lead checklist, response times, Salesforce in month one and the five weekly numbers |
+| 8 | Team, asks and risks | In-house and partner work, what is needed from Control Bionics in week one, and the four biggest risks |
 
 ## Presenting it
 
-- `n` and `p` move to the next and previous chapter.
-- `e` toggles the evidence lens.
-- The numbered buttons at the top of the rail jump straight to each interview question.
-- Every model responds live: audience weights, budget, pipeline inputs, the lead router, the UTM builder and the roadmap start date.
+- The top nav jumps to each section and highlights the one on screen.
+- `n` and `p` move to the next and previous section.
+- The budget buttons and slider update every number in the Budget section.
 
 ## Changing it
 
-All numbers and most copy for the interactive modules live in one file: [`assets/js/data.js`](assets/js/data.js). Sources, assumptions and hypotheses are registered there too, and the ledger is generated from them.
-
 ```
-src/shell.html        page frame, navigation, footer
-src/sections/*.html   one file per chapter
+src/shell.html        page frame, top nav, footer
+src/sections/*.html   one file per section, in filename order
 src/css/*.css         styles, concatenated in filename order
 src/js/*.js           behavior, concatenated in filename order
-assets/js/data.js     strategy data
+assets/js/data.js     budget lines and the pipeline math behind the Budget section
 tools/build.mjs       assembles index.html and standalone.html
 ```
 
@@ -84,14 +52,22 @@ After any edit:
 node tools/build.mjs
 ```
 
-Node 18 or newer. No packages to install. The build stops if a section references an icon or evidence id that does not exist.
+Node 18 or newer. No packages to install. Never edit `index.html`, `standalone.html`, `assets/css/site.css` or `assets/js/app.js` by hand: the build writes them.
 
-## Adding Control Bionics photography
+### How the Budget section works out the numbers
 
-The site ships with original concept illustrations. Photo slots look for a local file first, then try the public image on controlbionics.com, and otherwise keep the illustration. To pin real photos into the repo, see [`assets/img/cb/README.md`](assets/img/cb/README.md).
+Each source of qualified calls has a weekly rate at Day 90, set in `assets/js/data.js`:
+
+- Outbound email: 300 contacts a week at 0.9 calls per 100.
+- Google Search and LinkedIn: month-three spend on their budget line, divided by a planned cost per call of $330 and $2,000. These two are the only sources that change with the budget.
+- Weekly live demo: 60 registrants a month, 15% book a call.
+- APTA CSM follow-up: 150 conversations a quarter, 20% book a call.
+- Existing inbound and referrals: an estimate of 3.8 calls a week, to be replaced by the real count in week one.
+
+At $90,000 that adds up to about 15 qualified calls a week. Then 55% of calls become opportunities, 45% of those start a pilot, and 50% of pilots convert at $7,500 in first-year value.
 
 ## Credits
 
 - Typefaces: Inter and Lora, under the SIL Open Font License. See [`assets/fonts/LICENSES.md`](assets/fonts/LICENSES.md).
 - Icons: Lucide, ISC License.
-- NeuroStrip, NeuroNode and NeuroBounce are names used by Control Bionics. Other names belong to their owners.
+- NeuroStrip is a name used by Control Bionics. Other names belong to their owners.
