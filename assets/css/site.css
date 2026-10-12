@@ -303,7 +303,7 @@ sup.fn a{color:inherit;opacity:.7}
 .hero-cta .arrow-link{color:var(--link-d);font-size:19px}
 .hero-what{margin:26px auto 0;max-width:36em;font-size:15px;line-height:1.45;color:var(--text-d2)}
 .hero-ph{margin:clamp(40px,6vw,64px) auto 0;max-width:1200px;width:calc(100% - 2 * var(--gut));aspect-ratio:1200/560;border-radius:var(--r-tile);background:#000}
-.hero-ph svg{width:100%;height:110%;will-change:transform}
+.hero-ph img{width:100%;height:112%;object-fit:cover;will-change:transform}
 .hero-cap{margin-top:14px;color:var(--text-d2)}
 
 /* ==========================================================================
@@ -530,6 +530,23 @@ sup.fn a{color:inherit;opacity:.7}
 .wk1{display:block;margin-top:6px;font-size:12px;font-weight:600;color:var(--text-2)}
 .sec--gray .more-c .tile{background:var(--gray)}
 .more-c .tiles{margin-top:8px}
+
+/* Control Bionics product photography */
+.cbimg{display:block;width:100%;height:100%;object-fit:cover}
+.ph--story{aspect-ratio:864/520;margin:18px 0 8px;max-width:560px}
+.ph--story img{width:100%;height:100%;object-fit:cover}
+.ph--band{aspect-ratio:980/360;margin-top:clamp(36px,5vw,56px)}
+.ph--band img{width:100%;height:100%;object-fit:cover}
+.ph--band + .bmap{margin-top:16px}
+.ph--tile img{width:100%;height:100%;object-fit:cover}
+.msg-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:16px;align-items:stretch;max-width:1180px;margin-left:min(0px,calc((100% - min(1180px,100vw - 64px)) / 2));margin-right:min(0px,calc((100% - min(1180px,100vw - 64px)) / 2))}
+.msg-pair .screen--xl{margin:0;max-width:none}
+.ph--msg{min-height:320px}
+.ph--msg img{width:100%;height:100%;object-fit:cover}
+.ph--msg figcaption,.ph--band figcaption,.ph--story figcaption,.ph--tile figcaption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:24px 14px 10px;color:#f5f5f7;background:linear-gradient(transparent,rgba(0,0,0,.45));text-align:left;font-size:11px}
+@media (max-width:834px){.msg-pair{grid-template-columns:minmax(0,1fr);margin-left:0;margin-right:0}.ph--msg{aspect-ratio:1/1;min-height:0}}
+.tile-ph{margin:-6px -6px 12px;aspect-ratio:16/9;border-radius:14px;overflow:hidden}
+.tile-ph img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* 20-ads.css */
 /* ==========================================================================

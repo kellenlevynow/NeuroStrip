@@ -55,7 +55,7 @@ node docs/tools/personas.cjs
 
 ## Product photography
 
-The page is built for Control Bionics' own NeuroStrip photography, but none of the 14 image files could be downloaded when the site was rebuilt, because the build environment's network blocked controlbionics.com. The page uses drawn SVG illustrations in their place and says so in each caption. [`assets/img/cb/README.md`](assets/img/cb/README.md) lists every missing file, where it goes and how to add it.
+The page uses Control Bionics' own NeuroStrip photography, converted to WebP at 1x and 2x in `assets/img/cb/`, lazy-loaded below the first screen and embedded in `standalone.html` by the build. [`assets/img/cb/README.md`](assets/img/cb/README.md) lists each file and where it is used. Drawn traces stand in only where a photo cannot show the data, such as the one-athlete 7% and 37% example.
 
 ## Presenting it
 

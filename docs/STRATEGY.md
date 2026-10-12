@@ -458,7 +458,7 @@ Strength tests tell a clinic how much force a limb produces, and NeuroStrip show
 
 Notes:
 
-1. Every piece is a mockup at its true size, scaled down on small screens. Frames are drawn without platform logos. Product illustrations stand in for Control Bionics photography until the image files are added.
+1. Every piece is a mockup at its true size, scaled down on small screens. Frames are drawn without platform logos. Product photography: Control Bionics. Drawn traces and frames stand in where no photograph fits.
 2. The 7% and 37% figures are one athlete's example. No customer names, logos or results appear until Control Bionics clears them.
 
 ## 7. Channels

@@ -17,7 +17,19 @@
     clinical: 'A against B in each role\'s wording. Chief clinical officer: strength tests can miss muscles covering for an injured one, against a documented return-to-sport protocol for the whole group',
   };
 
-  /* ---------- small illustrations that stand in for Control Bionics photography ---------- */
+  /* ---------- Control Bionics product photography (literal paths so the build can embed them offline) ---------- */
+  const PH = {
+    calves: ['src="assets/img/cb/calves-1x.webp"', 'NeuroStrip sensors on both calves of a standing athlete'],
+    profiling: ['src="assets/img/cb/profiling-1x.webp" data-hd="assets/img/cb/profiling-2x.webp"', 'A clinician shows an athlete with a sensor on the thigh the readings on an iPad'],
+    platform05: ['src="assets/img/cb/platform-05-1x.webp" data-hd="assets/img/cb/platform-05-2x.webp"', 'Live activation traces in the NeuroStrip app on a laptop'],
+    homepage: ['src="assets/img/cb/homepage-1x.webp" data-hd="assets/img/cb/homepage-2x.webp"', 'A NeuroStrip sensor on the skin of an upper arm'],
+    box: ['src="assets/img/cb/box-1x.webp" data-hd="assets/img/cb/box-2x.webp"', 'The NeuroStrip kit: charging case, sensors and adhesive strips'],
+    arm: ['src="assets/img/cb/arm-1x.webp" data-hd="assets/img/cb/arm-2x.webp"', 'A NeuroStrip sensor being pressed onto the skin of an arm'],
+    lifestyle: ['src="assets/img/cb/lifestyle-1x.webp" data-hd="assets/img/cb/lifestyle-2x.webp"', 'A NeuroStrip sensor being placed on the back of an athlete\'s thigh'],
+  };
+  const photo = (k, pos) => `<img class="cbimg" ${PH[k][0]} alt="${PH[k][1]}" loading="lazy" decoding="async"${pos ? ` style="object-position:${pos}"` : ''}>`;
+
+  /* ---------- small illustrations, used where no photograph fits ---------- */
   const art = {
     leg: (h) => `<svg viewBox="0 0 400 ${h || 300}" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="${h || 300}" fill="#111"/><path d="M-10 ${(h || 300) * .78}C80 ${(h || 300) * .62} 150 ${(h || 300) * .3} 220 ${(h || 300) * .28}s140 30 200 10v${h || 300}H-10z" fill="#2a2a2e"/><g transform="rotate(-9 200 ${(h || 300) * .48})"><rect x="150" y="${(h || 300) * .48 - 22}" width="100" height="44" rx="17" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.3)"/><rect x="164" y="${(h || 300) * .48 - 12}" width="72" height="24" rx="9" fill="#f5f5f7"/><circle cx="180" cy="${(h || 300) * .48}" r="3.6" fill="#111"/><circle cx="200" cy="${(h || 300) * .48}" r="3.6" fill="#111"/><circle cx="220" cy="${(h || 300) * .48}" r="3.6" fill="#111"/><circle cx="231" cy="${(h || 300) * .48 - 7}" r="1.8" fill="#2EE6A6"/></g><g fill="none" stroke="#2EE6A6" stroke-linecap="round" stroke-width="1.8" opacity=".5"><path d="M134 ${(h || 300) * .38}a46 46 0 0 0 0 ${(h || 300) * .2}"/><path d="M266 ${(h || 300) * .38}a46 46 0 0 1 0 ${(h || 300) * .2}"/></g></svg>`,
     kit: () => `<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#f5f5f7"/><rect x="70" y="60" width="260" height="180" rx="22" fill="#fff" stroke="#d2d2d7"/>${[0, 1, 2, 3].map((i) => `<g transform="translate(${104 + (i % 2) * 104} ${92 + Math.floor(i / 2) * 72})"><rect width="88" height="40" rx="15" fill="#f5f5f7" stroke="#c7c7cc"/><circle cx="24" cy="20" r="4" fill="#1d1d1f"/><circle cx="44" cy="20" r="4" fill="#1d1d1f"/><circle cx="64" cy="20" r="4" fill="#1d1d1f"/></g>`).join('')}</svg>`,
@@ -38,7 +50,7 @@
   /* 1. 15-second video storyboard, clinical cluster */
   if (C.storyboard) {
     const sb = C.storyboard;
-    const frameArt = (i) => (i === 1 || i === 2 || i === 3 ? art.trace() : art.leg(220));
+    const frameArt = (i) => (i === 0 ? photo('profiling', 'center 30%') : i === 4 ? photo('platform05') : i === 5 ? art.leg(220) : art.trace());
     items.push({
       wide: true, cl: ['clinical'], ch: 'video', chName: 'Video', title: '15-second video, six frames',
       mock: `<ol class="sb">${sb.frames.map((f, i) => `<li><div class="sb-art">${frameArt(i)}<p class="sb-os">${esc(f.on_screen.split(/\s*Small print:\s*/)[0])}${/Small print:/.test(f.on_screen) ? `<small>${esc(f.on_screen.split(/\s*Small print:\s*/)[1])}</small>` : ''}</p></div><p class="sb-t">${esc(f.time)}</p><p class="sb-v"><b>Picture:</b> ${esc(f.visual)}</p><p class="sb-v"><b>Voice:</b> ${esc(f.voiceover)}</p></li>`).join('')}</ol>`,
@@ -52,7 +64,7 @@
     const unit = (w, h, kind) => {
       const fr = D.frames.map((f, i) => {
         const txt = kind === 'banner' ? f.short : f.long;
-        const vis = i === 0 ? `<div class="dsp-v">${art.leg(Math.round(h * 0.6))}</div>` : i === 1 ? `<div class="dsp-v">${art.trace()}</div>` : '';
+        const vis = i === 0 ? `<div class="dsp-v">${photo('calves', 'center 35%')}</div>` : i === 1 ? `<div class="dsp-v">${art.trace()}</div>` : '';
         return `<div class="dsp-f dsp-f${i + 1}">${kind === 'banner' ? '' : vis}<p class="dsp-t">${esc(txt)}</p>${i === 2 ? `<span class="dsp-b">${esc(D.cta)}</span>` : ''}<span class="dsp-brand">NeuroStrip</span></div>`;
       }).join('');
       return `<figure class="dsp"><div class="dsp-u dsp-${kind}" style="width:${w}px;height:${h}px" role="img" aria-label="${w} by ${h} display ad, three frames: ${esc(D.frames.map((f) => (kind === 'banner' ? f.short : f.long)).join('; '))}">${fr}</div><figcaption>${w} × ${h}</figcaption></figure>`;
@@ -69,7 +81,7 @@
     const K = C.carousel;
     items.push({
       wide: true, cl: ['executive'], ch: 'social', chName: 'LinkedIn and Meta', title: 'Five-card carousel',
-      mock: scale(`<div class="sp"><div class="sp-h"><span class="sp-av">CB</span><div><b>Control Bionics</b><i>Sponsored</i></div></div><p class="sp-x">${esc(K.intro)}</p><div class="sp-cards">${K.cards.map((c, i) => `<div class="sp-card"><div class="sp-img">${i === 1 ? art.trace() : i === 3 ? art.kit() : art.leg(300)}</div><div class="sp-f"><b>${esc(c.headline)}</b><span>${esc(c.sub)}</span></div></div>`).join('')}</div><div class="sp-cta"><span>controlbionics.com</span><span class="sp-btn">${esc(K.cta)}</span></div></div>`, 1060, 560),
+      mock: scale(`<div class="sp"><div class="sp-h"><span class="sp-av">CB</span><div><b>Control Bionics</b><i>Sponsored</i></div></div><p class="sp-x">${esc(K.intro)}</p><div class="sp-cards">${K.cards.map((c, i) => `<div class="sp-card"><div class="sp-img">${i === 0 ? photo('homepage') : i === 1 ? art.trace() : i === 2 ? photo('profiling', 'center 30%') : i === 3 ? photo('box') : photo('platform05')}</div><div class="sp-f"><b>${esc(c.headline)}</b><span>${esc(c.sub)}</span></div></div>`).join('')}</div><div class="sp-cta"><span>controlbionics.com</span><span class="sp-btn">${esc(K.cta)}</span></div></div>`, 1060, 560),
       labels: { where: 'LinkedIn and Meta carousel placements bought through Propensity, shown only to the half of the list that gets ads', size: 'Five square cards. LinkedIn shows only a headline on each card, up to 45 characters, so each subline moves into the card image. Meta cuts long headlines, so each card is checked in its preview before launch', who: ROLES.executive, message: AB.executive, cta: K.cta, landing: 'Economics worksheet built from their own visit numbers', metric: 'Worksheets started and meetings booked per 100 executives in the half that sees ads' },
     });
   }
@@ -79,7 +91,7 @@
     const N = C.native;
     items.push({
       cl: ['clinical', 'executive'], ch: 'native', chName: 'Sponsored articles', title: 'Sponsored article ad on an industry site',
-      mock: scale(`<div class="nat"><div class="nat-site"><span></span><span></span><span></span></div><p class="nat-ctx">${esc(N.context)}</p><div class="nat-ad"><div class="nat-img">${art.leg(200)}</div><div><p class="nat-sp">Sponsored · Control Bionics</p><p class="nat-hd">${esc(N.headline)}</p><p class="nat-bd">${esc(N.body)}</p></div></div><div class="nat-lines"><i></i><i></i><i></i></div></div>`, 340, 470),
+      mock: scale(`<div class="nat"><div class="nat-site"><span></span><span></span><span></span></div><p class="nat-ctx">${esc(N.context)}</p><div class="nat-ad"><div class="nat-img">${photo('arm')}</div><div><p class="nat-sp">Sponsored · Control Bionics</p><p class="nat-hd">${esc(N.headline)}</p><p class="nat-bd">${esc(N.body)}</p></div></div><div class="nat-lines"><i></i><i></i><i></i></div></div>`, 340, 470),
       labels: { where: 'Native and contextual ads bought through Propensity, shown next to articles on return-to-sport and rehab topics. Which physical therapy sites carry them: confirm with Propensity in week one', size: 'Headline up to 55 characters, body up to 120', who: 'Readers of articles on return to sport and outcomes', message: 'Strength tests can miss muscles covering for an injured one', cta: 'Read the clinical primer', landing: 'Clinical primer page', metric: 'Primer reads from target groups, and replies that follow' },
     });
   }
@@ -99,7 +111,7 @@
     const G = C.geofence;
     items.push({
       cl: ['clinical', 'executive', 'operations'], ch: 'mobile', chName: 'Conference phone ad', title: 'Phone ad at the Combined Sections Meeting',
-      mock: scale(`<div class="geo"><div class="geo-img">${art.leg(260)}</div><div class="geo-c"><p class="geo-k">APTA CSM · Philadelphia · February 4 to 6</p><p class="geo-h">${esc(G.headline)}</p><p class="geo-b">${esc(G.body)}</p><span class="geo-btn">${esc(G.cta)}</span></div></div>`, 320, 480),
+      mock: scale(`<div class="geo"><div class="geo-img">${photo('lifestyle', 'center 40%')}</div><div class="geo-c"><p class="geo-k">APTA CSM · Philadelphia · February 4 to 6</p><p class="geo-h">${esc(G.headline)}</p><p class="geo-b">${esc(G.body)}</p><span class="geo-btn">${esc(G.cta)}</span></div></div>`, 320, 480),
       labels: { where: 'Phones inside a geofence, an ad area drawn around the Philadelphia convention center, during the American Physical Therapy Association Combined Sections Meeting (APTA CSM), February 4 to 6, 2027, through Propensity', size: '320 × 480, with a 320 × 50 version', who: 'Anyone inside the geofence. Most are physical therapists attending the meeting', message: 'A 60-second activation test at the booth', cta: G.cta, landing: 'Booth booking page', metric: 'Booth tests and meetings booked during the show' },
     });
   }
@@ -132,6 +144,13 @@
   });
 
   track.innerHTML = items.map(item).join('');
+
+  /* photos sit in scaled frames inside a scroller, where native lazy loading never fires: load them as the section comes near */
+  const wake = () => $$('img[loading="lazy"]', track).forEach((img) => { img.loading = 'eager'; });
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { wake(); io.disconnect(); } }, { rootMargin: '800px 0px' });
+    io.observe(track);
+  } else wake();
 
   /* ---------- line, clusters and the learn-more text ---------- */
   const line = $('#campaignLine');

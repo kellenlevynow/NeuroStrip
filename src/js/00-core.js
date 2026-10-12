@@ -105,6 +105,13 @@
   d.addEventListener('click', (e) => { if (!e.target.closest('.term') && !e.target.closest('#pop')) hidePop(); });
   window.addEventListener('resize', hidePop);
 
+  /* sharper photos on high-density screens, skipped in the offline copy where images are embedded */
+  U.hd = (root) => $$('img[data-hd]', root).forEach((img) => {
+    const src = img.getAttribute('src');
+    if (!src || src.startsWith('data:') || img.srcset) return;
+    img.srcset = `${src} 1x, ${img.dataset.hd} 2x`;
+  });
+
   /* ---------------- highlights carousel: swipe, arrows, dots, keys ---------------- */
   const chev = (dir) => `<svg viewBox="0 0 10 16" aria-hidden="true"><path d="${dir < 0 ? 'M8 1L2 8l6 7' : 'M2 1l6 7-6 7'}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   U.carousel = (root) => {
@@ -183,6 +190,7 @@
     U.drawTraces(d);
     U.initTerms(d);
     $$('[data-carousel]').forEach((c) => { if (!c.dataset.manual) c.carouselApi = U.carousel(c); });
+    U.hd(d);
     U.reveal(d);
     mark();
     parallax();
