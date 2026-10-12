@@ -30,15 +30,15 @@ Words like account-based ads, intent data, NPI, pipeline, cost per qualified cal
 
 | # | Section | What it covers |
 |---|---|---|
-| | Hero | The goal: 20 qualified sales calls a week |
-| 1 | Follow one clinic | One 12-clinic physical therapy group, from the list to a rollout, with the cost of each step and the $4,100 cost per customer |
+| | Hero | The goal of 20 qualified sales calls a week, about 15 by Day 90, and what NeuroStrip is |
+| 1 | Follow one group | A made-up 12-clinic physical therapy group, from the list to a rollout, with the cost of each step and the $6,900 average cost per customer |
 | 2 | The plan at a glance | Six numbers, each with what it means, and a short answer to each of the five interview questions |
 | 3 | Who we target first | Physical therapy groups with 5 to 25 clinics (70%), pro and college sport (20%), everyone else inbound (10%) |
 | 4 | The buying group | Who signs, approves, runs the pilot and decides rollout; who to contact first by size; a tab for each of seven roles; the ten most common objections; the message tests by cluster |
 | 5 | What we say | One idea, said three ways for the executive, operations and clinical clusters, and what we can and cannot claim |
 | 6 | The campaign | "See the muscle behind the number": a video storyboard, an animated display set, a carousel, a native ad, a direct mail box, a geofenced mobile ad, three responsive search ads and three email sequences, each labeled with where it runs, limits, audience, message tested, call to action, landing page and the number we read |
 | 7 | Channels | The 90-day account-based ad test with a holdout half, plus search, email, retargeting and small tests, with keep and cut rules |
-| 8 | Budget | Lean, Base and Aggressive side by side. Choosing a column updates the month-by-month spend and where the calls come from |
+| 8 | Budget | Lean, Base and Aggressive side by side, with the cost of each call the budget pays for, the cost with every call counted, and the cost of each extra call. Choosing a column updates the month-by-month spend and where the calls come from |
 | 9 | The first 90 days | Three phases with a pinned phase name, a checkpoint and a decision at Day 30, 60 and 90, and an owner for every week |
 | 10 | Handing leads to sales | The five-point checklist, reply times, discovery questions by role, five weekly numbers and the Salesforce build |
 | 11 | Team, asks and risks | In-house and partner work, the week-one asks for Control Bionics, and the risks with owners |
@@ -95,13 +95,15 @@ The campaign module checks every responsive search ad in code: headlines must be
 
 Each source of qualified calls has a weekly rate at Day 90, set in `assets/js/data.js`:
 
-- Outbound email: 300 contacts a week. 1.5% reply with interest and 60% of those hold a call, so 0.9 calls per 100 contacts.
-- Google Search and the account-based test: month-three spend on their budget line, divided by a planned cost per call of $330 and $2,000. These two are the only sources that change with the budget.
+- Email to the purchased list: 300 new contacts a week. 1.5% reply with interest and 60% of those hold a call, so 0.9 calls per 100 contacts. The list is used up between weeks 11 and 15.
+- Google Search and the account-based test: month-three spend on their budget line, divided by a planned cost per call of $330 and $2,000 (all-in, Propensity's fee included). Both are planning guesses with no outside source. These two are the only sources that change with the budget.
 - Weekly live demo: 60 registrants a month, 15% book a call.
-- APTA Combined Sections Meeting follow-up: 150 conversations a quarter, 20% book a call.
+- APTA Combined Sections Meeting follow-up: 150 conversations, 20% book a call over the quarter. Paid from the event budget and does not repeat the next quarter.
 - Calls that already come in today: an estimate of 3.8 a week, replaced by the real count in week one.
 
-At $90,000 that adds up to about 15 qualified calls a week. Then 55% of calls become opportunities, 45% of those start a pilot, and 50% of pilots sign at $7,500 in first-year value. So about 12.4% of calls become customers, and a call can cost up to about $930 and still pay back in the first year.
+At $90,000 that adds up to about 15 qualified calls a week. Then 55% of calls become opportunities, 45% of those start a pilot, and 50% of pilots sign at $7,500 in first-year value. So about 12.4% of calls become customers, and a call can cost up to about $930 and still be covered by first-year payments.
+
+The page reports cost per call two ways. Counting only the calls the budget pays for (leaving out the 3.8 that already come in and the conference), Base costs about $860 a call and $6,900 a customer in month three. Counting every call, it is about $510 and $4,100. The first is the one used for decisions. Each extra call bought by moving up a budget costs about $1,840.
 
 ## Credits
 

@@ -85,7 +85,7 @@ Every account gets at least one executive contact (owner, CEO, COO or practice a
 
 ### The contact-order test
 
-From week 5, groups in each size band are split at random. Half start with a clinical contact and half start with an executive. The second contact hears from us a week later. At Day 90 we compare pilots started per 100 groups in each half, and the winning order becomes the default for the next quarter. If the gap is under 30%, both orders stay in use and the test runs another quarter.
+From week 5, groups in each size band are split at random. Half start with a clinical contact and half start with an executive. The second contact hears from us a week later. We compare qualified calls per 100 groups at Day 90 and pilots started per 100 groups at Day 180. With about 500 groups a half, only a large gap counts: if it is under 30%, both orders stay in use and the test runs another quarter.
 
 ## How we test messages
 
@@ -93,19 +93,19 @@ The seven roles fall into three clusters, so each test reaches enough people. Ea
 
 | Cluster | Roles | Message A | Message B |
 |---|---|---|---|
-| Executive | Clinic Owner, Chief Executive Officer (CEO) | Clinic owner: Patients who can see their progress have a reason to finish their plan of care.<br>CEO: A program you can roll out to every clinic and measure. | Clinic owner: A return-to-sport program the clinic down the street does not have.<br>CEO: Objective muscle data to show referring physicians and partners. |
-| Operations | Chief Operating Officer (COO), Practice Administrator | COO: Each sensor goes on in seconds and shows live on an iPad.<br>Practice administrator: Clear annual pricing and what it includes. | COO: One standard return-to-sport test in every clinic.<br>Practice administrator: A monthly report on plan-of-care completion at the pilot clinic. |
-| Clinical | Chief Clinical Officer, Rehab Director, Clinic Director | Chief clinical officer: Strength tests can miss muscles covering for an injured one.<br>Rehab director: A live target line on screen shows patients how hard to work the muscle.<br>Clinic director: Show patients their progress at every visit. | Chief clinical officer: A documented return-to-sport protocol.<br>Rehab director: One tool for joint, sports and nerve-injury patients.<br>Clinic director: Be the first clinic in the group to run it. |
+| Executive | Clinic Owner, Chief Executive Officer (CEO) | Clinic owner: Patients who can see their progress at each visit have a reason to keep coming back.<br>CEO: Track plan-of-care completion the same way in every clinic. | Clinic owner: A return-to-sport service you can start at one clinic, measure, then add to the rest.<br>CEO: One program you can roll out to every clinic and measure. |
+| Operations | Chief Operating Officer (COO), Practice Administrator | COO: Each sensor goes on like a bandage and shows live on an iPad.<br>Practice administrator: See the office time for a pilot before anyone signs. | COO: A rollout plan that shows what each new clinic needs.<br>Practice administrator: One page that lists what the annual price includes. |
+| Clinical | Chief Clinical Officer, Rehab Director, Clinic Director | Chief clinical officer: Strength tests can miss muscles covering for an injured one.<br>Rehab director: See which muscles do the work, live, and coach the next rep.<br>Clinic director: Show patients which muscles are doing the work during the test. | Chief clinical officer: A documented return-to-sport protocol for the whole group.<br>Rehab director: The same return-to-sport steps for every therapist in the group.<br>Clinic director: Run the group's first documented return-to-sport protocol at your clinic. |
 
 Each role hears its own wording of the cluster's message A or B, so the test compares the two ideas while the copy still fits the reader. The full copy for each role is in its section below.
 
 **Rules**
 
 - Contacts inside each cluster are split at random between A and B.
-- Each test runs to about 150 contacts a side or 6 weeks, whichever comes first.
+- Each test is read in week 8, once about 150 contacts a side have had each message. If neither message is 30% ahead, it runs to 6 weeks, about 300 a side, and closes by the end of week 10.
 - We read two numbers: positive reply rate (people who reply with interest) and meetings booked.
 - A message wins only if its positive reply rate is 30% or more above the other and meetings booked do not point the other way. Below that it is a tie: we keep the simpler message and test a new one against it.
-- Volumes are small. Outbound reaches 300 contacts a week, which is 50 a week in each of the six test cells. At the planned 1.5% positive reply rate, 150 contacts give about 2 replies a side and six weeks give about 4 or 5. A win with fewer than 10 positive replies on the leading side is used, then tested again in month four with fresh contacts before it changes every sequence.
+- Volumes are small. Outbound reaches 300 contacts a week, which is 50 a week in each of the six test cells. At the planned 1.5% positive reply rate, 150 contacts give about 2 replies a side and six weeks give about 4 or 5. A firm win needs about 10 interested replies a side, about 670 people a message, which this quarter cannot reach. So every win is used for now and tested again in month four with fresh contacts, and a gap of one reply counts as a tie.
 - Owner: the demand generation lead runs the tests. Week 8 reads them with sales. Remaining tests close by the end of week 10.
 
 ## The seven roles
@@ -158,7 +158,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 
 **Message A.** Patients who can see their progress at each visit have a reason to keep coming back. NeuroStrip shows each patient's muscle activation live on an iPad, and the pilot tests whether that shows up in plan-of-care completion at one clinic, measured against that clinic's own numbers from before the pilot.
 
-**Message B.** Start a return-to-sport service at one clinic, measure it for 30 days, then add it to your other clinics. NeuroStrip shows activation on up to four muscles at once next to the strength and hop tests your therapists already run, and keeps a record your clinics can show patients and referring physicians.
+**Message B.** Start a return-to-sport service at one clinic, measure it for 30 days, then add it to your other clinics. NeuroStrip shows activation on up to four muscles at once next to the strength and hop tests your therapists already run, and keeps a record your clinics can show patients. How records can be shared with referring physicians: confirm in week one.
 
 **Offer.** A short economics worksheet that uses the group's own visit numbers to show what each extra completed visit is worth, with no new billing assumed, then a 20-minute pilot scoping call. Owners in the test half whose groups Bombora shows researching now also get one direct mail box, priced in week one.
 
@@ -180,7 +180,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 | Objection | Answer |
 |---|---|
 | We bought tech before and it sat in a drawer. | That is why the pilot runs at one clinic for 30 days with a named clinic director and usage measures you choose, so you see whether therapists reach for it before it goes anywhere else. Training and support during the pilot are pilot terms we confirm in week one. |
-| Can we bill for it? | Your billing team decides that, and we make no billing promises. Control Bionics will confirm what current customers do, and the economics worksheet assumes no new billing. |
+| Can we bill for it? | Your billing team decides that, and we make no billing or coding promises. Control Bionics will confirm what current customers do, and the economics worksheet assumes no new billing. |
 | It costs more than a $499 biofeedback unit. | A single-channel unit, which lists from $499 at mTrigger, reads one muscle at a time. NeuroStrip reads up to four at once and records them with a synchronized motion sensor and video, and if one muscle at a time covers your caseload, we will tell you the cheaper unit may be enough. |
 | Not this budget cycle. | If a 30-day pilot at one clinic can run before the next budget is set, your own numbers will be ready when it is. Pilot cost and terms, including that timing, are something we confirm in week one. |
 
@@ -242,7 +242,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 
 **Message A.** Plan-of-care completion is a number you can track the same way in every clinic. NeuroStrip shows patients their muscle activation live at each visit, and a 30-day pilot at one clinic measures completion against that clinic's own numbers before you add more clinics.
 
-**Message B.** Run one program you can roll out to every clinic and measure. Start with a 30-day pilot at one clinic, judged on success measures you set, then add clinics one at a time with the same report at each, including records your clinics can share with referring physicians.
+**Message B.** Run one program you can roll out to every clinic and measure. Start with a 30-day pilot at one clinic, judged on success measures you set, then add clinics one at a time with the same report at each. How session records can be shared with referring physicians: confirm in week one.
 
 **Offer.** A one-clinic, 30-day pilot with success measures the CEO sets, plus a clinic-by-clinic rollout plan that shows which clinics come next and what each one needs. Pilot cost and terms: confirm in week one.
 
@@ -327,7 +327,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 
 **Message A.** The sensor goes on like an adhesive bandage and shows readings live on an iPad, so therapists use it during exercises they already run. The pilot times setup at one of your clinics, so you see the real minutes before you decide.
 
-**Message B.** One annual price, with everything it includes listed on one page, and a rollout plan that shows what each new clinic needs, from kits to training to the same test steps, before it starts.
+**Message B.** One page that lists what the annual price includes, and a rollout plan that shows what each new clinic needs, from kits to training to the same test steps, before it starts. Annual price and what it includes: confirm in week one.
 
 **Offer.** A 20-minute operations walkthrough of setup, charging, storage and training, plus a one-page rollout plan that shows which clinics go first, who gets trained and where kits are kept. Support, training and replacement terms: confirm in week one.
 
@@ -338,7 +338,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 | Week | Channel | Touch |
 |---|---|---|
 | 1 | Outbound email and account-based ads through Propensity | Plain-text email from the sales rep on message A or B, whichever this contact was assigned at random, offering the one-page rollout plan. Ads with the 90-second video run all six weeks for groups in the test half. The holdout half gets the same emails and calls without ads. |
-| 2 | Rep call | The rep calls to offer the operations walkthrough and asks which electronic medical record (EMR) system the clinics use, noting that how NeuroStrip fits that system is something we confirm in week one. |
+| 2 | Rep call | The rep calls to offer the operations walkthrough and asks which electronic medical record (EMR) system the clinics use, noting that whether and how NeuroStrip records can get into that system is something we confirm in week one. |
 | 3 | Outbound email | Second email on the same assigned message, with the rollout plan attached and a link to the pricing questions page. |
 | 4 | Weekly live demo | Invitation to the weekly live demo, which shows setup from start to finish. |
 | 5 | LinkedIn connection from the rep | The rep sends a connection request, and if a clinical contact at the group is engaged, says so in the note. |
@@ -349,7 +349,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 | Objection | Answer |
 |---|---|
 | My therapists don't have time. | The sensor goes on like an adhesive bandage and the readings show live on an iPad during exercises the therapist already runs. The pilot times setup at one clinic, so the decision rests on your own minutes. |
-| Does it work with our electronic medical record (EMR)? | We confirm in week one how NeuroStrip records fit into an electronic medical record (EMR) and which systems current customers use, and we will not promise an integration before that. The pilot clinic then checks the documentation steps on real visits. |
+| Does it work with our electronic medical record (EMR)? | We confirm in week one whether NeuroStrip records can get into your electronic medical record (EMR), and how, and we say only what is confirmed in writing. The pilot clinic then checks the documentation steps on real visits. |
 | What happens when a sensor gets lost or breaks? | Replacement and support terms are something we confirm in week one, and the answer goes on the pricing questions page. The rollout plan names where kits are kept at each clinic and who checks them back in. |
 | Training will pull therapists off the schedule. | Your team can see the full setup at the weekly live demo before anyone commits, and the training format and support for the pilot are what we confirm in week one. The rollout plan schedules training around clinic hours. |
 
@@ -578,7 +578,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 
 **Message A.** Most of the work happens in the treatment room, where therapists put the sensors on and read them on an iPad. The pilot guide lists each step your office handles, from vendor setup to where kits are kept, so you can see the office time before anyone signs.
 
-**Message B.** One annual price, with everything it includes listed on one page, so you know the full cost before anyone signs.
+**Message B.** One page that lists what the annual price includes, so you can check the cost before anyone signs. Annual price, what it includes and replacement costs: confirm in week one.
 
 **Offer.** A pricing questions page that lists what the annual price includes, says the clinic's billing team decides on billing, and answers data security and support questions in writing once we confirm them in week one. Also the pilot agreement to review early, with pilot terms to confirm in week one.
 
@@ -599,7 +599,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 
 | Objection | Answer |
 |---|---|
-| Can we bill for it? | Your billing team decides that, and we make no billing promises. Control Bionics will confirm what current customers do and send it to your billing team. |
+| Can we bill for it? | Your billing team decides that, and we make no billing or coding promises. Control Bionics will confirm what current customers do and send it to your billing team. |
 | Where does patient data go? | We confirm in week one where NeuroStrip stores data, who can see it and what agreements Control Bionics signs with clinics. You get those answers in writing before the pilot agreement is signed. |
 | What does the pilot cost, and what are we signing? | The pilot agreement sets the clinic, the 30-day length and the success measures your team chooses. Cost and the remaining pilot terms are what we confirm in week one, and you get them before anyone signs. |
 | Are there costs beyond the annual price? | The pricing questions page lists what the annual price includes. Replacement sensors and support are terms we confirm in week one, and they go on that page once settled. |
@@ -685,7 +685,7 @@ Each role follows the same order: role in the decision, other titles, what they 
 | My therapists don't have time. | It goes on like an adhesive bandage and shows live on an iPad during exercises your therapists already run. In the pilot you pick which therapists use it, and the clinic times setup so leadership sees real minutes. |
 | Corporate won't approve another tool. | The leadership kit puts the pilot guide, the economics worksheet and the evidence summary in one place, and the rep can join your call with the owner or rehab director. The ask is one clinic for 30 days, with success measures leadership sets. |
 | We already test strength with force plates and hop tests. | Keep them. Those tests show what the limb can do, and NeuroStrip shows which muscles are doing the work, live, during the same visit. |
-| Does it work with our electronic medical record (EMR)? | How NeuroStrip records fit into your electronic medical record (EMR) is something we confirm in week one. During the pilot your clinic checks the documentation steps on real visits. |
+| Does it work with our electronic medical record (EMR)? | Whether and how NeuroStrip records can get into your electronic medical record (EMR) is something we confirm in week one. During the pilot your clinic checks the documentation steps on real visits. |
 
 **Proof they need**
 
@@ -716,11 +716,11 @@ All 18 objections we expect, in rough order of how often we think they will come
 | 1 | We already test strength with force plates and hop tests. | Chief clinical officer, Rehab director, Clinic director, Clinic owner | Keep them, because NeuroStrip adds to them. Force plates and hop tests show what the limb can do and NeuroStrip shows which muscles are doing the work, as in one athlete's example from Control Bionics: three weeks after a hamstring injury, force plates showed a 7% gap between legs and NeuroStrip on both hamstrings showed a 37% gap in muscle activation. | 90-second video | When a patient passes your strength test, how do your therapists see whether the injured muscle is doing its share? |
 | 2 | My therapists don't have time. | Clinic director, COO, Rehab director, Clinic owner | The sensor goes on like an adhesive bandage and shows live on an iPad during exercises the therapist already runs. The pilot times setup at one clinic, so the decision rests on your own minutes. | Live demo | Where in a typical visit would one more step hurt the most? |
 | 3 | It costs more than a $499 biofeedback unit. | Clinic owner, Practice administrator, Rehab director, COO | A single-channel unit, which lists from $499 at mTrigger, reads one muscle at a time. NeuroStrip reads up to four at once with a synchronized motion sensor and video, and if one muscle at a time covers your caseload we will say the cheaper unit may be enough. | Comparison page | How often do your therapists need to compare both legs, or two muscles, in the same exercise? |
-| 4 | Can we bill for it? | Clinic owner, Practice administrator, CEO, COO | Your billing team decides that, and we make no billing promises. Control Bionics will confirm what current customers do, and the economics worksheet assumes no new billing.<br>**Confirm in week one:** What current customers do about billing, gathered by Control Bionics and checked by compliance, with no coding advice in it. | Economics worksheet | Who on your billing team should get the summary of what current customers do? |
+| 4 | Can we bill for it? | Clinic owner, Practice administrator, CEO, COO | Your billing team decides that, and we make no billing or coding promises. Control Bionics will confirm what current customers do, and the economics worksheet assumes no new billing.<br>**Confirm in week one:** What current customers do about billing, gathered by Control Bionics and checked by compliance, with no coding advice in it. | Economics worksheet | Who on your billing team should get the summary of what current customers do? |
 | 5 | Is surface electromyography (sEMG) reliable, and where is the evidence? | Chief clinical officer, Rehab director, Clinic director | The spec sheet lists 100 decibels of common mode rejection (how well it ignores electrical noise from nearby equipment), 0.2 microvolts root mean square of internal noise and a 0.1 to 1000 hertz bandwidth, and your team can check the signal at the live demo. A 2022 systematic review of 8 randomized trials by Karaborklu Argut and colleagues found electromyography (EMG) biofeedback beat comparison rehab for quadriceps strength in most of them, and the authors say high-quality evidence is limited, so your team writes the pilot criteria. | Spec sheet and evidence summary | What would the readings need to show in a 30-day pilot for your team to trust them? |
 | 6 | We bought tech before and it sat in a drawer. | Clinic owner, CEO, COO, Rehab director | The pilot runs at one clinic for 30 days with a named clinic director and usage measures you choose, so you see whether therapists reach for it before it goes further. Training and support during the pilot are terms we confirm in week one.<br>**Confirm in week one:** Training and support offered during the 30-day pilot and after rollout. | Pilot guide | What went wrong with the last tool that ended up in a drawer? |
 | 7 | Not this budget cycle. | Clinic owner, CEO, COO, Practice administrator | If a 30-day pilot at one clinic can run before the next budget is set, your own numbers will be ready when it is. Pilot cost and terms, including that timing, are what we confirm in week one.<br>**Confirm in week one:** Pilot cost and terms, including whether a pilot can start before a budget is approved. | Pilot guide | When is your next budget set, and what would you need in hand by then? |
-| 8 | Does it work with our electronic medical record (EMR)? | COO, Practice administrator, Clinic director, Chief clinical officer | We confirm in week one how NeuroStrip records fit into an electronic medical record (EMR) and which systems current customers use, and we will not promise an integration before then. During the pilot your clinic director checks the documentation steps on real visits.<br>**Confirm in week one:** Whether NeuroStrip connects to or exports into the main physical therapy electronic medical record (EMR) systems, and how current customers record it in the patient's chart. | Pricing questions page | Which electronic medical record (EMR) system do your clinics use, and is a switch to a new one planned this year? |
+| 8 | Does it work with our electronic medical record (EMR)? | COO, Practice administrator, Clinic director, Chief clinical officer | We confirm in week one whether NeuroStrip records can get into your electronic medical record (EMR), and how, and we say only what is confirmed in writing. During the pilot your clinic director checks the documentation steps on real visits.<br>**Confirm in week one:** Whether and how NeuroStrip records can get into the main physical therapy electronic medical record (EMR) systems, and how current customers record sessions in the patient's chart. | Pricing questions page | Which electronic medical record (EMR) system do your clinics use, and is a switch to a new one planned this year? |
 | 9 | Where does patient data go? | Practice administrator, COO, Chief clinical officer, CEO | We confirm in week one where NeuroStrip stores data, who can see it and what agreements Control Bionics signs with clinics. Your practice administrator gets those answers in writing before the pilot agreement is signed.<br>**Confirm in week one:** Where data is stored, who can access it, and whether Control Bionics signs a business associate agreement, the patient privacy contract that clinics ask vendors to sign under the Health Insurance Portability and Accountability Act (HIPAA). | Pilot agreement | Who signs off on data security for a new vendor, and what should our written answers, confirmed in week one, cover? |
 | 10 | Who else like us uses it? | Clinic owner, CEO, Chief clinical officer, COO | We will share a customer story from a group like yours, once cleared, and a reference call when a current customer agrees to one. Until then, a 30-day pilot at one of your clinics lets your own team judge it.<br>**Confirm in week one:** Which customers Control Bionics has cleared to name, and which will take a reference call. | A customer story, once cleared | Would a call with a group your size be useful once a customer agrees to it? |
 | 11 | Is it cleared by the Food and Drug Administration (FDA)? | Chief clinical officer, Practice administrator, CEO | NeuroStrip is registered and listed with the Food and Drug Administration (FDA) as a non-diagnostic measurement and biofeedback tool, and registration is a different step from clearance. It measures and shows muscle activity, and your clinicians make the clinical calls. | Spec sheet | Does your compliance lead need the registration details in writing? |
@@ -730,7 +730,7 @@ All 18 objections we expect, in rough order of how often we think they will come
 | 15 | What does the pilot cost, and what are we signing? | Practice administrator, Clinic owner, COO, CEO | The pilot agreement sets the clinic, the 30-day length and the success measures your team chooses. Cost and the remaining terms are what we confirm in week one, and you get them before anyone signs.<br>**Confirm in week one:** Pilot cost, number of kits, return terms and what happens at day 30. | Pilot agreement | Who reviews vendor agreements on your side, and how long does that usually take? |
 | 16 | Are there costs beyond the annual price? | Practice administrator, Clinic owner, COO | The pricing questions page lists what the annual price includes. Replacement sensors and support are terms we confirm in week one, and they go on that page once settled.<br>**Confirm in week one:** What the annual price includes, and the cost of replacement sensors and support. | Pricing questions page | Which costs have surprised you with other vendors after signing? |
 | 17 | Corporate won't approve another tool. | Clinic director, Rehab director | The pilot guide and the economics worksheet give leadership the case in one place, and the rep can join your call with the owner or rehab director. The ask is one clinic for 30 days, with success measures leadership sets. | Pilot guide and economics worksheet | Who would you need to convince, and what would they want to see first? |
-| 18 | We're in the middle of an electronic medical record (EMR) migration. | COO, Practice administrator | The pilot can run at a clinic that has already switched, or at one that switches later, so it stays out of the way of the switch-over. How NeuroStrip records fit your new electronic medical record (EMR) is something we confirm in week one.<br>**Confirm in week one:** How NeuroStrip records fit the main physical therapy electronic medical record (EMR) systems. | Rollout plan | Which clinics finish the switch first, and when? |
+| 18 | We're in the middle of an electronic medical record (EMR) migration. | COO, Practice administrator | The pilot can run at a clinic that has already switched, or at one that switches later, so it stays out of the way of the switch-over. Whether and how NeuroStrip records can get into your new electronic medical record (EMR) is something we confirm in week one.<br>**Confirm in week one:** Whether and how NeuroStrip records can get into the main physical therapy electronic medical record (EMR) systems. | Rollout plan | Which clinics finish the switch first, and when? |
 
 ## What sales records in Salesforce
 
@@ -754,7 +754,7 @@ These answers depend on facts only Control Bionics can confirm. They are part of
 - What current customers do about billing, gathered by Control Bionics and checked by compliance, with no coding advice in it.
 - Training and support offered during the 30-day pilot and after rollout.
 - Pilot cost and terms, including whether a pilot can start before a budget is approved.
-- Whether NeuroStrip connects to or exports into the main physical therapy electronic medical record (EMR) systems, and how current customers record it in the patient's chart.
+- Whether and how NeuroStrip records can get into the main physical therapy electronic medical record (EMR) systems, and how current customers record sessions in the patient's chart.
 - Where data is stored, who can access it, and whether Control Bionics signs a business associate agreement, the patient privacy contract that clinics ask vendors to sign under the Health Insurance Portability and Accountability Act (HIPAA).
 - Which customers Control Bionics has cleared to name, and which will take a reference call.
 - What current customers do about billing, confirmed by Control Bionics, with no coding advice in it.
@@ -762,6 +762,6 @@ These answers depend on facts only Control Bionics can confirm. They are part of
 - Training format, length and who delivers it, during the pilot and at each new clinic.
 - Pilot cost, number of kits, return terms and what happens at day 30.
 - What the annual price includes, and the cost of replacement sensors and support.
-- How NeuroStrip records fit the main physical therapy electronic medical record (EMR) systems.
+- Whether and how NeuroStrip records can get into the main physical therapy electronic medical record (EMR) systems.
 - Which Bombora research topics match the ones named in this playbook.
 - Which size patterns above hold for the purchased list, checked against the first 100 accounts.

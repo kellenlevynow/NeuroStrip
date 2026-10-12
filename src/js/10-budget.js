@@ -27,8 +27,12 @@
     const pilotsPerWeek = perWeek * (f.opp / 100) * (f.pilot / 100);
     const customers = Math.round(pilotsPerWeek * (f.paid / 100) * WEEKS_PER_QUARTER);
     const monthThree = T * B.lines.reduce((a, l) => a + l.m[2], 0) / 100;
+    /* calls this budget pays for: everything except calls that already come in and the conference, which has its own budget */
+    const paidPerWeek = bySource.filter(([s]) => s.paid !== false).reduce((a, [, v]) => a + v, 0);
+    const perPaidCall = monthThree / (paidPerWeek * WEEKS_PER_MONTH);
     return {
-      T, bySource, perWeek,
+      T, bySource, perWeek, paidPerWeek, perPaidCall, monthThree,
+      perCustomer: perPaidCall / toCustomer,
       pilotsMonth: Math.round(pilotsPerWeek * WEEKS_PER_MONTH),
       customers, revenue: customers * f.acv,
       perCall: monthThree / (perWeek * WEEKS_PER_MONTH),
@@ -37,6 +41,8 @@
     };
   }
   NS.planMath = { outcome, limit, toCustomer };
+  /* cost of each extra call over the next smaller budget, month three */
+  const marginal = (a, b) => (b.monthThree - a.monthThree) / ((b.perWeek - a.perWeek) * WEEKS_PER_MONTH);
 
   const S = B.scenarios;
   const O = Object.fromEntries(S.map((s) => [s.id, outcome(s.v)]));
@@ -50,12 +56,14 @@
     let h = `<div class="cmp-phone"><div class="seg" role="group" aria-label="Choose a budget">${S.map((s) => `<button type="button" data-pick="${s.id}" aria-pressed="${s.id === sel}">${esc(s.name)}</button>`).join('')}</div></div>`;
     h += '<div class="cmp-grid">';
     h += '<div class="cmp-cell cmp-lab cmp-hide-h"></div>' + S.map((s) => `<div class="cmp-col-h" data-col="${s.id}"><p class="cmp-name">${esc(s.name)}</p><span class="cmp-price num">${money(s.v)}</span><button type="button" data-pick="${s.id}" aria-pressed="${s.id === sel}">${s.id === sel ? 'Selected' : 'Choose ' + esc(s.name)}</button></div>`).join('');
-    h += `<div class="cmp-sec">What you get by Day 90</div>`;
-    h += row(`<span>Qualified calls a week <span class="cmp-means">Only search and the account-based ads grow with the budget. About 11 a week come from sources that stay the same.</span></span>`, (o) => `<span><span class="cmp-big num">${Math.round(o.perWeek)}</span><span class="cmp-means">Tanner's calendar ${o.fill}% full</span></span>`);
+    h += `<div class="cmp-sec">Pace at Day 90, and what it gives over the next quarter</div>`;
+    h += row(`<span>Qualified calls a week <span class="cmp-means">Only search and the account-based ads grow with the budget. About 11 a week come from sources that stay the same.</span></span>`, (o) => `<span><span class="cmp-big num">${Math.round(o.perWeek)}</span><span class="cmp-means">${o.fill}% of the 20-call goal</span></span>`);
     h += row(`<span>Pilots started a month <span class="cmp-means">Each pilot needs a kit on loan. Kit numbers: confirm in week one.</span></span>`, (o) => `<span class="num">${o.pilotsMonth}</span>`);
     h += row(`<span>New customers a quarter <span class="cmp-means">Groups signing their first clinic. Half of pilots sign.</span></span>`, (o) => `<span class="num">${o.customers}</span>`);
     h += row(`<span>What new customers pay in their first year, a quarter <span class="cmp-means">At the planned $7,500 a clinic, before any group adds clinics.</span></span>`, (o) => `<span class="num">${money(o.revenue)}</span>`);
-    h += row(`<span>Cost per qualified call, month three <span class="cmp-means">Month-three spend divided by that month\'s calls. Lean looks cheapest because about 11 calls a week come at no extra cost, yet it books the fewest.</span></span>`, (o) => `<span><span class="num ${o.perCall <= limit ? 'ok' : ''}">${money(o.perCall)}</span><span class="cmp-means">limit about ${money(Math.round(limit / 10) * 10)}</span></span>`);
+    h += row(`<span>Cost per qualified call the budget pays for, month three <span class="cmp-means">Leaves out about 4 calls a week that come in today and about 2 from the February conference, which has its own budget. The limit is about $930.</span></span>`, (o) => `<span class="num ${o.perPaidCall <= limit ? 'ok' : 'over'}">${money(Math.round(o.perPaidCall / 10) * 10)}</span>`);
+    h += row(`<span>Cost per qualified call, every call counted <span class="cmp-means">Includes the calls that cost this budget nothing, so it flatters every budget.</span></span>`, (o) => `<span class="num">${money(Math.round(o.perCall / 10) * 10)}</span>`);
+    h += row(`<span>Each extra call over the next smaller budget <span class="cmp-means">About twice the limit. More money buys calls slowly, so it goes only to channels that beat $930.</span></span>`, (o, s) => { const i = S.indexOf(s); return i ? `<span class="num over">${money(Math.round(marginal(O[S[i - 1].id], o) / 10) * 10)}</span>` : '<span class="muted">None smaller</span>'; });
     h += row(`<span>Ad money left after Propensity\'s $9,000 fee <span class="cmp-means">At Lean, too little for a clear Day 60 result.</span></span>`, (o) => `<span class="num">${money(o.adsLeft)}</span>`);
     h += `<div class="cmp-sec">Where the money goes</div>`;
     B.groups.forEach(([g, gl]) => {

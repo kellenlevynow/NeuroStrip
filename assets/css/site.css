@@ -452,6 +452,7 @@ sup.fn a{color:inherit;opacity:.7}
 .cmp-on{background:var(--gray)}
 .cmp-means{display:block;font-size:12px;color:var(--text-2);font-weight:400;margin-top:2px}
 .cmp-cell .ok{color:var(--green);font-weight:600}
+.cmp-cell .over{color:#b25000;font-weight:600}
 .cmp-phone{display:none;margin-bottom:18px;text-align:center}
 @media (max-width:734px){
   .cmp-phone{display:block}

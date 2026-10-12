@@ -221,8 +221,12 @@
     const pilotsPerWeek = perWeek * (f.opp / 100) * (f.pilot / 100);
     const customers = Math.round(pilotsPerWeek * (f.paid / 100) * WEEKS_PER_QUARTER);
     const monthThree = T * B.lines.reduce((a, l) => a + l.m[2], 0) / 100;
+    /* calls this budget pays for: everything except calls that already come in and the conference, which has its own budget */
+    const paidPerWeek = bySource.filter(([s]) => s.paid !== false).reduce((a, [, v]) => a + v, 0);
+    const perPaidCall = monthThree / (paidPerWeek * WEEKS_PER_MONTH);
     return {
-      T, bySource, perWeek,
+      T, bySource, perWeek, paidPerWeek, perPaidCall, monthThree,
+      perCustomer: perPaidCall / toCustomer,
       pilotsMonth: Math.round(pilotsPerWeek * WEEKS_PER_MONTH),
       customers, revenue: customers * f.acv,
       perCall: monthThree / (perWeek * WEEKS_PER_MONTH),
@@ -231,6 +235,8 @@
     };
   }
   NS.planMath = { outcome, limit, toCustomer };
+  /* cost of each extra call over the next smaller budget, month three */
+  const marginal = (a, b) => (b.monthThree - a.monthThree) / ((b.perWeek - a.perWeek) * WEEKS_PER_MONTH);
 
   const S = B.scenarios;
   const O = Object.fromEntries(S.map((s) => [s.id, outcome(s.v)]));
@@ -244,12 +250,14 @@
     let h = `<div class="cmp-phone"><div class="seg" role="group" aria-label="Choose a budget">${S.map((s) => `<button type="button" data-pick="${s.id}" aria-pressed="${s.id === sel}">${esc(s.name)}</button>`).join('')}</div></div>`;
     h += '<div class="cmp-grid">';
     h += '<div class="cmp-cell cmp-lab cmp-hide-h"></div>' + S.map((s) => `<div class="cmp-col-h" data-col="${s.id}"><p class="cmp-name">${esc(s.name)}</p><span class="cmp-price num">${money(s.v)}</span><button type="button" data-pick="${s.id}" aria-pressed="${s.id === sel}">${s.id === sel ? 'Selected' : 'Choose ' + esc(s.name)}</button></div>`).join('');
-    h += `<div class="cmp-sec">What you get by Day 90</div>`;
-    h += row(`<span>Qualified calls a week <span class="cmp-means">Only search and the account-based ads grow with the budget. About 11 a week come from sources that stay the same.</span></span>`, (o) => `<span><span class="cmp-big num">${Math.round(o.perWeek)}</span><span class="cmp-means">Tanner's calendar ${o.fill}% full</span></span>`);
+    h += `<div class="cmp-sec">Pace at Day 90, and what it gives over the next quarter</div>`;
+    h += row(`<span>Qualified calls a week <span class="cmp-means">Only search and the account-based ads grow with the budget. About 11 a week come from sources that stay the same.</span></span>`, (o) => `<span><span class="cmp-big num">${Math.round(o.perWeek)}</span><span class="cmp-means">${o.fill}% of the 20-call goal</span></span>`);
     h += row(`<span>Pilots started a month <span class="cmp-means">Each pilot needs a kit on loan. Kit numbers: confirm in week one.</span></span>`, (o) => `<span class="num">${o.pilotsMonth}</span>`);
     h += row(`<span>New customers a quarter <span class="cmp-means">Groups signing their first clinic. Half of pilots sign.</span></span>`, (o) => `<span class="num">${o.customers}</span>`);
     h += row(`<span>What new customers pay in their first year, a quarter <span class="cmp-means">At the planned $7,500 a clinic, before any group adds clinics.</span></span>`, (o) => `<span class="num">${money(o.revenue)}</span>`);
-    h += row(`<span>Cost per qualified call, month three <span class="cmp-means">Month-three spend divided by that month\'s calls. Lean looks cheapest because about 11 calls a week come at no extra cost, yet it books the fewest.</span></span>`, (o) => `<span><span class="num ${o.perCall <= limit ? 'ok' : ''}">${money(o.perCall)}</span><span class="cmp-means">limit about ${money(Math.round(limit / 10) * 10)}</span></span>`);
+    h += row(`<span>Cost per qualified call the budget pays for, month three <span class="cmp-means">Leaves out about 4 calls a week that come in today and about 2 from the February conference, which has its own budget. The limit is about $930.</span></span>`, (o) => `<span class="num ${o.perPaidCall <= limit ? 'ok' : 'over'}">${money(Math.round(o.perPaidCall / 10) * 10)}</span>`);
+    h += row(`<span>Cost per qualified call, every call counted <span class="cmp-means">Includes the calls that cost this budget nothing, so it flatters every budget.</span></span>`, (o) => `<span class="num">${money(Math.round(o.perCall / 10) * 10)}</span>`);
+    h += row(`<span>Each extra call over the next smaller budget <span class="cmp-means">About twice the limit. More money buys calls slowly, so it goes only to channels that beat $930.</span></span>`, (o, s) => { const i = S.indexOf(s); return i ? `<span class="num over">${money(Math.round(marginal(O[S[i - 1].id], o) / 10) * 10)}</span>` : '<span class="muted">None smaller</span>'; });
     h += row(`<span>Ad money left after Propensity\'s $9,000 fee <span class="cmp-means">At Lean, too little for a clear Day 60 result.</span></span>`, (o) => `<span class="num">${money(o.adsLeft)}</span>`);
     h += `<div class="cmp-sec">Where the money goes</div>`;
     B.groups.forEach(([g, gl]) => {
@@ -431,9 +439,9 @@
   const ROLES = { executive: 'Owners and chief executives', operations: 'Chief operating officers and practice administrators', clinical: 'Chief clinical officers, rehab directors and clinic directors' };
   const clusterOf = (id) => (C.clusters || []).find((c) => c.cluster === id) || {};
   const AB = {
-    executive: 'A against B in each role\'s wording. Owner: patients who can see their progress have a reason to finish their plan of care, against a return-to-sport program the clinic down the street does not have',
-    operations: 'A against B in each role\'s wording. COO: each sensor goes on in seconds and shows live on an iPad, against one standard return-to-sport test in every clinic',
-    clinical: 'A against B in each role\'s wording. Chief clinical officer: strength tests can miss muscles covering for an injured one, against a documented return-to-sport protocol',
+    executive: 'A against B in each role\'s wording. Owner: patients who can see their progress at each visit have a reason to keep coming back, against a return-to-sport service you can start at one clinic, measure, then add to the rest',
+    operations: 'A against B in each role\'s wording. COO: each sensor goes on like a bandage and shows live on an iPad, against a rollout plan that shows what each new clinic needs',
+    clinical: 'A against B in each role\'s wording. Chief clinical officer: strength tests can miss muscles covering for an injured one, against a documented return-to-sport protocol for the whole group',
   };
 
   /* ---------- small illustrations that stand in for Control Bionics photography ---------- */
@@ -479,7 +487,7 @@
     items.push({
       wide: true, cl: ['executive', 'operations', 'clinical'], ch: 'display', chName: 'Website banners', title: 'Animated banner set, three frames',
       mock: `<div class="dsp-set">${scale(`<div class="dsp-grid">${unit(300, 250, 'rect')}${unit(160, 600, 'sky')}<div class="dsp-col">${unit(728, 90, 'leader')}${unit(320, 50, 'banner')}</div></div>`, 1240, 640)}</div>`,
-      labels: { where: 'Banner spaces on Propensity\'s network of websites, shown only to the half of the list that gets ads', size: '300 × 250, 728 × 90, 160 × 600 and 320 × 50. Three frames over 15 seconds', who: 'All seven roles at groups in the half that gets ads', message: 'The gap, the trace, then the pilot offer', cta: D.cta, landing: 'Pilot page with the scheduler', metric: 'Booked pilot calls per 100 groups, the half that sees ads against the holdout half' },
+      labels: { where: 'Banner spaces on Propensity\'s network of websites, shown only to the half of the list that gets ads', size: '300 × 250, 728 × 90, 160 × 600 and 320 × 50. Three frames over 15 seconds', who: 'All seven roles at groups in the half that gets ads', message: 'No A and B split. The read is what the banners add, the half that sees ads against the holdout half', cta: D.cta, landing: 'Pilot page with the scheduler', metric: 'Booked pilot calls per 100 groups, the half that sees ads against the holdout half' },
     });
   }
 
@@ -489,7 +497,7 @@
     items.push({
       wide: true, cl: ['executive'], ch: 'social', chName: 'LinkedIn and Meta', title: 'Five-card carousel',
       mock: scale(`<div class="sp"><div class="sp-h"><span class="sp-av">CB</span><div><b>Control Bionics</b><i>Sponsored</i></div></div><p class="sp-x">${esc(K.intro)}</p><div class="sp-cards">${K.cards.map((c, i) => `<div class="sp-card"><div class="sp-img">${i === 1 ? art.trace() : i === 3 ? art.kit() : art.leg(300)}</div><div class="sp-f"><b>${esc(c.headline)}</b><span>${esc(c.sub)}</span></div></div>`).join('')}</div><div class="sp-cta"><span>controlbionics.com</span><span class="sp-btn">${esc(K.cta)}</span></div></div>`, 1060, 560),
-      labels: { where: 'LinkedIn and Meta carousel placements bought through Propensity, shown only to the half of the list that gets ads', size: 'Five square cards, headlines up to 45 characters', who: ROLES.executive, message: AB.executive, cta: K.cta, landing: 'Economics worksheet built from their own visit numbers', metric: 'Worksheets started and meetings booked per 100 executives in the half that sees ads' },
+      labels: { where: 'LinkedIn and Meta carousel placements bought through Propensity, shown only to the half of the list that gets ads', size: 'Five square cards. LinkedIn shows only a headline on each card, up to 45 characters, so each subline moves into the card image. Meta cuts long headlines, so each card is checked in its preview before launch', who: ROLES.executive, message: AB.executive, cta: K.cta, landing: 'Economics worksheet built from their own visit numbers', metric: 'Worksheets started and meetings booked per 100 executives in the half that sees ads' },
     });
   }
 
@@ -499,7 +507,7 @@
     items.push({
       cl: ['clinical', 'executive'], ch: 'native', chName: 'Sponsored articles', title: 'Sponsored article ad on an industry site',
       mock: scale(`<div class="nat"><div class="nat-site"><span></span><span></span><span></span></div><p class="nat-ctx">${esc(N.context)}</p><div class="nat-ad"><div class="nat-img">${art.leg(200)}</div><div><p class="nat-sp">Sponsored · Control Bionics</p><p class="nat-hd">${esc(N.headline)}</p><p class="nat-bd">${esc(N.body)}</p></div></div><div class="nat-lines"><i></i><i></i><i></i></div></div>`, 340, 470),
-      labels: { where: 'Sponsored posts that look like articles, placed next to stories on physical therapy news sites, bought through Propensity', size: 'Headline up to 55 characters, body up to 120', who: 'Readers of articles on return to sport and outcomes', message: 'Strength tests can miss muscles covering for an injured one', cta: 'Read the clinical primer', landing: 'Clinical primer page', metric: 'Primer reads from target groups, and replies that follow' },
+      labels: { where: 'Native and contextual ads bought through Propensity, shown next to articles on return-to-sport and rehab topics. Which physical therapy sites carry them: confirm with Propensity in week one', size: 'Headline up to 55 characters, body up to 120', who: 'Readers of articles on return to sport and outcomes', message: 'Strength tests can miss muscles covering for an injured one', cta: 'Read the clinical primer', landing: 'Clinical primer page', metric: 'Primer reads from target groups, and replies that follow' },
     });
   }
 
@@ -509,7 +517,7 @@
     items.push({
       wide: true, cl: ['executive'], ch: 'mail', chName: 'Mailed box', title: 'Box for owners at groups researching now',
       mock: `<div class="dm"><figure class="dm-v"><div class="dm-box"><p class="dm-k">NeuroStrip</p><p class="dm-front">${esc(M.box_front)}</p></div><figcaption>Front of the box</figcaption></figure><figure class="dm-v"><div class="dm-in"><p class="dm-lh">${esc(M.letter_headline)}</p>${M.letter_body.map((p) => `<p>${esc(p)}</p>`).join('')}<table class="dm-est">${M.estimate_rows.map((r) => `<tr><td>${esc(r.label)}</td><td>${esc(r.value)}</td></tr>`).join('')}</table><div class="dm-qr"><span class="qr" aria-hidden="true"></span><span>${esc(M.qr_cta)}</span></div></div><figcaption>Inside: the one-page estimate</figcaption></figure><figure class="dm-v"><div class="dm-card"><div class="dm-card-f"><div class="dm-strip"><i></i><i></i><i></i></div><p>${esc(M.card_front)}</p></div><div class="dm-card-b"><p>${esc(M.card_back)}</p></div></div><figcaption>Sample strip card, front and back</figcaption></figure></div>`,
-      labels: { where: 'Direct mail through Propensity, sent only after a group starts researching', size: 'A small box with a letter-size estimate and a card holding a sample strip', who: 'Owners at groups that are researching now, capped at 100 boxes', message: 'Patients who can see their progress have a reason to finish their plan of care', cta: M.qr_cta, landing: 'Pilot call booking page that shows the group\'s estimate', metric: 'Code scans and booked calls per 100 boxes. Each box is priced in week one' },
+      labels: { where: 'Direct mail through Propensity, sent only after a group starts researching', size: 'A small box with a letter-size estimate and a card holding a sample strip', who: 'Owners at groups that are researching now, capped at 100 boxes so they stay inside the $7,200 small-tests line once the price is quoted in week one', message: 'Patients who can see their progress at each visit have a reason to keep coming back', cta: M.qr_cta, landing: 'Pilot call booking page that shows the group\'s estimate', metric: 'Code scans and booked calls per 100 boxes. Each box is priced in week one' },
     });
   }
 
