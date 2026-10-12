@@ -2,8 +2,8 @@
   <div class="wrap">
     <header class="head rv">
       <span class="eyebrow">Budget</span>
-      <h2 id="budget-h">$90,000 for 90 days takes qualified calls from about 4 a week today to about 15.</h2>
-      <p class="sub">Compare three budgets side by side. Choose one to see the month-by-month spend and where the calls come from.</p>
+      <h2 id="budget-h">$90,000 over 90 days lifts qualified calls from about 4 a week today to about 15.</h2>
+      <p class="sub">The three budget options appear side by side. Selecting one shows the month-by-month spend and the source of each qualified call.</p>
     </header>
 
     <div class="big cmp rv" id="cmp"></div>
@@ -13,29 +13,29 @@
     <details class="more more--center rv">
       <summary>Learn more about the budget math</summary>
       <div class="more-c" id="budgetMore">
-        <h4>How qualified calls are worked out</h4>
-        <p>Each source has a planned weekly rate at Day 90. Only Google Search and the account-based ads change with the budget: their month-three spend is divided by a planned cost per qualified call. The other sources are held constant, which is why the range between Lean and Aggressive is narrow.</p>
+        <h4>How qualified calls are forecast</h4>
+        <p>Each source has a planned weekly rate at Day 90. Only Google Search and the account-based ads scale with the budget: their month-three spend is divided by a planned cost per qualified call. All other sources are held constant, which is why the range between Lean and Aggressive is narrow.</p>
         <table class="tbl tbl--stack" id="srcTable"></table>
-        <p class="small muted" style="margin-top:12px">Each call is counted once, under the source Salesforce records first. The demo and conference rates count only people who did not first reply to email or an ad.</p>
-        <h4>What the two setup lines buy</h4>
+        <p class="small muted" style="margin-top:12px">Each call is counted once and attributed to the source Salesforce records first. The demo and conference rates count only people who did not first reply to email or an ad.</p>
+        <h4>What the two setup lines fund</h4>
         <table class="tbl tbl--stack">
           <thead><tr><th>Line</th><th>What it buys</th><th>If quotes come in high</th></tr></thead>
           <tbody>
-            <tr><td>Video, customer stories and landing pages<br><span class="muted small">$22,500 at Base</span></td><td data-l="What it buys">The 15-second and 90-second videos, two filmed customer stories once cleared, the clinical primer, the economics worksheet, the pilot guide and four landing pages. Each is a quote in week one.</td><td data-l="If quotes come in high">The second customer story is cut first, then the 15-second video is cut down from the 90-second shoot.</td></tr>
-            <tr><td>List, research data and Salesforce setup<br><span class="muted small">$10,800 at Base</span></td><td data-l="What it buys">The provider list, Bombora research data, scheduling and routing tools, and a four-week Salesforce consultant if there is no admin time in-house. Each is a quote in week one.</td><td data-l="If quotes come in high">The consultant is cut first if an in-house admin can give the time. Bombora is dropped at Day 60 if groups researching now book no more calls than the rest.</td></tr>
+            <tr><td>Video, customer stories and landing pages<br><span class="muted small">$22,500 at Base</span></td><td data-l="What it buys">This line funds the 15-second and 90-second videos, two filmed customer stories once cleared, the clinical primer, the economics worksheet, the pilot guide and four landing pages. Each item is a quote in week one.</td><td data-l="If quotes come in high">The second customer story is cut first. The 15-second video is then edited down from the 90-second shoot.</td></tr>
+            <tr><td>List, research data and Salesforce setup<br><span class="muted small">$10,800 at Base</span></td><td data-l="What it buys">This line funds the provider list, Bombora research data, scheduling and routing tools, and a four-week Salesforce consultant if no in-house admin time is available. Each item is a quote in week one.</td><td data-l="If quotes come in high">The consultant is cut first if an in-house admin can commit the time. Bombora is dropped at Day 60 if groups researching now book no more calls than the rest.</td></tr>
           </tbody>
         </table>
-        <h4>How calls become customers</h4>
-        <p>Of every 100 qualified calls, about 55 become real sales opportunities, about 25 start a pilot and about 12 sign. With a first-year value of $7,500, the most a qualified call can cost and still be covered by first-year payments is about $930. That is before product, sales and pilot kit costs.</p>
-        <h4>Try another budget</h4>
+        <h4>How qualified calls convert to customers</h4>
+        <p>Of every 100 qualified calls, about 55 become real sales opportunities, about 25 start a pilot and about 12 sign. With a first-year value of $7,500, the most a qualified call can cost and still be covered by first-year payments is about $930. That ceiling is calculated before product, sales and pilot kit costs.</p>
+        <h4>Model another budget</h4>
         <div class="slider"><label for="cmpRange">Total for 90 days <output id="cmpRangeOut" class="num">$90,000</output></label><input type="range" id="cmpRange"></div>
         <div id="cmpCustom" class="cmp-custom"></div>
       </div>
     </details>
 
     <ol class="notes">
-      <li id="budget-n1">Excludes salaries, event costs and the email agency's monthly fee. Propensity's listed fee of $3,000 a month comes out of the account-based line. The list and intent data have no published prices and are quotes in week one.</li>
-      <li id="budget-n2">Planning rates with no outside source: search at $330 per qualified call and the account-based ads at $2,000 per qualified call. Search is replaced by live account data within two weeks of launch, and the ad rate by the test's own cost per call at Day 60.</li>
+      <li id="budget-n1">The budget excludes salaries, event costs and the email agency's monthly fee. Propensity's listed fee of $3,000 a month is funded from the account-based line. The list and intent data have no published prices and are quotes in week one.</li>
+      <li id="budget-n2">Two planning rates have no outside source: search at $330 per qualified call and the account-based ads at $2,000 per qualified call. Live account data replaces the search rate within two weeks of launch, and the test's own cost per call replaces the ad rate at Day 60.</li>
     </ol>
   </div>
 </section>

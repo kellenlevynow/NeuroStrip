@@ -258,15 +258,15 @@
     let h = `<div class="cmp-phone"><div class="seg" role="group" aria-label="Choose a budget">${S.map((s) => `<button type="button" data-pick="${s.id}" aria-pressed="${s.id === sel}">${esc(s.name)}</button>`).join('')}</div></div>`;
     h += '<div class="cmp-grid">';
     h += '<div class="cmp-cell cmp-lab cmp-hide-h"></div>' + S.map((s) => `<div class="cmp-col-h" data-col="${s.id}"><p class="cmp-name">${esc(s.name)}</p><span class="cmp-price num">${money(s.v)}</span><button type="button" data-pick="${s.id}" aria-pressed="${s.id === sel}">${s.id === sel ? 'Selected' : 'Choose ' + esc(s.name)}</button></div>`).join('');
-    h += `<div class="cmp-sec">Pace at Day 90, and what it gives over the next quarter</div>`;
-    h += row(`<span>Qualified calls a week <span class="cmp-means">Only search and the account-based ads grow with the budget. About 11 a week come from sources that stay the same.</span></span>`, (o) => `<span><span class="cmp-big num">${Math.round(o.perWeek)}</span><span class="cmp-means">${o.fill}% of the 20-call goal</span></span>`);
-    h += row(`<span>Pilots started a month <span class="cmp-means">Each pilot needs a kit on loan. Kit numbers: confirm in week one.</span></span>`, (o) => `<span class="num">${o.pilotsMonth}</span>`);
-    h += row(`<span>New customers a quarter <span class="cmp-means">Groups signing their first clinic. Half of pilots sign.</span></span>`, (o) => `<span class="num">${o.customers}</span>`);
-    h += row(`<span>What new customers pay in their first year, a quarter <span class="cmp-means">At the planned $7,500 a clinic, before any group adds clinics.</span></span>`, (o) => `<span class="num">${money(o.revenue)}</span>`);
-    h += row(`<span>Cost per qualified call the budget pays for, month three <span class="cmp-means">Leaves out about 4 calls a week that come in today and about 2 from the February conference, which has its own budget. The limit is about $930.</span></span>`, (o) => `<span class="num ${o.perPaidCall <= limit ? 'ok' : 'over'}">${money(Math.round(o.perPaidCall / 10) * 10)}</span>`);
-    h += row(`<span>Cost per qualified call, every call counted <span class="cmp-means">Includes the calls that cost this budget nothing, so it flatters every budget.</span></span>`, (o) => `<span class="num">${money(Math.round(o.perCall / 10) * 10)}</span>`);
-    h += row(`<span>Each extra call over the next smaller budget <span class="cmp-means">About twice the limit. Additional spend buys calls slowly, so it goes only to channels that beat $930.</span></span>`, (o, s) => { const i = S.indexOf(s); return i ? `<span class="num over">${money(Math.round(marginal(O[S[i - 1].id], o) / 10) * 10)}</span>` : '<span class="muted">None smaller</span>'; });
-    h += row(`<span>Media budget remaining after Propensity\'s $9,000 fee <span class="cmp-means">At Lean, too little for a clear Day 60 result.</span></span>`, (o) => `<span class="num">${money(o.adsLeft)}</span>`);
+    h += `<div class="cmp-sec">Run rate at Day 90 and projected results for the following quarter</div>`;
+    h += row(`<span>Qualified calls a week <span class="cmp-means">Only search and account-based ads scale with the budget. About 11 a week come from sources that hold constant.</span></span>`, (o) => `<span><span class="cmp-big num">${Math.round(o.perWeek)}</span><span class="cmp-means">${o.fill}% of the 20-call goal</span></span>`);
+    h += row(`<span>Pilots started a month <span class="cmp-means">Each pilot requires a loaner kit. Confirm kit availability in week one.</span></span>`, (o) => `<span class="num">${o.pilotsMonth}</span>`);
+    h += row(`<span>New customers a quarter <span class="cmp-means">Groups signing their first clinic, with half of all pilots converting to a paid contract.</span></span>`, (o) => `<span class="num">${o.customers}</span>`);
+    h += row(`<span>First-year value of new customers, per quarter <span class="cmp-means">At the planned $7,500 per clinic, before any group adds clinics.</span></span>`, (o) => `<span class="num">${money(o.revenue)}</span>`);
+    h += row(`<span>Cost per qualified call funded by this budget, month three <span class="cmp-means">Excludes about 4 calls a week that already come in and about 2 from the February conference, which has its own budget. The limit is about $930.</span></span>`, (o) => `<span class="num ${o.perPaidCall <= limit ? 'ok' : 'over'}">${money(Math.round(o.perPaidCall / 10) * 10)}</span>`);
+    h += row(`<span>Blended cost per qualified call, all calls counted <span class="cmp-means">Includes calls this budget does not pay for, so it flatters every scenario.</span></span>`, (o) => `<span class="num">${money(Math.round(o.perCall / 10) * 10)}</span>`);
+    h += row(`<span>Incremental cost per call over the next smaller budget <span class="cmp-means">About twice the limit. Incremental spend yields calls slowly, so it is directed only to channels that come in under $930.</span></span>`, (o, s) => { const i = S.indexOf(s); return i ? `<span class="num over">${money(Math.round(marginal(O[S[i - 1].id], o) / 10) * 10)}</span>` : '<span class="muted">No smaller budget</span>'; });
+    h += row(`<span>Media budget remaining after Propensity\'s $9,000 fee <span class="cmp-means">At Lean, too little to produce a clear Day 60 result.</span></span>`, (o) => `<span class="num">${money(o.adsLeft)}</span>`);
     h += `<div class="cmp-sec">Budget allocation</div>`;
     B.groups.forEach(([g, gl]) => {
       const ls = B.lines.filter((l) => l.group === g);
@@ -300,8 +300,8 @@
     const maxS = Math.max(...o.bySource.map(([, v]) => v));
     const srcs = o.bySource.map(([x, v]) => `<li><span>${esc(x.name)}</span><b class="num">${v.toFixed(1)}</b><i style="width:${(v / maxS * 100).toFixed(1)}%"></i></li>`).join('');
     det.innerHTML =
-      `<div class="cmp-panel"><h3>Spend by month</h3><p class="means">${esc(s.name)} budget. Green is ads and email, dark gray is content and setup, light gray is the reserve.</p><ul class="bars">${months}</ul><p class="means" style="margin-top:12px">Month one mostly builds. Ads about double in month two. In month three the reserve goes to whatever is working.</p></div>` +
-      `<div class="cmp-panel"><h3>Where the calls come from</h3><p class="means">Qualified calls a week at Day 90, ${esc(s.name)} budget.</p><ul class="bars">${srcs}</ul><p class="means" style="margin-top:12px">About 4 a week already come in without this plan. Account-based ads book the fewest calls directly, at a planned $2,000 a call, so they stay funded only as a test of whether they lift replies in the half that sees them.</p></div>` +
+      `<div class="cmp-panel"><h3>Spend by month</h3><p class="means">${esc(s.name)} budget. Green shows ads and email, dark gray shows content and setup, and light gray shows the reserve.</p><ul class="bars">${months}</ul><p class="means" style="margin-top:12px">Month one is weighted toward production and setup. Ad spend roughly doubles in month two, and in month three the reserve shifts to the channels that are performing.</p></div>` +
+      `<div class="cmp-panel"><h3>Where qualified calls come from</h3><p class="means">Weekly qualified calls at the Day 90 run rate, ${esc(s.name)} budget.</p><ul class="bars">${srcs}</ul><p class="means" style="margin-top:12px">About 4 calls a week already come in without this plan. Account-based ads book the fewest calls directly, at a planned $2,000 per call, so they remain funded only as a test of whether they lift replies in the half of the list that sees them.</p></div>` +
       `<div class="cmp-read"><p class="tile-k">What ${esc(s.name)} means for Control Bionics</p><p class="lead" style="margin-top:6px">${esc(s.read)}</p></div>`;
     if (srcT) srcT.innerHTML = '<thead><tr><th>Source</th><th>Calls a week</th><th>How it is worked out</th></tr></thead><tbody>' +
       o.bySource.map(([x, v]) => `<tr><td>${esc(x.name)}</td><td data-l="Calls a week" class="num">${v.toFixed(1)}</td><td data-l="How it is worked out">${esc(x.why)}</td></tr>`).join('') +
@@ -323,7 +323,7 @@
     const upd = () => {
       const o = outcome(+range.value);
       out.textContent = money(o.T);
-      cust.innerHTML = `<p class="small">About <b class="num">${o.perWeek.toFixed(1)}</b> qualified calls a week by Day 90, <b class="num">${o.pilotsMonth}</b> pilots a month, <b class="num">${o.customers}</b> new customers a quarter worth <b class="num">${money(o.revenue)}</b>, at <b class="num">${money(o.perCall)}</b> per qualified call in month three against the ${money(Math.round(limit / 10) * 10)} limit.</p>`;
+      cust.innerHTML = `<p class="small">Projects about <b class="num">${o.perWeek.toFixed(1)}</b> qualified calls a week by Day 90, <b class="num">${o.pilotsMonth}</b> pilots a month and <b class="num">${o.customers}</b> new customers a quarter worth <b class="num">${money(o.revenue)}</b> in first-year value, at <b class="num">${money(o.perCall)}</b> per qualified call in month three against the ${money(Math.round(limit / 10) * 10)} limit.</p>`;
     };
     range.addEventListener('input', upd);
     upd();
@@ -379,20 +379,20 @@
             <div><h5>Role in the decision</h5><p>${esc(r.role_in_decision)}</p></div>
             <div><h5>Other titles</h5><p>${esc((r.also_called || []).join(', '))}</p><p class="means">${esc(r.exists_when)}</p></div>
             <div><h5>Measured on</h5>${list(r.measured_on)}</div>
-            <div><h5>What worries them</h5>${list(r.worries)}</div>
-            <div><h5>Signs they are ready to talk</h5>${list(r.ready_signals)}<p class="means">Research topics to check with Bombora: ${esc((r.bombora_topics || []).join(', '))}</p></div>
-            <div><h5>The two messages in full</h5><p><b>A.</b> ${esc(r.message_a)}</p><p><b>B.</b> ${esc(r.message_b)}</p></div>
+            <div><h5>Key concerns</h5>${list(r.worries)}</div>
+            <div><h5>Buying signals</h5>${list(r.ready_signals)}<p class="means">Bombora research topics to monitor: ${esc((r.bombora_topics || []).join(', '))}</p></div>
+            <div><h5>Both messages in full</h5><p><b>A.</b> ${esc(r.message_a)}</p><p><b>B.</b> ${esc(r.message_b)}</p></div>
             <div><h5>Offer</h5><p>${esc(r.offer)}</p></div>
             <div><h5>Landing page</h5><p>${esc(r.landing_page)}</p></div>
           </div>
           <h4>Six-week sequence</h4>
-          <p class="small muted">Sequence week 1 is the week this contact gets the first email, from plan week 5 on.</p>
+          <p class="small muted">Sequence week 1 is the week this contact receives the first email, which falls in plan week 5 or later.</p>
           <table class="tbl tbl--stack seq"><thead><tr><th>Sequence week</th><th>Channel</th><th>Touch</th></tr></thead><tbody>${(r.sequence || []).map((s) => `<tr><td>Sequence week ${esc(s.week)}</td><td data-l="Channel">${esc(s.channel)}</td><td data-l="Touch">${esc(s.touch)}</td></tr>`).join('')}</tbody></table>
           <h4>Top four objections</h4>
           <table class="tbl tbl--stack"><thead><tr><th>Objection</th><th>Answer</th></tr></thead><tbody>${(r.objections || []).map((o) => `<tr><td>${esc(o.objection)}</td><td data-l="Answer">${esc(o.answer)}</td></tr>`).join('')}</tbody></table>
           <div class="role-grid">
-            <div><h5>Proof they need</h5>${list(r.proof)}</div>
-            <div><h5>Three questions for the discovery call</h5>${list(r.discovery_questions)}</div>
+            <div><h5>Proof required</h5>${list(r.proof)}</div>
+            <div><h5>Three discovery call questions</h5>${list(r.discovery_questions)}</div>
             <div><h5>What a yes looks like</h5><p>${esc(r.yes_looks_like)}</p></div>
             <div><h5>When to stop</h5><p>${esc(r.stop_when)}</p></div>
           </div>
@@ -419,7 +419,7 @@
     ot.innerHTML = rows(O.slice(0, FIRST));
     if (ot2) ot2.innerHTML = rows(O.slice(FIRST, SITE_MAX));
     const all = (NS.objections || []).length;
-    if (all > SITE_MAX) (ot2 || ot).insertAdjacentHTML('afterend', `<p class="center small muted" style="margin-top:14px">${all - SITE_MAX} more objections, with answers, are in the <a href="${PLAYBOOK}#objections">buyer playbook</a>.</p>`);
+    if (all > SITE_MAX) (ot2 || ot).insertAdjacentHTML('afterend', `<p class="center small muted" style="margin-top:14px">The <a href="${PLAYBOOK}#objections">buyer playbook</a> covers ${all - SITE_MAX} more objections, with answers.</p>`);
   }
 
   /* persona test groups: one A/B pair each */
@@ -448,9 +448,9 @@
   const ROLES = { executive: 'Owners and chief executives', operations: 'Chief operating officers and practice administrators', clinical: 'Chief clinical officers, clinical directors and clinic directors' };
   const clusterOf = (id) => (C.clusters || []).find((c) => c.cluster === id) || {};
   const AB = {
-    executive: 'A against B in each role\'s wording. Owner: patients who can see their progress at each visit have a reason to keep coming back, against a return-to-sport service you can start at one clinic, measure, then add to the rest',
-    operations: 'A against B in each role\'s wording. COO: each sensor goes on like a bandage and the pilot times setup at one clinic, against one page with the annual price and a rollout plan for each new clinic',
-    clinical: 'A against B in each role\'s wording. Chief clinical officer: strength tests can miss compensation, against a documented return-to-sport protocol for the whole group',
+    executive: 'Message A against message B, worded for each role. Owner: patients who can see their progress at every visit have a reason to keep coming back, against a return-to-sport service you can launch at one clinic, measure, then extend to the rest',
+    operations: 'Message A against message B, worded for each role. COO: each sensor goes on like a bandage and the pilot times setup at one clinic, against one page with the annual price and a rollout plan for each new clinic',
+    clinical: 'Message A against message B, worded for each role. Chief clinical officer: strength tests can miss compensation, against a documented return-to-sport protocol for the whole group',
   };
 
   /* ---------- Control Bionics product photography (literal paths so the build can embed them offline) ---------- */
@@ -490,7 +490,7 @@
     items.push({
       wide: true, cl: ['clinical'], ch: 'video', chName: 'Video', title: '15-second video, six frames',
       mock: `<ol class="sb">${sb.frames.map((f, i) => `<li><div class="sb-art">${frameArt(i)}<p class="sb-os">${esc(f.on_screen.split(/\s*Small print:\s*/)[0])}${/Small print:/.test(f.on_screen) ? `<small>${esc(f.on_screen.split(/\s*Small print:\s*/)[1])}</small>` : ''}</p></div><p class="sb-t">${esc(f.time)}</p><p class="sb-v"><b>Picture:</b> ${esc(f.visual)}</p><p class="sb-v"><b>Voice:</b> ${esc(f.voiceover)}</p></li>`).join('')}</ol>`,
-      labels: { where: 'LinkedIn and Meta video placements bought through Propensity, shown only to the half of the list that gets ads', size: '15 seconds, square and vertical, captions always on', who: ROLES.clinical, message: AB.clinical, cta: sb.cta, landing: 'Clinical primer page with the 90-second video', metric: 'Interested replies and meetings per 100 clinical contacts, the half that sees ads against the holdout half' },
+      labels: { where: 'LinkedIn and Meta video placements bought through Propensity, served only to the half of the list that receives ads', size: '15 seconds, in square and vertical formats, with captions always on', who: ROLES.clinical, message: AB.clinical, cta: sb.cta, landing: 'Clinical primer page with the 90-second video', metric: 'Interested replies and meetings per 100 clinical contacts, comparing the half that sees ads with the holdout half' },
     });
   }
 
@@ -508,7 +508,7 @@
     items.push({
       wide: true, cl: ['executive', 'operations', 'clinical'], ch: 'display', chName: 'Website banners', title: 'Animated banner set, three frames',
       mock: `<div class="dsp-set">${scale(`<div class="dsp-grid">${unit(300, 250, 'rect')}${unit(160, 600, 'sky')}<div class="dsp-col">${unit(728, 90, 'leader')}${unit(320, 50, 'banner')}</div></div>`, 1240, 640)}</div>`,
-      labels: { where: 'Banner spaces on Propensity\'s network of websites, shown only to the half of the list that gets ads', size: '300 × 250, 728 × 90, 160 × 600 and 320 × 50. Three frames over 15 seconds', who: 'All seven roles at groups in the half that gets ads', message: 'No A and B split. The read is what the banners add, the half that sees ads against the holdout half', cta: D.cta, landing: 'Pilot page with the scheduler', metric: 'Booked pilot calls per 100 groups, the half that sees ads against the holdout half' },
+      labels: { where: 'Banner placements across Propensity\'s website network, served only to the half of the list that receives ads', size: '300 × 250, 728 × 90, 160 × 600 and 320 × 50. Three frames over 15 seconds', who: 'All seven roles at groups in the half that receives ads', message: 'No A/B split. The banners are measured on incremental lift, comparing the half that sees ads with the holdout half', cta: D.cta, landing: 'Pilot page with the scheduler', metric: 'Booked pilot calls per 100 groups, comparing the half that sees ads with the holdout half' },
     });
   }
 
@@ -518,7 +518,7 @@
     items.push({
       wide: true, cl: ['executive'], ch: 'social', chName: 'LinkedIn and Meta', title: 'Five-card carousel',
       mock: scale(`<div class="sp"><div class="sp-h"><span class="sp-av">CB</span><div><b>Control Bionics</b><i>Sponsored</i></div></div><p class="sp-x">${esc(K.intro)}</p><div class="sp-cards">${K.cards.map((c, i) => `<div class="sp-card"><div class="sp-img">${i === 0 ? photo('homepage') : i === 1 ? art.trace() : i === 2 ? photo('profiling', 'center 30%') : i === 3 ? photo('box') : photo('platform05')}</div><div class="sp-f"><b>${esc(c.headline)}</b><span>${esc(c.sub)}</span></div></div>`).join('')}</div><div class="sp-cta"><span>controlbionics.com</span><span class="sp-btn">${esc(K.cta)}</span></div></div>`, 1060, 560),
-      labels: { where: 'LinkedIn and Meta carousel placements bought through Propensity, shown only to the half of the list that gets ads', size: 'Five square cards. LinkedIn shows only a headline on each card, up to 45 characters, so each subline moves into the card image. Meta cuts long headlines, so each card is checked in its preview before launch', who: ROLES.executive, message: AB.executive, cta: K.cta, landing: 'Economics worksheet built from their own visit numbers', metric: 'Worksheets started and meetings booked per 100 executives in the half that sees ads' },
+      labels: { where: 'LinkedIn and Meta carousel placements bought through Propensity, served only to the half of the list that receives ads', size: 'Five square cards. LinkedIn displays only a headline on each card, up to 45 characters, so each subline moves into the card image. Meta truncates long headlines, so each card is checked in preview before launch', who: ROLES.executive, message: AB.executive, cta: K.cta, landing: 'Economics worksheet built on the group\'s own visit numbers', metric: 'Worksheets started and meetings booked per 100 executives in the half that sees ads' },
     });
   }
 
@@ -528,7 +528,7 @@
     items.push({
       cl: ['clinical', 'executive'], ch: 'native', chName: 'Sponsored articles', title: 'Sponsored article ad on an industry site',
       mock: scale(`<div class="nat"><div class="nat-site"><span></span><span></span><span></span></div><p class="nat-ctx">${esc(N.context)}</p><div class="nat-ad"><div class="nat-img">${photo('arm')}</div><div><p class="nat-sp">Sponsored · Control Bionics</p><p class="nat-hd">${esc(N.headline)}</p><p class="nat-bd">${esc(N.body)}</p></div></div><div class="nat-lines"><i></i><i></i><i></i></div></div>`, 340, 470),
-      labels: { where: 'Native and contextual ads bought through Propensity, shown next to articles on return-to-sport and rehab topics. Which physical therapy sites carry them: confirm with Propensity in week one', size: 'Headline up to 55 characters, body up to 120', who: 'Readers of articles on return to sport and outcomes', message: 'Strength tests can miss compensation', cta: 'Read the clinical primer', landing: 'Clinical primer page', metric: 'Primer reads from target groups, and replies that follow' },
+      labels: { where: 'Native and contextual ads bought through Propensity, placed beside articles on return-to-sport and rehabilitation topics. Confirm with Propensity in week one which physical therapy sites carry them', size: 'Headline up to 55 characters, body up to 120', who: 'Readers of articles on return to sport and outcomes', message: 'Strength tests can miss compensation', cta: 'Read the clinical primer', landing: 'Clinical primer page', metric: 'Primer reads from target groups, and the replies that follow' },
     });
   }
 
@@ -538,7 +538,7 @@
     items.push({
       wide: true, cl: ['executive'], ch: 'mail', chName: 'Mailed box', title: 'Box for owners at groups researching now',
       mock: `<div class="dm"><figure class="dm-v"><div class="dm-box"><p class="dm-k">NeuroStrip</p><p class="dm-front">${esc(M.box_front)}</p></div><figcaption>Front of the box</figcaption></figure><figure class="dm-v"><div class="dm-in"><p class="dm-lh">${esc(M.letter_headline)}</p>${M.letter_body.map((p) => `<p>${esc(p)}</p>`).join('')}<table class="dm-est">${M.estimate_rows.map((r) => `<tr><td>${esc(r.label)}</td><td>${esc(r.value)}</td></tr>`).join('')}</table><div class="dm-qr"><span class="qr" aria-hidden="true"></span><span>${esc(M.qr_cta)}</span></div></div><figcaption>Inside: the one-page estimate</figcaption></figure><figure class="dm-v"><div class="dm-card"><div class="dm-card-f"><div class="dm-strip"><i></i><i></i><i></i></div><p>${esc(M.card_front)}</p></div><div class="dm-card-b"><p>${esc(M.card_back)}</p></div></div><figcaption>Sample strip card, front and back</figcaption></figure></div>`,
-      labels: { where: 'Direct mail through Propensity, sent only after a group starts researching', size: 'A small box with a letter-size estimate and a card holding a sample strip', who: 'Owners at groups that are researching now, capped at 100 boxes so they stay inside the $7,200 small-tests line once the price is quoted in week one', message: 'Patients who can see their progress at each visit have a reason to keep coming back', cta: M.qr_cta, landing: 'Pilot call booking page that shows the group\'s estimate', metric: 'Code scans and booked calls per 100 boxes. Each box is priced in week one' },
+      labels: { where: 'Direct mail through Propensity, sent only after a group shows active research', size: 'A small box containing a letter-size estimate and a card holding a sample strip', who: 'Owners at groups that are researching now, capped at 100 boxes to stay within the $7,200 small-tests line once the price is quoted in week one', message: 'Patients who can see their progress at every visit have a reason to keep coming back', cta: M.qr_cta, landing: 'Pilot call booking page that shows the group\'s estimate', metric: 'Code scans and booked calls per 100 boxes. The per-box price is quoted in week one' },
     });
   }
 
@@ -546,9 +546,9 @@
   if (C.geofence) {
     const G = C.geofence;
     items.push({
-      cl: ['clinical', 'executive', 'operations'], ch: 'mobile', chName: 'Conference phone ad', title: 'Phone ad at the Combined Sections Meeting',
+      cl: ['clinical', 'executive', 'operations'], ch: 'mobile', chName: 'Conference mobile ad', title: 'Mobile ad at the Combined Sections Meeting',
       mock: scale(`<div class="geo"><div class="geo-img">${photo('lifestyle', 'center 40%')}</div><div class="geo-c"><p class="geo-k">APTA CSM · Philadelphia · February 4 to 6</p><p class="geo-h">${esc(G.headline)}</p><p class="geo-b">${esc(G.body)}</p><span class="geo-btn">${esc(G.cta)}</span></div></div>`, 320, 480),
-      labels: { where: 'Phones inside a geofence, an ad area drawn around the Philadelphia convention center, during the American Physical Therapy Association Combined Sections Meeting (APTA CSM), February 4 to 6, 2027, through Propensity', size: '320 × 480, with a 320 × 50 version', who: 'Anyone inside the geofence. Most are physical therapists attending the meeting', message: 'A 60-second activation test at the booth', cta: G.cta, landing: 'Booth booking page', metric: 'Booth tests and meetings booked during the show' },
+      labels: { where: 'Mobile devices inside a geofence, a virtual boundary drawn around the Philadelphia convention center, during the American Physical Therapy Association Combined Sections Meeting (APTA CSM), February 4 to 6, 2027, bought through Propensity', size: '320 × 480, with a 320 × 50 version', who: 'Anyone inside the geofence, most of them physical therapists attending the meeting', message: 'A 60-second activation test at the booth', cta: G.cta, landing: 'Booth booking page', metric: 'Booth tests and meetings booked during the show' },
     });
   }
 
@@ -562,7 +562,7 @@
     items.push({
       wide: true, cl: ['executive', 'operations', 'clinical'], ch: 'search', chName: 'Google Search', title: `${name} ad and landing page`,
       mock: `<div class="rsa"><div class="rsa-res"><p class="rsa-q">${esc(r.keywords[0])}</p><p class="rsa-sp">Sponsored</p><p class="rsa-url">${esc(r.path)}</p><p class="rsa-hd">${esc(hs.slice(0, 3).map((h) => h.t).join(' | '))}</p><p class="rsa-ds">${esc(ds[0] ? ds[0].t : '')} ${esc(ds[1] ? ds[1].t : '')}</p></div><div class="rsa-lp"><p class="rsa-lp-k">Landing page</p><p class="rsa-lp-h">${esc(r.landing.headline)}</p><p class="rsa-lp-s">${esc(r.landing.sub)}</p><div class="rsa-form"><span>Name</span><span>Work email</span><span>Practice</span><span>Number of clinics</span></div><span class="rsa-btn">${esc(r.landing.cta)}</span></div><details class="rsa-all"><summary>All ${hs.length} headlines and ${ds.length} descriptions, with character counts</summary><ul>${hs.map((h) => `<li class="${h.over ? 'over' : ''}"><span>${esc(h.t)}</span><b>${h.n}/${LIMITS.headline}</b></li>`).join('')}</ul><ul>${ds.map((h) => `<li class="${h.over ? 'over' : ''}"><span>${esc(h.t)}</span><b>${h.n}/${LIMITS.description}</b></li>`).join('')}</ul><p class="rsa-kw">Keywords: ${esc(r.keywords.join(', '))}</p></details></div>`,
-      labels: { where: `Google Search, ${name.toLowerCase()} keywords`, size: 'Headlines up to 30 characters, descriptions up to 90', who: 'People searching these terms, most of them clinicians and owners', message: r.cluster === 'competitor' ? 'Four muscles at once, wireless, with a record you can document' : r.cluster === 'problem' ? 'Strength tests can miss compensation' : 'Wireless muscle sensing for the clinic', cta: r.landing.cta, landing: r.landing.headline, metric: '35% or more of search leads accepted by sales' },
+      labels: { where: `Google Search, ${name.toLowerCase()} keywords`, size: 'Headlines up to 30 characters, descriptions up to 90', who: 'People searching these terms, most of them clinicians and owners', message: r.cluster === 'competitor' ? 'Four muscles at once, wireless, with a record you can document' : r.cluster === 'problem' ? 'Strength tests can miss compensation' : 'Wireless muscle sensing for the clinic', cta: r.landing.cta, landing: r.landing.headline, metric: 'Sales acceptance of 35% or more of search leads' },
     });
   });
   if (rsaWarn.length) console.warn('Search ads over the character limit:', rsaWarn);
@@ -570,12 +570,12 @@
 
   /* 8. four-email sequence per cluster */
   (C.emails || []).forEach((e) => {
-    const bv = (e.b_variant || []).length ? `<div class="em-alt"><p class="em-alt-k">Contacts assigned message B get these as emails 1 and 2 instead:</p>${e.b_variant.map((s, i) => `<p class="em-d">Email ${i + 1} · message B version</p><p class="em-s">${esc(s.subject)}</p><p class="em-b">${esc(s.body)}</p>`).join('')}</div>` : '';
-    const emr = e.emr_variant && e.emr_variant.subject ? `<div class="em-alt"><p class="em-alt-k">If Bombora shows the group researching a move to a new electronic medical record (EMR) system, email 1 becomes, for either version:</p><p class="em-s">${esc(e.emr_variant.subject)}</p><p class="em-b">${esc(e.emr_variant.body)}</p></div>` : '';
+    const bv = (e.b_variant || []).length ? `<div class="em-alt"><p class="em-alt-k">Contacts assigned message B receive these as emails 1 and 2 instead:</p>${e.b_variant.map((s, i) => `<p class="em-d">Email ${i + 1} · message B version</p><p class="em-s">${esc(s.subject)}</p><p class="em-b">${esc(s.body)}</p>`).join('')}</div>` : '';
+    const emr = e.emr_variant && e.emr_variant.subject ? `<div class="em-alt"><p class="em-alt-k">If Bombora shows the group researching a move to a new electronic medical record (EMR) system, email 1 is replaced, in either version, with:</p><p class="em-s">${esc(e.emr_variant.subject)}</p><p class="em-b">${esc(e.emr_variant.body)}</p></div>` : '';
     items.push({
       wide: true, cl: [e.cluster], ch: 'email', chName: 'Email', title: `${CL[e.cluster]} email sequence`,
-      mock: `<div class="em">${e.steps.map((s, i) => `<div class="em-m"><p class="em-d">Email ${i + 1} · sequence week ${s.week}${i < 2 ? ' · message A version' : ' · same for everyone'}</p><p class="em-s">${esc(s.subject)}</p><p class="em-b">${esc(s.body)}</p></div>`).join('')}${bv}${emr}</div>`,
-      labels: { where: 'Outbound email from the rep, both halves of the list', size: 'Four plain-text emails, each under 110 words, in sequence weeks 1, 3, 4 and 6. Each contact gets one assigned message in emails 1 and 2',  who: ROLES[e.cluster], message: AB[e.cluster], cta: 'Reply, or book a time on the calendar', landing: 'None. Replies go to the rep, and the calendar link books a call', metric: 'Interested replies from 1.5% or more of contacts, the rate the plan counts on, and meetings booked' },
+      mock: `<div class="em">${e.steps.map((s, i) => `<div class="em-m"><p class="em-d">Email ${i + 1} · sequence week ${s.week}${i < 2 ? ' · message A version' : ' · identical for all contacts'}</p><p class="em-s">${esc(s.subject)}</p><p class="em-b">${esc(s.body)}</p></div>`).join('')}${bv}${emr}</div>`,
+      labels: { where: 'Outbound email from the rep to both halves of the list', size: 'Four plain-text emails, each under 110 words, in sequence weeks 1, 3, 4 and 6. Each contact receives one assigned message in emails 1 and 2',  who: ROLES[e.cluster], message: AB[e.cluster], cta: 'Reply, or book a time on the calendar', landing: 'None. Replies route to the rep, and the calendar link books a call directly', metric: 'Interested replies from 1.5% or more of contacts, the rate the plan assumes, plus meetings booked' },
     });
   });
 
@@ -594,7 +594,7 @@
   const cc = $('#campaignClusters');
   if (cc) cc.innerHTML = (C.clusters || []).map((c) => `<div class="tile"><p class="tile-k">${CL[c.cluster]} cluster</p><p class="tile-l">${esc(c.headline)}</p></div>`).join('');
   const more = $('#campaignMore');
-  if (more) more.innerHTML = `<h4>The idea</h4><p>${esc(C.idea)}</p><h4>What each cluster is tested on</h4><table class="tbl tbl--stack"><thead><tr><th>Cluster</th><th>Message A</th><th>Message B</th></tr></thead><tbody>${(C.clusters || []).map((c) => `<tr><td>${CL[c.cluster]}</td><td data-l="Message A">${esc(c.message_a)}</td><td data-l="Message B">${esc(c.message_b)}</td></tr>`).join('')}</tbody></table><h4>Rules every piece follows</h4><ul class="dots"><li>Every claim stays inside NeuroStrip's registration as a non-diagnostic measurement and biofeedback tool.</li><li>The 7% and 37% case appears only as one athlete's example.</li><li>No testimonials, quotes, customer names or logos until Control Bionics clears them.</li><li>Search ads never put a competitor's brand name in the ad text.</li><li>Every link carries tracking tags, so Salesforce records where each lead came from.</li></ul>`;
+  if (more) more.innerHTML = `<h4>The idea</h4><p>${esc(C.idea)}</p><h4>What each cluster tests</h4><table class="tbl tbl--stack"><thead><tr><th>Cluster</th><th>Message A</th><th>Message B</th></tr></thead><tbody>${(C.clusters || []).map((c) => `<tr><td>${CL[c.cluster]}</td><td data-l="Message A">${esc(c.message_a)}</td><td data-l="Message B">${esc(c.message_b)}</td></tr>`).join('')}</tbody></table><h4>Guardrails for every piece</h4><ul class="dots"><li>Every claim stays inside NeuroStrip's registration as a non-diagnostic measurement and biofeedback tool.</li><li>The 7% and 37% case appears only as a single athlete's example.</li><li>No testimonials, quotes, customer names or logos appear until Control Bionics clears them.</li><li>Search ads never use a competitor's brand name in the ad text.</li><li>Every link carries tracking parameters, so Salesforce records the source of every lead.</li></ul>`;
 
   /* ---------- filters ---------- */
   const clusters = [['all', 'All buyers'], ['executive', 'Executive'], ['operations', 'Operations'], ['clinical', 'Clinical']];
