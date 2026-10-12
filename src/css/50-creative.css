@@ -16,6 +16,8 @@
 .terr-card h4{font-family:var(--display);font-size:1.25rem;letter-spacing:-.022em}
 .terr-line{font-family:var(--serif);font-style:italic;font-size:1.08rem;line-height:1.35;margin:10px 0 12px;color:var(--signal-ink)}
 .terr-card:nth-child(-n+2) .terr-line{color:var(--signal)}
+.terr-line:has(+ .terr-by){margin-bottom:4px}
+.terr-by{font-size:.76rem;color:var(--dim);margin-bottom:12px}
 .terr-card:nth-child(-n+2) h4{color:#fff}
 .terr-why{font-size:.9rem;color:var(--mute);margin-bottom:16px}
 .terr-card:nth-child(-n+2) .terr-why{color:var(--mute-d)}
