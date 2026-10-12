@@ -618,6 +618,7 @@
         <div class="terr-top"><span class="terr-n">${t.n}</span><span class="tag">${esc(t.kind)}</span><span class="terr-str" role="img" aria-label="Strength ${t.strength} of 5">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= t.strength ? 'on' : ''}"></i>`).join('')}</span></div>
         <h4>${esc(t.name)}</h4>
         <p class="terr-line">${esc(t.line)}</p>
+        ${t.by ? `<p class="terr-by">${esc(t.by)}</p>` : ''}
         <p class="terr-why">${esc(t.why)}</p>
         <p class="terr-fit">${esc(t.fit)}</p>
       </article>`).join('');

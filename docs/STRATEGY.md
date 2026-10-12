@@ -38,13 +38,13 @@ Elite sport supplies the proof. Physical therapy supplies the volume.
 
 **Traction**
 - Biotech Daily, August 2026: "In the US, the company has signed about half a dozen rehabilitation groups." **[V: s11]** In Australia, more than 10 groups are active on the platform. **[V: s10]**
-- Bay State Physical Therapy (160+ US clinics) is rolling out to its first clinic. Mountain Land Physical Therapy (about 70 clinics) has a case study in progress. **[V: s9]**
+- Bay State Physical Therapy (160+ US clinics) has begun rolling out NeuroStrip. Mountain Land Physical Therapy (about 70 clinics) has a case study in progress. **[V: s9]**
 - Ohio University: 500+ athlete concussion-protocol profiles, about 30 devices. **[V: s9, s11]**
-- A company-reported program model: a 12-session program billed under a biofeedback code, with revenue of US$1,175 to US$1,375 per client. **[V: s9, company-stated]**
-- Research use: Mayo Clinic has used NeuroStrip in a gait analysis study, and Penn State Health is assessing it for research. **[V: s9]**
+- A company-reported clinic program model, with revenue of US$1,175 to US$1,375 per client. **[V: s9, company-stated]**
+- Research use: Mayo Clinic and Penn State Health are evaluating NeuroStrip for research and clinical use. **[V: s9]**
 
 **Company**
-- FY26 revenue A$4.77M. About A$9.7M raised in the mid-2026 capital raising, with A$3.5M allocated to commercial expansion and capability build-out. **[V: s10, s13]**
+- FY26 revenue A$4.77M. About A$9.7M raised in the mid-2026 capital raising, to accelerate commercial growth and technology development. **[V: s10, s13]**
 - The CEO's stated priority after CE marking: "our focus is on rapidly building our customer and partner base." **[V: s8]**
 - The assistive communication business is moving to distributors, which frees direct focus for NeuroStrip. **[V: s10]**
 
@@ -174,7 +174,7 @@ Only about half of the program budget is media in the first 90 days. Media share
 
 1. **The trace** (demonstration). The product's "aha" is visual and takes five seconds.
 2. **Output is not activation** (reframe). "Passed the strength test. Still compensating."
-3. **A clinic like yours** (peer proof). A therapist with 30 years in practice, a group mid-rollout.
+3. **A clinic like yours** (peer proof). "The NeuroStrip system is the most impactful advancement I've seen in 30 years." (Steve, PT, 30+ years, Houston Rehabilitation Institute) Paired with a group mid-rollout. **[V: s3]**
 4. **EMG left the basement** (old way versus new way).
 5. **Visible progress** (economics for executives). "Patients don't quit therapy. They quit when they can't see progress."
 6. **Elite sport halo.** A proof line, never the lead message for PT.
